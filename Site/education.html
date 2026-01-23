@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing</title>
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        body.light {
+        background: #ffffff;
+        color: #222;
+        transition: 1s ease-in-out;
+        }
+
+
+        body.dark {
+        background: #121212;
+        color: #f1f1f1;
+        }
+
+        .hero {
+            margin-top: 9rem;
+        }
+
+        .security {
+            
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            padding-bottom: 2rem;
+        }
+
+        body.dark .security {
+            background-color: black;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .security h1 {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            font-size: 60px;
+            font-weight: 300;
+        }
+
+        .security h1 span {
+            color: blue;
+        }
+
+        .security p {
+            margin-left: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .security a {
+            margin-left: 1.5rem;
+        }
+
+        .secure-link {
+            margin-top: 3rem;
+        } 
+
+        .secure-link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: blue;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        .secure-links {
+            margin-top: 2rem;
+            margin-left: 10px;
+        } 
+
+        .secure-links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: blue;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        body.dark .secure-link a {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .edu {
+            margin-top: 2rem;
+        }
+
+        .edu h3 {
+            margin-left: 1.5rem;
+        }
+
+        .edu ul li {
+            margin-top: 1.5rem;
+            margin-left: 3rem;
+        }
+
+        .request {
+            margin-top: 2rem;
+        }
+
+        .request a {
+            text-decoration: none;
+            background-color: transparent;
+            border: 1px solid #1d2d74f8;
+            padding: 8px;
+            border-radius: 6px;
+            color: #000;
+        }
+
+        body.dark .request a {
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        .social {
+            
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            height: 45vh;
+        }
+
+        body.dark .social {
+            background-color: black;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .enterprise p {
+            margin-top: 2rem;
+        }
+
+        .enter {
+            
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            display: block;
+            padding-bottom: 1rem;
+        }
+
+        body.dark .enter {
+            background-color: black;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .enter-text {
+            margin-left: 8px;
+        }
+
+        .enter-text h3 {
+            font-size: 13px;
+        }
+
+        .enter-text p {
+            font-size: 14px;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        body.dark .secure-links a {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .org h3 {
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .from {
+            display: flex;
+            gap: 2%;
+            margin: 0 auto;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .before {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        body.dark .before {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .beforee {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            width: 18%;
+        }
+
+        body.dark .beforee {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .beforee p {
+            width: 80%;
+            margin-top: 10px;
+            margin-left: 7px;
+        }
+
+        .before ul li {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .how-to {
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+
+        .list {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            border-radius: 8px;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        body.dark .list {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .list ol li {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .list h3 {
+            margin-top: 0.5rem;
+        }
+
+        .list p {
+            margin-top: 1rem;
+        }
+
+        .list-link {
+            margin-top: 2rem;
+        }
+
+        .list-link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        body.dark .list-link a {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .faq {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            width: 88%;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        body.dark .faq {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding: 6px;
+            cursor: pointer;
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        body.dark .dropdown-toggle {
+            background-color: #000;
+            box-shadow: 0 0 10px #484747;
+            color: #fff;
+        }
+
+        .dropdown-menu {
+            display: none;
+            color: #000;
+            padding-left: 20px;
+            margin-top: 8px;
+            opacity: 0;
+            animation: animateContent 1.5s ease forwards;
+        }
+
+        body.dark .dropdown-menu {
+            color: #fff;
+        }
+
+        .request-demo {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(163, 161, 161);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;   
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            position: absolute;
+            z-index: 1;
+            top:20px;
+            margin-left: 10rem;
+            display: none;
+        }
+
+        body.dark .request-demo {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .demo-edu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .close i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .tell h3 {
+            margin-top: 10px;
+        }
+
+        .tell p {
+            margin-top: 15px;
+        }
+
+        form {
+            display: grid;
+            margin-top: 2rem;
+        }
+
+        form input {
+            padding: 8px;
+            border: 1px solid gainsboro;
+            border-radius: 8px;
+            width: 100%;
+            margin-top: 7px;
+            outline: none;
+        }
+
+        body.dark form input {
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.dark form textarea {
+            background-color: #000;
+            color: #fff;
+        }
+
+        form textarea {
+            height: 30vh;
+            padding: 8px;
+            border: 1px solid gainsboro;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        form label {
+            margin-top: 15px;
+        }
+
+        form button {
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border: none;
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 15px;
+            width: 10%;
+            cursor: pointer;
+        }
+
+        body.dark form button {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .procure {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(163, 161, 161);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;   
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            position: absolute;
+            z-index: 1;
+            top: 250px;
+            margin-left: 10rem;
+            display: none;
+        }
+
+        body.dark .procure {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .pro p {
+            margin-top: 10px;
+        }
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .closes i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        
+
+        @media(max-width: 800px) {
+
+        .hero {
+            display: block;
+        }
+
+        .first p {
+            width: 75%;
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .security h1 {
+            font-size: 18px;
+            margin: 0;
+            margin-top: 2rem;
+        }
+
+        .security p {
+            margin: 0;
+            margin-top: 1.5rem;
+            font-size: 12px;
+        }
+
+        .security a {
+            margin: 0;
+        }
+
+        .secure {
+            display: block;
+            margin: 0;
+            margin-top: 1.5rem;
+        }
+
+        .edu h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .edu ul li {
+            font-size: 12px;
+            margin: 0;
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+
+        .secure-link a, .facilities a {
+            font-size: 11px;
+        }
+
+        .request a {
+            font-size: 11px;
+        }
+
+        .enterprise {
+            margin: 0;
+            margin-top: 4rem;
+            height: 74vh;
+        }
+
+        .firsts p {
+            width: 32%;
+        }
+
+        .enterprise p {
+            font-size: 13px;
+        }
+
+        .enter {
+            display: block;
+            padding-bottom: 1rem;
+        }
+
+        .enter-text {
+            margin-top: 1rem;
+        }
+
+        .enter-text h3 {
+            font-size: 12px;
+        }
+
+        .enter-text p {
+            font-size: 11px;
+        }
+
+        .secure-links {
+            margin-left: 0;
+            margin-left: 8px;
+        }
+
+        .secure-links a {
+            font-size: 11px;
+        }
+
+        .from {
+            display: block;
+        }
+
+        .org h3 {
+            font-size: 15px;
+        }
+
+        .before {
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+        .beforee {
+            width: 55%;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+        .before ul li, .beforee p {
+            font-size: 11px;
+        }
+
+        .list {
+            margin: 0;
+            margin-top: 1rem;
+        }
+
+        .list h3 {
+            font-size: 15px;
+        }
+
+        .list ol li {
+            font-size: 11px;
+        }
+
+        .list p {
+            font-size: 11px;
+        }
+
+        .list-link a {
+            font-size: 11px;
+        }
+
+        .faq h3 {
+            font-size: 15px;
+        }
+
+        .ferpa p {
+            font-size: 14px;
+        }
+
+        .dropdown-menu p {
+            font-size: 12px;
+        }
+
+        .request-demo {
+            margin: 0;
+            top: 0;
+            margin-left: 1rem;
+            width: 90%;
+            top: 50px;
+        }
+
+        .tell h3 {
+            font-size: 15px;
+        }
+
+        .tell p {
+            font-size: 11px;
+        }
+
+        form label {
+            font-size: 11px;
+        } 
+
+        form button {
+            width: 30%;
+        }
+
+        .procure {
+            top: 0;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin-left: 1rem;
+            top: 180px;
+        }
+
+        .pro h3 {
+            font-size: 15px;
+        }
+
+        .pro p {
+            font-size: 11px;
+        }
+
+        
+        }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        }
+
+        @keyframes animateContent {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="container">
+        <div id="header"></div>
+        <div class="hero">
+            <div class="security">
+                <div class="first">
+                    <p>For School Districts & Universities</p>
+                </div>
+                <h1>Enterprise <span>education software</span> built for secure, compliant <span>operations.</span></h1>
+                <p>Purpose-built platforms for school districts and universities operating in regulated, high-scale environments.</p>
+                <div class="secure-link">
+                    <a href="#" class="demo">Request a Demo</a>
+                </div>
+                <div class="edu">
+                    <h3>Education agencies face growing operational and compliance pressure</h3>
+                    <ul>
+                        <li>Legacy systems and disconnected tools</li>
+                        <li>Manual workflows that slow staff and administrators</li>
+                        <li>Limited visibility into processes and outcomes</li>
+                        <li>Increasing FERPA and data-security risk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="enterprise">
+                <div class="social">
+                    <div class="firsts">
+                        <p>Social Proof</p>
+                    </div>
+                    <p>"Ayjas Integrated Systems helped our district replace fragmented tools with a single secure platform - we improved reporting and reduced manual work." - IT Director, Example Unified School District</p>
+                </div>    
+                <div class="enter">
+                    <div class="enter-text">
+                        <h3>Modernize education operations with confidence</h3>
+                        <p>Ready to move away from manual workflows?</p>
+                    </div>
+                    <div class="secure-links">
+                        <a href="#" class="demos">Request a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="request-demo">
+            <div class="demo-edu">
+                <div class="tell">
+                    <h3>Request a Demo - Education</h3>
+                    <p>Tell us about your district or campus. We'll follow up with a tailored demo.</p>
+                </div>
+                <div class="close">
+                    <i class="fa-solid fa-close"></i>
+                </div>
+            </div>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" required>
+                <label for="email">Email</label>
+                <input type="email" required>
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes" required></textarea>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+        <div class="org">
+            <h3>From fragmented systems to confident, compliant operations</h3>
+            <div class="from">
+                <div class="before">
+                    <h4>Before</h4>
+                    <ul>
+                        <li>Spreadsheets, emails, and manual approvals</li>
+                        <li>Inconsistent access to sensitive data</li>
+                        <li>Audit and compliance uncertainty</li>
+                    </ul>
+                </div>
+                <div class="before">
+                    <h4>After</h4>
+                    <ul>
+                        <li>Centralized, secure workflows</li>
+                        <li>Role-based access to student and staff data</li>
+                        <li>FERPA-aligned data handling</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="key">
+                <h3>Key Benefits</h3>
+                <div class="from">
+                    <div class="beforee">
+                        <p>FERPA-aligned data protection practices</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Enterprise-grade security controls</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Configurable workflows to match district and university needs</p>
+                    </div>
+                </div>
+                <div class="from">
+                    <div class="beforee">
+                        <p>Scales across schools, campuses, and departments</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Built for long-term public-sector use</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Clear reporting and accountability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how-to">
+            <div class="list">
+                <h3>How it works</h3>
+                <ol>
+                    <li>Configure workflows based on agency requirements</li>
+                    <li>Assign roles and permissions by function</li>
+                    <li>Monitor activity and performance in real time</li>
+                    <li>Scale deployment across the organization</li>
+                </ol>
+            </div>
+            <div class="list">
+                <h3>Trusted by education agencies</h3>
+                <p>Logos and short testimonials from districts and universities. Currently deployed in education agencies, with additional public-sector partnerships underway.</p>
+            </div>
+            <div class="list">
+                <h3>Pricing</h3>
+                <p>Enterprise pricing designed for education agencies. Custom pricing based on number of users, scope of deployment, support and onboarding needs. Annual contracts available.</p>
+                <div class="list-link">
+                    <a href="#" class="openDocs">Request Pricing</a>
+                </div>
+            </div>          
+        </div>
+        <div class="procure">
+            <div class="cont">
+                <div class="pro">
+                    <h3>Request Pricing - Education</h3>
+                    <p>We'll provide a custom quote based on users, deployment scope, and onboarding needs.</p>
+                </div>
+                <div class="closes">
+                    <i class="fa-solid fa-close"></i>
+                </div>
+            </div>
+            <div class="request">
+                <a href="#" class="proDocs">Request Pricing</a>
+            </div>
+        </div>
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="dropdown-toggle">
+                <div class="ferpa">
+                    <p>Is this FERPA compliant?</p>
+                </div>
+                <div class="plus">
+                    <i class="fa-solid fa-plus" id="plus"></i>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <p>Our platform is designed to support FERPA compliance through contractual safeguards, access controls, and secure data-handling practices.</p>
+            </div>
+            <div class="dropdown-toggle">
+                <div class="ferpa">
+                    <p>Do you support SOC 2 requirements?</p>
+                </div>
+                <div class="plus">
+                    <i class="fa-solid fa-plus" id="plus"></i>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <p>Yes. Our security program is aligned with SOC 2 principles and audit readiness.</p>
+            </div>
+            <div class="dropdown-toggle">
+                <div class="ferpa">
+                    <p>How long does implementation take?</p>
+                </div>
+                <div class="plus">
+                    <i class="fa-solid fa-plus" id="plus"></i>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <p>Timelines vary based on scope, but most agencies are operational within weeks.</p>
+            </div>
+        </div>
+        <div id="footer"></div>
+     </div>
+     <script>
+        window.addEventListener('load', () => {
+            //---------------------------------------------------------------
+
+        //----------------------------------------------------------------
+
+        const demo = document.querySelector('.demo');
+        const demos = document.querySelector('.demos');
+        const reqDemo = document.querySelector('.request-demo');
+        const closes = document.querySelector('.close');
+        const submit = document.querySelector('.submit');
+        const openDocs = document.querySelector('.openDocs');
+        const openPro = document.querySelector('.procure');
+        const closess = document.querySelector('.closes');
+        const proDocs = document.querySelector('.proDocs');
+
+        demo.addEventListener('click', show);
+        demos.addEventListener('click', show);
+        closes.addEventListener('click', close);
+
+        function show(){
+        reqDemo.style.display = "block";
+        }
+
+        function close(){
+        reqDemo.style.display = "none";
+        }
+
+        openDocs.addEventListener('click', display);
+        closess.addEventListener('click', cancel);
+
+        function display(){
+        openPro.style.display = "block";
+        }
+
+        function cancel(){
+        openPro.style.display = "none";
+        }
+
+        proDocs.addEventListener("click", () => {
+        alert("Thanks, a sales rep will contact you.");
+        });
+        });
+     </script>
+     <script src="javascript/include.js"></script>
+</body>
+</html>

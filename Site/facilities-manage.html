@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing</title>
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        body.light {
+        background: #ffffff;
+        color: #222;
+        transition: 1s ease-in-out;
+        }
+
+
+        body.dark {
+        background: #121212;
+        color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hero {
+            display: flex;
+            gap: 2%;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .security {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            padding-bottom: 2rem;
+        }
+
+        body.dark .security {
+            background-color: black;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .security h1 {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .first p {
+            margin-top: 1rem;
+            background-color: #97a1cbf8;
+            border-radius: 15px;
+            padding: 7px;
+            width: 63%;
+            color: #fff;
+        }
+
+        .firsts p {
+            margin-top: 2rem;
+            background-color: #97a1cbf8;
+            border-radius: 15px;
+            padding: 7px;
+            width: 34%;
+            color: #fff;
+        }
+
+        .security p {
+            margin-left: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .security a {
+            margin-left: 1.5rem;
+        }
+
+        .secure-link {
+            margin-top: 3rem;
+        } 
+
+        .secure-link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .secure-links {
+            margin-top: 2rem;
+            margin-left: 10px;
+        } 
+
+        .secure-links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        body.dark .secure-link a {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .edu {
+            margin-top: 2rem;
+        }
+
+        .edu h3 {
+            margin-left: 1.5rem;
+        }
+
+        .edu ul li {
+            margin-top: 1.5rem;
+            margin-left: 3rem;
+        }
+
+        .request {
+            margin-top: 2rem;
+        }
+
+        .request a {
+            text-decoration: none;
+            background-color: transparent;
+            border: 1px solid #1d2d74f8;
+            padding: 8px;
+            border-radius: 6px;
+            color: #000;
+        }
+
+        body.dark .request a {
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        .social {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            height: 45vh;
+        }
+
+        body.dark .social {
+            background-color: black;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .enterprise p {
+            margin-top: 2rem;
+        }
+
+        .enter {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            display: block;
+            padding-bottom: 1rem;
+        }
+
+        body.dark .enter {
+            background-color: black;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .enter-text {
+            margin-left: 8px;
+        }
+
+        .enter-text h3 {
+            font-size: 13px;
+        }
+
+        .enter-text p {
+            font-size: 14px;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        body.dark .secure-links a {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .org h3 {
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .from {
+            display: flex;
+            gap: 2%;
+            margin: 0 auto;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .before {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        body.dark .before {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .beforee {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            width: 18%;
+        }
+
+        body.dark .beforee {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .beforee p {
+            width: 80%;
+            margin-top: 10px;
+            margin-left: 7px;
+        }
+
+        .before ul li {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .how-to {
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+
+        .list {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            border-radius: 8px;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        body.dark .list {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .list ul li {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .list h3 {
+            margin-top: 0.5rem;
+        }
+
+        .list p {
+            margin-top: 1rem;
+        }
+
+        .list-link {
+            margin-top: 2rem;
+        }
+
+        .list-link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        body.dark .list-link a {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .faq {
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            width: 88%;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        body.dark .faq {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding: 6px;
+            cursor: pointer;
+            background-color: rgba(168, 168, 232, 0.336);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        body.dark .dropdown-toggle {
+            background-color: #000;
+            box-shadow: 0 0 10px #484747;
+            color: #fff;
+        }
+
+        .dropdown-menu {
+            display: none;
+            color: #000;
+            padding-left: 20px;
+            margin-top: 8px;
+            opacity: 0;
+            animation: animateContent 1.5s ease forwards;
+        }
+
+        body.dark .dropdown-menu {
+            color: #fff;
+        }
+
+        .request-demo {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(163, 161, 161);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;   
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            position: absolute;
+            z-index: 1;
+            top:20px;
+            margin-left: 10rem;
+            display: none;
+        }
+
+        body.dark .request-demo {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .demo-edu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .close i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .tell h3 {
+            margin-top: 10px;
+        }
+
+        .tell p {
+            margin-top: 15px;
+        }
+
+        form {
+            display: grid;
+            margin-top: 2rem;
+        }
+
+        form input {
+            padding: 8px;
+            border: 1px solid gainsboro;
+            border-radius: 8px;
+            width: 100%;
+            margin-top: 7px;
+            outline: none;
+        }
+
+        body.dark form input {
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.dark form textarea {
+            background-color: #000;
+            color: #fff;
+        }
+
+        form textarea {
+            height: 30vh;
+            padding: 8px;
+            border: 1px solid gainsboro;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        form label {
+            margin-top: 15px;
+        }
+
+        form button {
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border: none;
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 15px;
+            width: 10%;
+            cursor: pointer;
+        }
+
+        body.dark form button {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .procure {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(163, 161, 161);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;   
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            position: absolute;
+            z-index: 1;
+            top: 250px;
+            margin-left: 10rem;
+            display: none;
+        }
+
+        body.dark .procure {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .pro p {
+            margin-top: 10px;
+        }
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .closes i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        @media(max-width: 800px) {
+
+        .hero {
+            display: block;
+        }
+
+        .first p {
+            width: 90%;
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .security h1 {
+            font-size: 18px;
+            margin: 0;
+            margin-top: 2rem;
+        }
+
+        .security p {
+            margin: 0;
+            margin-top: 1.5rem;
+            font-size: 12px;
+        }
+
+        .security a {
+            margin: 0;
+        }
+
+        .secure {
+            display: block;
+            margin: 0;
+            margin-top: 1.5rem;
+        }
+
+        .edu h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .edu ul li {
+            font-size: 12px;
+            margin: 0;
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+
+        .secure-link a, .facilities a {
+            font-size: 11px;
+        }
+
+        .request a {
+            font-size: 11px;
+        }
+
+        .enterprise {
+            margin: 0;
+            margin-top: 4rem;
+            height: 74vh;
+        }
+
+        .firsts p {
+            width: 50%;
+        }
+
+        .enterprise p {
+            font-size: 13px;
+        }
+
+        .enter {
+            display: block;
+            padding-bottom: 1rem;
+        }
+
+        .enter-text {
+            margin-top: 1rem;
+        }
+
+        .enter-text h3 {
+            font-size: 12px;
+        }
+
+        .enter-text p {
+            font-size: 11px;
+        }
+
+        .secure-links {
+            margin-left: 0;
+            margin-left: 8px;
+        }
+
+        .secure-links a {
+            font-size: 11px;
+        }
+
+        .from {
+            display: block;
+        }
+
+        .org h3 {
+            font-size: 15px;
+        }
+
+        .before {
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+        .beforee {
+            width: 55%;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+        .before ul li, .beforee p {
+            font-size: 11px;
+        }
+
+        .list {
+            margin: 0;
+            margin-top: 1rem;
+        }
+
+        .list h3 {
+            font-size: 15px;
+        }
+
+        .list ul li {
+            font-size: 11px;
+        }
+
+        .list p {
+            font-size: 11px;
+        }
+
+        .list-link a {
+            font-size: 11px;
+        }
+
+        .faq h3 {
+            font-size: 15px;
+        }
+
+        .ferpa p {
+            font-size: 12px;
+        }
+
+        .dropdown-menu p {
+            font-size: 12px;
+        }
+
+        .request-demo {
+            margin: 0;
+            top: 0;
+            margin-left: 1rem;
+            width: 90%;
+            top: 50px;
+        }
+
+        .tell h3 {
+            font-size: 15px;
+        }
+
+        .tell p {
+            font-size: 11px;
+        }
+
+        form label {
+            font-size: 11px;
+        } 
+
+        form button {
+            width: 30%;
+        }
+
+        .procure {
+            top: 0;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin-left: 1rem;
+            top: 180px;
+        }
+
+        .pro h3 {
+            font-size: 15px;
+        }
+
+        .pro p {
+            font-size: 11px;
+        }
+        }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        }
+
+        @keyframes animateContent {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="container">
+        <div id="header"></div>
+        <div class="hero">
+            <div class="security">
+                <div class="first">
+                    <p>Cleaning, Moving, Landscaping & Services</p>
+                </div>
+                <h1>Facilities management software for public-sector operations</h1>
+                <p>Centralize and manage cleaning, moving, landscaping, and facilities services across buildings and campuses.</p>
+                <div class="secure-link">
+                    <a href="#" class="demo">Request a Demo</a>
+                </div>
+                <div class="edu">
+                    <h3>Facilities operations are often manual and difficult to scale</h3>
+                    <ul>
+                        <li>Phone and email-based service requests</li>
+                        <li>Inconsistent service quality</li>
+                        <li>Limited coordination between teams and vendors</li>
+                        <li>Little visibility into performance and costs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="enterprise">
+                <div class="social">
+                    <div class="firsts">
+                        <p>Operations Impact</p>
+                    </div>
+                    <p>Coordinate vendors and internal teams, reduce response time, and measure service-level performance across locations.</p>
+                </div>    
+                <div class="enter">
+                    <div class="enter-text">
+                        <h3>Bring visibility and control to facilities operations</h3>
+                        <p>Ready to scale field operations?</p>
+                    </div>
+                    <div class="secure-links">
+                        <a href="#" class="demos">Request a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="request-demo">
+            <div class="demo-edu">
+                <div class="tell">
+                    <h3>Request a Demo - Facilities</h3>
+                    <p>Share your locations and service types. We'll follow up with scheduling options.</p>
+                </div>
+                <div class="close">
+                    <i class="fa-solid fa-close"></i>
+                </div>
+            </div>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" required>
+                <label for="email">Email</label>
+                <input type="email" required>
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes" required></textarea>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+        <div class="org">
+            <h3>From reactive operations to structured, accountable service delivery</h3>
+            <div class="from">
+                <div class="before">
+                    <h4>Before</h4>
+                    <ul>
+                        <li>Disconnected requests and schedules</li>
+                        <li>No clear ownership or tracking</li>
+                        <li>Delayed reporting</li>
+                    </ul>
+                </div>
+                <div class="before">
+                    <h4>After</h4>
+                    <ul>
+                        <li>Centralized service management</li>
+                        <li>Automated scheduling and tracking</li>
+                        <li>Clear accountability and performance metrics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="key">
+                <h3>Key Benefits</h3>
+                <div class="from">
+                    <div class="beforee">
+                        <p>Centralized work order and service request management</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Support for multiple service categories</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Vendor and internal team coordination</p>
+                    </div>
+                </div>
+                <div class="from">
+                    <div class="beforee">
+                        <p>Mobile access for field and facilities teams</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Real-time reporting and service-level tracking</p>
+                    </div>
+                    <div class="beforee">
+                        <p>Customizable workflows</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how-to">
+            <div class="list">
+                <h3>Supported services</h3>
+                <ul>
+                    <li>Cleaning and janitorial services</li>
+                    <li>Moving and relocation</li>
+                    <li>Landscaping and groundskeeping</li>
+                    <li>Custom facilities and operational workflows</li>
+                </ul>
+            </div>
+            <div class="list">
+                <h3>Social Proof</h3>
+                <p>Testimonials from facilities or operations leaders and metrics such as reduced response times and improved service consistency.</p>
+            </div>
+            <div class="list">
+                <h3>Pricing</h3>
+                <p>Pricing based on number of locations, services managed, users and support requirements.</p>
+                <div class="list-link">
+                    <a href="#" class="openDocs">Request Pricing</a>
+                </div>
+            </div>          
+        </div>
+        <div class="procure">
+            <div class="cont">
+                <div class="pro">
+                    <h3>Request Pricing - Facilities</h3>
+                    <p>Pricing is based on locations, services, and support levels. Request a quote to start.</p>
+                </div>
+                <div class="closes">
+                    <i class="fa-solid fa-close"></i>
+                </div>
+            </div>
+            <div class="request">
+                <a href="#" class="proDocs">Request Pricing</a>
+            </div>
+        </div>
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="can">
+                <div class="dropdown-toggle">
+                    <div class="ferpa">
+                        <p>Can this manage multiple buildings or campuses?</p>
+                    </div>
+                    <div class="plus">
+                        <i class="fa-solid fa-plus" id="plus"></i>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Yes. The platform is designed for multi-location public-sector environments.</p>
+                </div>
+            </div>
+            <div class="can">
+                <div class="dropdown-toggle">
+                    <div class="ferpa">
+                        <p>Does it support third-party vendors?</p>
+                    </div>
+                    <div class="plus">
+                        <i class="fa-solid fa-plus" id="plus"></i>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Yes. Vendors and internal teams can be managed within the same workflows.</p>
+                </div>
+            </div>
+            <div class="can">
+                <div class="dropdown-toggle">
+                    <div class="ferpa">
+                        <p>Is mobile access available for crews?</p>
+                    </div>
+                    <div class="plus">
+                        <i class="fa-solid fa-plus" id="plus"></i>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Yes. Field teams can access and update work orders from mobile devices.</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+     </div>
+     <script>
+        window.addEventListener('load', () => {
+            //---------------------------------------------------------------
+
+        //----------------------------------------------------------------
+        const demo = document.querySelector('.demo');
+        const demos = document.querySelector('.demos');
+        const reqDemo = document.querySelector('.request-demo');
+        const closes = document.querySelector('.close');
+        const submit = document.querySelector('.submit');
+        const openDocs = document.querySelector('.openDocs');
+        const openPro = document.querySelector('.procure');
+        const closess = document.querySelector('.closes');
+        const proDocs = document.querySelector('.proDocs');
+
+        demo.addEventListener('click', show);
+        demos.addEventListener('click', show);
+        closes.addEventListener('click', close);
+
+        function show(){
+        reqDemo.style.display = "block";
+        }
+
+        function close(){
+        reqDemo.style.display = "none";
+        }
+
+        openDocs.addEventListener('click', display);
+        closess.addEventListener('click', cancel);
+
+        function display(){
+        openPro.style.display = "block";
+        }
+
+        function cancel(){
+        openPro.style.display = "none";
+        }
+
+        proDocs.addEventListener("click", () => {
+        alert("Thanks, a sales rep will contact you.");
+        });
+        //----------------------------------------------------------------
+        });
+     </script>
+     <script src="javascript/include.js"></script>
+</body>
+</html>

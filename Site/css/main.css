@@ -1,0 +1,453 @@
+.theme-toggle i {
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: #000;
+}
+
+body.dark nav {
+  background-color: #121212;
+  color: #fff;
+}
+
+.theme-toggle i {
+    font-size: 34px;
+    margin-top: .5rem;
+}
+
+body.dark .theme-toggle i {
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    padding: .3rem;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    margin: 0;
+    width: 100%;
+}
+
+.mainMenu {
+    display: flex;
+    margin-left: 15rem;
+}
+
+.mainMenu li {
+    list-style: none;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.mainMenu li a {
+      text-decoration: none;
+      margin-top: .5rem;
+      color: #000;
+      font-size: 17px;
+      font-weight: 600;
+      opacity: 0.6;
+      margin: .3rem;
+}
+
+body.dark .mainMenu li a {
+    color: #fff;
+}
+
+.mainMenu li a:hover {
+    opacity: 0.6;
+}
+
+.mainMenu .edu .sol {
+    color: #fff;
+}
+
+.openMenu {
+    display: none;
+}
+
+.closeMenu {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    color: #000;
+}
+
+.logo-img {
+    width:55px;
+    height:55px;
+    border-radius:10px;
+    background:rgba(71, 70, 70, 0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    margin-top: 4px;
+}
+
+body.dark .logo {
+    color: #fff;
+}
+
+body.dark .logo-img {
+    background:rgba(216, 213, 213, 0.15);
+}
+
+.log a {
+    background-color: #fff;
+    padding: 7px;
+    color: #000;
+    border-radius: 8px;
+}
+
+.stuni {
+    margin-left: .5rem;
+}
+
+.student {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+body.dark .student{
+    color: #fff;
+}
+
+.uni {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+}
+
+body.dark .uni {
+    color: #fff;
+}
+
+.ayjas {
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+    font-size: 12px;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+body.dark .ayjas {
+    background-color: #000;
+}
+
+.refuge h1 {
+    font-size: 28px;
+    line-height: 2.2;
+    margin-left: 3rem;
+    color: #fff;
+}
+
+.refuge p {
+    opacity: 0.7;
+    margin-top: 1rem;
+    text-align: center;
+    border-top: 1px solid #fff;
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.terms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.useful {
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.useful h1 {
+    font-size: 14px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    border-left: 2px solid blue;
+    padding: 5px;
+}
+
+.lin {
+    width: 15%;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    color: #000;
+    display: none;
+}
+
+.links li {
+    list-style: none;
+    font-size: 12px;
+    color: #fff;
+}
+
+.useful, .links {
+    list-style: none;
+    list-style: square;
+}
+
+.links li a {
+    color: #fff;
+}
+
+.links, .cit {
+    margin: 1rem;
+}
+
+.cit, .of {
+    color: black;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.icons {
+    text-decoration: none;
+    color: #fff;
+}
+
+.icons i {
+    color: #fff;
+    font-size: 20px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.Ay {
+    color: greenyellow;
+    font-weight: 200;
+}
+
+.create {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.create p {
+    line-height: 1.8;
+}
+
+body.dark .create {
+    background-color: #000;
+}
+
+@media(max-width: 800px){
+    nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .logo-img {
+    margin: 0;
+    width: 44px;
+    height: 44px;
+    margin-top: 4px;
+  }
+
+  .student {
+    font-size: 31px;
+  }
+
+  .uni {
+    font-size: 7px;
+  }
+  
+  .stuni {
+        margin-top: 1px;
+        font-size: 30px;
+    }
+  
+ .mainMenu {
+    background-color: #fff;
+    position: fixed;
+    height: 100vh;
+    width: 80%;
+    top: 0;
+    right: -80%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    transition: right 1s ease-in-out;
+    padding-bottom: 10rem;
+    overflow-x: hidden;
+    margin-left: 0;
+  }
+
+  body.dark .mainMenu {
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .mainMenu::-webkit-scrollbar {
+    width: 6px
+  }
+
+  .mainMenu::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  .mainMenu::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  
+  }
+
+  .mainMenu.show {
+  right: 0;
+  }
+
+
+  
+  .mainMenu li {
+      list-style: none;
+      margin-top: .6rem;
+  }
+  
+  .mainMenu .home {
+      margin-top: 4rem;
+  }
+  
+  .mainMenu li a {
+      text-decoration: none;
+      margin-top: .5rem;
+      color: #000;
+      margin-left: 1rem;
+      margin-top: 1rem;
+  }
+
+  body.dark .mainMenu li a {
+    color: #fff;
+  }
+
+  .theme-toggle i {
+    color: #000;
+    margin-left: 3rem;
+  }
+
+  body.dark .theme-toggle i {
+    color: #fff;
+  }
+  
+  .closeMenu {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 30px;
+      margin-top: 1rem;
+      cursor: pointer;
+  }
+  
+  .closeMenu i {
+      color: #000;
+      font-size: 26px;
+  }
+
+  body.dark .closeMenu i {
+    color: #fff;
+  }
+
+  .openMenu {
+    margin-right: 2rem;
+    margin-top: .8rem;
+    cursor: pointer;
+    display: block;
+  }
+
+  .openMenu i {
+    color: #000;
+    font-size: 22px;
+    margin: 0;
+  }
+
+  body.dark .openMenu i {
+    color: #fff;
+  }
+
+  .ayjas {
+        display: block;
+        padding-bottom: 3rem;
+    }
+    
+    .terms {
+        display: block;
+    }
+
+    .lin {
+        width: 7%;
+    }
+    
+    .links li a {
+        font-size: 11px;
+    }
+
+    .useful {
+        margin: 0;
+    }
+
+    .refuge {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .refuge h1 {
+        margin: 0;
+        margin-left: .4rem;
+        margin-top: 1.5rem;
+        font-size: 14px;
+    }
+
+    .refuge p {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+        border-top: 1px solid gainsboro;
+        padding: 5px;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    .create {
+        font-size: 13px;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        /* top: -20px; */
+    }
+
+    .create p {
+        font-size: 12px;
+    }
+
+    .icons a i {
+        font-size: 14px;
+    }
+
+}
