@@ -39,14 +39,10 @@
         }
 
         .hero {
-            display: flex;
-            gap: 2%;
-            width: 90%;
-            margin: 0 auto;
+            margin-top: 5rem;
         }
 
         .security {
-            background-color: rgba(168, 168, 232, 0.336);
             padding: 10px;
             margin-top: 1rem;
             border-radius: 8px;
@@ -54,31 +50,18 @@
         }
 
         body.dark .security {
-            background-color: black;
-            box-shadow: 0 0 10px #fff;
+            background-color: #121212;
         }
 
         .security h1 {
             margin-left: 1.5rem;
             margin-top: 1rem;
+            font-size: 60px;
+            font-weight: 300;
         }
 
-        .first p {
-            margin-top: 1rem;
-            background-color: #97a1cbf8;
-            border-radius: 15px;
-            padding: 7px;
-            width: 63%;
-            color: #fff;
-        }
-
-        .firsts p {
-            margin-top: 2rem;
-            background-color: #97a1cbf8;
-            border-radius: 15px;
-            padding: 7px;
-            width: 34%;
-            color: #fff;
+        .security h1 span {
+            color: blue;
         }
 
         .security p {
@@ -97,9 +80,10 @@
         .secure-link a {
             text-decoration: none;
             color: #fff;
-            background-color: #1d2d74f8;
-            padding: 8px;
-            border-radius: 6px;
+            background-color: blue;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 14px;
         }
 
         .secure-links {
@@ -110,14 +94,28 @@
         .secure-links a {
             text-decoration: none;
             color: #fff;
-            background-color: #1d2d74f8;
-            padding: 8px;
-            border-radius: 6px;
+            background-color: blue;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 14px;
         }
 
         body.dark .secure-link a {
             background-color: #000;
-            box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #616060;
+        }
+
+        .first p {
+            
+            width: 63%;
+        }
+
+        .firsts p {
+            margin-top: 2rem;
+            border-left: 2px solid blue;
+            padding: 5px;
+            width: 34%;
+            font-weight: 700;
         }
 
         .edu {
@@ -140,7 +138,7 @@
         .request a {
             text-decoration: none;
             background-color: transparent;
-            border: 1px solid #1d2d74f8;
+            border: 1px solid blue;
             padding: 8px;
             border-radius: 6px;
             color: #000;
@@ -152,7 +150,7 @@
         }
 
         .social {
-            background-color: rgba(168, 168, 232, 0.336);
+            
             padding: 10px;
             margin-top: 1rem;
             border-radius: 8px;
@@ -160,16 +158,14 @@
         }
 
         body.dark .social {
-            background-color: black;
-            box-shadow: 0 0 10px #fff;
+            background-color: #121212;
         }
 
         .enterprise p {
             margin-top: 2rem;
         }
 
-        .enter {
-            background-color: rgba(168, 168, 232, 0.336);
+        .enter { 
             padding: 10px;
             margin-top: 1rem;
             border-radius: 8px;
@@ -178,8 +174,7 @@
         }
 
         body.dark .enter {
-            background-color: black;
-            box-shadow: 0 0 10px #fff;
+            background-color: #121212;
         }
 
         .enter-text {
@@ -187,7 +182,9 @@
         }
 
         .enter-text h3 {
-            font-size: 13px;
+            font-size: 16px;
+            padding: 5px;
+            border-left: 2px solid blue;
         }
 
         .enter-text p {
@@ -198,89 +195,166 @@
 
         body.dark .secure-links a {
             background-color: #000;
-            box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #3e3d3d;
             color: #fff;
         }
 
         .org h3 {
-            text-align: center;
             margin-top: 5rem;
         }
 
         .from {
             display: flex;
             gap: 2%;
-            margin: 0 auto;
-            justify-content: center;
             margin-top: 1rem;
         }
 
         .before {
-            background-color: rgba(168, 168, 232, 0.336);
             padding: 10px;
             margin-top: 1rem;
             border-radius: 8px;
+        }
+
+        .before ul li {
+            margin-top: 1rem;
+            margin-left: 2rem;
+        }
+
+        .before h4 {
+            border-left: 2px solid blue;
+            padding: 5px;
         }
 
         body.dark .before {
             background-color: #000;
-            box-shadow: 0 0 10px #fff;
             color: #fff;
         }
 
+        .key-ben {
+            display: flex;
+        }
+
+        .ben-img {
+            text-align: center;
+        }
+
+        .ben-img img {
+            width: 75%;
+            border-radius: 50%;
+            border: 10px solid blue;
+        }
+
         .beforee {
-            background-color: rgba(168, 168, 232, 0.336);
-            padding: 10px;
-            margin-top: 1rem;
+            padding: 20px;
+            margin-top: 2.5rem;
             border-radius: 8px;
-            width: 18%;
+            border: 2px solid rgb(145, 145, 216);
         }
 
         body.dark .beforee {
             background-color: #000;
-            box-shadow: 0 0 10px #fff;
             color: #fff;
         }
 
-        .beforee p {
-            width: 80%;
-            margin-top: 10px;
-            margin-left: 7px;
+        .ico i {
+            top: -80px;
+            left: 340px;
+            position: relative;
+            font-size: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            border-bottom-right-radius: 0;
+            box-shadow: 0 0 10px rgb(180, 178, 178);
         }
 
-        .before ul li {
-            margin-left: 2rem;
-            margin-top: 1rem;
+        body.dark .ico i, body.dark .icoo i, body.dark .icoon i {
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.dark .iconn i, body.dark .iconns i, body.dark .iconss i {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .icoo i {
+            top: -80px;
+            left: 340px;
+            position: relative;
+            font-size: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgb(180, 178, 178);
+        }
+
+        .icoon i {
+            top: -80px;
+            left: 340px;
+            position: relative;
+            font-size: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            border-top-right-radius: 0;
+            box-shadow: 0 0 10px rgb(180, 178, 178);
+        }
+
+        .iconss i {
+            top: -80px;
+            right: 60px;
+            position: relative;
+            font-size: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            border-bottom-left-radius: 0;
+            box-shadow: 0 0 10px rgb(180, 178, 178);
+        }
+
+        .iconn i {
+            top: -80px;
+            right: 60px;
+            position: relative;
+            font-size: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgb(180, 178, 178);
+        }
+
+        .iconns i {
+            top: -80px;
+            right: 60px;
+            position: relative;
+            font-size: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            border-top-left-radius: 0;
+            box-shadow: 0 0 10px rgb(180, 178, 178);
         }
 
         .how-to {
-            margin-left: 2rem;
+            /* margin-left: 2rem; */
             margin-top: 2rem;
         }
 
-        .list {
-            background-color: rgba(168, 168, 232, 0.336);
-            padding: 10px;
-            border-radius: 8px;
-            width: 90%;
-            margin: 0 auto;
-            margin-top: 1rem;
-            padding-bottom: 1rem;
-        }
-
         body.dark .list {
-            background-color: #000;
-            box-shadow: 0 0 10px #fff;
+            background-color: #121212;
             color: #fff;
         }
 
         .list ul li {
             margin-left: 2rem;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .list h3 {
-            margin-top: 0.5rem;
+            margin-top: 2.5rem;
+            border-left: 2px solid blue;
+            padding: 5px;
         }
 
         .list p {
@@ -293,31 +367,29 @@
 
         .list-link a {
             text-decoration: none;
+            text-decoration: none;
             color: #fff;
-            background-color: #1d2d74f8;
-            padding: 8px;
-            border-radius: 6px;
+            background-color: blue;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 14px;
         }
 
         body.dark .list-link a {
             background-color: #000;
-            box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #3d3c3c;
             color: #fff;
         }
 
         .faq {
-            background-color: rgba(168, 168, 232, 0.336);
             padding: 10px;
             margin-top: 1rem;
             border-radius: 8px;
-            width: 88%;
-            margin: 0 auto;
             margin-top: 2rem;
         }
 
         body.dark .faq {
-            background-color: #000;
-            box-shadow: 0 0 10px #fff;
+            background-color: #121212;
             color: #fff;
         }
 
@@ -481,6 +553,135 @@
             cursor: pointer;
         }
 
+        .request-demo {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(163, 161, 161);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;   
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            position: absolute;
+            z-index: 1;
+            top:20px;
+            margin-left: 10rem;
+            display: none;
+        }
+
+        body.dark .request-demo {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .demo-edu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .close i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .tell h3 {
+            margin-top: 10px;
+        }
+
+        .tell p {
+            margin-top: 15px;
+        }
+
+        form {
+            display: grid;
+            margin-top: 2rem;
+        }
+
+        form input {
+            padding: 8px;
+            border: 1px solid gainsboro;
+            border-radius: 8px;
+            width: 100%;
+            margin-top: 7px;
+            outline: none;
+        }
+
+        body.dark form input {
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.dark form textarea {
+            background-color: #000;
+            color: #fff;
+        }
+
+        form textarea {
+            height: 30vh;
+            padding: 8px;
+            border: 1px solid gainsboro;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        form label {
+            margin-top: 15px;
+        }
+
+        form button {
+            background-color: #1d2d74f8;
+            padding: 8px;
+            border: none;
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 15px;
+            width: 10%;
+            cursor: pointer;
+        }
+
+        body.dark form button {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .procure {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(163, 161, 161);
+            padding: 10px;
+            margin-top: 1rem;
+            border-radius: 8px;   
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            position: absolute;
+            z-index: 1;
+            top: 250px;
+            margin-left: 10rem;
+            display: none;
+        }
+
+        body.dark .procure {
+            background-color: #000;
+            box-shadow: 0 0 10px #fff;
+            color: #fff;
+        }
+
+        .pro p {
+            margin-top: 10px;
+        }
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .closes i {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
         @media(max-width: 800px) {
 
         .hero {
@@ -488,9 +689,14 @@
         }
 
         .first p {
-            width: 90%;
+            width: 100%;
             margin: 0;
+            margin-left: 0;
             font-size: 12px;
+        }
+
+        .firsts p {
+            width: 100%;
         }
 
         .security h1 {
@@ -541,10 +747,6 @@
             height: 74vh;
         }
 
-        .firsts p {
-            width: 50%;
-        }
-
         .enterprise p {
             font-size: 13px;
         }
@@ -577,6 +779,70 @@
 
         .from {
             display: block;
+        }
+
+        .key-ben {
+            display: block;
+        }
+
+        .ico i {
+            top: 0;
+            left: 0;
+            padding: 0;
+            padding: 15px;
+            font-size: 20px;
+            left: 250px;
+            top: -60px;
+        }
+
+        .iconn i {
+            top: 0;
+            right: 0;
+            padding: 0;
+            padding: 15px;
+            font-size: 20px;
+            top: -58px;
+            left: 10px;
+        }
+
+        .icoo i {
+            top: 0;
+            left: 0;
+            padding: 0;
+            padding: 15px;
+            font-size: 20px;
+            left: 250px;
+            top: -60px;
+        }
+
+        .icoon i {
+            top: 0;
+            left: 0;
+            padding: 0;
+            padding: 15px;
+            font-size: 20px;
+            left: 250px;
+            top: -60px;
+        }
+
+        .iconns i {
+            top: 0;
+            right: 0;
+            padding: 0;
+            padding: 15px;
+            font-size: 20px;
+            top: -58px;
+            left: 10px;
+        }
+
+        .iconss i {
+            top: 0;
+            right: 0;
+            padding: 0;
+            padding: 15px;
+            font-size: 20px;
+            top: -58px;
+            left: 10px;
         }
 
         .org h3 {
@@ -625,7 +891,7 @@
         }
 
         .ferpa p {
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .dropdown-menu p {
@@ -699,7 +965,7 @@
                 <div class="first">
                     <p>Cleaning, Moving, Landscaping & Services</p>
                 </div>
-                <h1>Facilities management software for public-sector operations</h1>
+                <h1>Facilities <span>management software</span> for public-sector <span>operations.</span></h1>
                 <p>Centralize and manage cleaning, moving, landscaping, and facilities services across buildings and campuses.</p>
                 <div class="secure-link">
                     <a href="#" class="demo">Request a Demo</a>
@@ -774,26 +1040,49 @@
             </div>
             <div class="key">
                 <h3>Key Benefits</h3>
-                <div class="from">
-                    <div class="beforee">
-                        <p>Centralized work order and service request management</p>
+                <div class="key-ben">
+                    <div class="froms">
+                        <div class="beforee">
+                            <p>Centralized work order and service request management</p>
+                        </div>
+                        <div class="ico">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <div class="beforee">
+                            <p>Support for multiple service categories</p>
+                        </div>
+                        <div class="icoo">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div class="beforee">
+                            <p>Vendor and internal team coordination</p>
+                        </div>
+                        <div class="icoon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
                     </div>
-                    <div class="beforee">
-                        <p>Support for multiple service categories</p>
+                    <div class="ben-img">
+                        <img src="images/abi.jpg" alt="">
                     </div>
-                    <div class="beforee">
-                        <p>Vendor and internal team coordination</p>
-                    </div>
-                </div>
-                <div class="from">
-                    <div class="beforee">
-                        <p>Mobile access for field and facilities teams</p>
-                    </div>
-                    <div class="beforee">
-                        <p>Real-time reporting and service-level tracking</p>
-                    </div>
-                    <div class="beforee">
-                        <p>Customizable workflows</p>
+                    <div class="froms">
+                        <div class="beforee">
+                            <p>Mobile access for field and facilities teams</p>
+                        </div>
+                        <div class="iconss">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="beforee">
+                            <p>Real-time reporting and service-level tracking</p>
+                        </div>
+                        <div class="iconn">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <div class="beforee">
+                            <p>Customizable workflows</p>
+                        </div>
+                        <div class="iconns">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -881,6 +1170,23 @@
      <script>
         window.addEventListener('load', () => {
             //---------------------------------------------------------------
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+
+                const icon = toggle.querySelector('i');
+                if (icon.classList.contains('fa-plus')) {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+                } else {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+                }
+            });
+            });
 
         //----------------------------------------------------------------
         const demo = document.querySelector('.demo');
