@@ -21,6 +21,21 @@
             overflow-x: hidden;
         }
 
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background-image:
+                linear-gradient(90deg, rgba(0, 8, 255, 0.3) 1px, transparent 1px),
+                linear-gradient(rgba(0,8,255,0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: shine 2s linear infinite;
+            z-index: -1;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(0,255,255,0.3), 0 0 20px rgba(0,255,255,0.2);
+        }
+
         body.light {
         background: #ffffff;
         color: #222;
@@ -38,6 +53,17 @@
             margin: 0 auto;
         }
 
+        .hidden {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         .hero {
             margin-top: 5rem;
         }
@@ -47,10 +73,6 @@
             margin-top: 1rem;
             border-radius: 8px;
             padding-bottom: 2rem;
-        }
-
-        body.dark .security {
-            background-color: #121212;
         }
 
         .security h1 {
@@ -157,10 +179,6 @@
             height: 45vh;
         }
 
-        body.dark .social {
-            background-color: #121212;
-        }
-
         .enterprise p {
             margin-top: 2rem;
         }
@@ -171,10 +189,6 @@
             border-radius: 8px;
             display: block;
             padding-bottom: 1rem;
-        }
-
-        body.dark .enter {
-            background-color: #121212;
         }
 
         .enter-text {
@@ -225,11 +239,6 @@
             padding: 5px;
         }
 
-        body.dark .before {
-            background-color: #000;
-            color: #fff;
-        }
-
         .key-ben {
             display: flex;
         }
@@ -249,11 +258,6 @@
             margin-top: 2.5rem;
             border-radius: 8px;
             border: 2px solid rgb(145, 145, 216);
-        }
-
-        body.dark .beforee {
-            background-color: #000;
-            color: #fff;
         }
 
         .ico i {
@@ -339,11 +343,6 @@
         .how-to {
             /* margin-left: 2rem; */
             margin-top: 2rem;
-        }
-
-        body.dark .list {
-            background-color: #121212;
-            color: #fff;
         }
 
         .list ul li {
@@ -955,22 +954,36 @@
                 opacity: 1;
             }
         }
+
+        @keyframes shine {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 40px 40px;
+        }
+        }
+
+        @keyframes shine {
+        0% { background-position: 0 0; }
+        100% { background-position: 40px 40px; }
+        }
     </style>
 </head>
 <body class="light">
+    <div id="header"></div>
     <div class="container">
-        <div id="header"></div>
         <div class="hero">
             <div class="security">
                 <div class="first">
-                    <p>Cleaning, Moving, Landscaping & Services</p>
+                    <p class="hidden">Cleaning, Moving, Landscaping & Services</p>
                 </div>
-                <h1>Facilities <span>management software</span> for public-sector <span>operations.</span></h1>
-                <p>Centralize and manage cleaning, moving, landscaping, and facilities services across buildings and campuses.</p>
-                <div class="secure-link">
+                <h1 class="hidden">Facilities <span>management software</span> for public-sector <span>operations.</span></h1>
+                <p class="hidden">Centralize and manage cleaning, moving, landscaping, and facilities services across buildings and campuses.</p>
+                <div class="secure-link hidden">
                     <a href="#" class="demo">Request a Demo</a>
                 </div>
-                <div class="edu">
+                <div class="edu hidden">
                     <h3>Facilities operations are often manual and difficult to scale</h3>
                     <ul>
                         <li>Phone and email-based service requests</li>
@@ -981,18 +994,18 @@
                 </div>
             </div>
             <div class="enterprise">
-                <div class="social">
+                <div class="social hidden">
                     <div class="firsts">
                         <p>Operations Impact</p>
                     </div>
                     <p>Coordinate vendors and internal teams, reduce response time, and measure service-level performance across locations.</p>
                 </div>    
                 <div class="enter">
-                    <div class="enter-text">
+                    <div class="enter-text hidden">
                         <h3>Bring visibility and control to facilities operations</h3>
                         <p>Ready to scale field operations?</p>
                     </div>
-                    <div class="secure-links">
+                    <div class="secure-links hidden">
                         <a href="#" class="demos">Request a Demo</a>
                     </div>
                 </div>
@@ -1019,9 +1032,9 @@
             </form>
         </div>
         <div class="org">
-            <h3>From reactive operations to structured, accountable service delivery</h3>
+            <h3 class="hidden">From reactive operations to structured, accountable service delivery</h3>
             <div class="from">
-                <div class="before">
+                <div class="before hidden">
                     <h4>Before</h4>
                     <ul>
                         <li>Disconnected requests and schedules</li>
@@ -1029,7 +1042,7 @@
                         <li>Delayed reporting</li>
                     </ul>
                 </div>
-                <div class="before">
+                <div class="before hidden">
                     <h4>After</h4>
                     <ul>
                         <li>Centralized service management</li>
@@ -1039,55 +1052,55 @@
                 </div>
             </div>
             <div class="key">
-                <h3>Key Benefits</h3>
+                <h3 class="hidden">Key Benefits</h3>
                 <div class="key-ben">
                     <div class="froms">
-                        <div class="beforee">
+                        <div class="beforee hidden">
                             <p>Centralized work order and service request management</p>
                         </div>
-                        <div class="ico">
+                        <div class="ico hidden">
                             <i class="fa-solid fa-credit-card"></i>
                         </div>
-                        <div class="beforee">
+                        <div class="beforee hidden">
                             <p>Support for multiple service categories</p>
                         </div>
-                        <div class="icoo">
+                        <div class="icoo hidden">
                             <i class="fa-solid fa-bars"></i>
                         </div>
-                        <div class="beforee">
+                        <div class="beforee hidden">
                             <p>Vendor and internal team coordination</p>
                         </div>
-                        <div class="icoon">
+                        <div class="icoon hidden">
                             <i class="fa-brands fa-github"></i>
                         </div>
                     </div>
-                    <div class="ben-img">
+                    <div class="ben-img hidden">
                         <img src="images/abi.jpg" alt="">
                     </div>
                     <div class="froms">
-                        <div class="beforee">
+                        <div class="beforee hidden">
                             <p>Mobile access for field and facilities teams</p>
                         </div>
-                        <div class="iconss">
+                        <div class="iconss hidden">
                             <i class="fa-solid fa-house"></i>
                         </div>
-                        <div class="beforee">
+                        <div class="beforee hidden">
                             <p>Real-time reporting and service-level tracking</p>
                         </div>
-                        <div class="iconn">
+                        <div class="iconn hidden">
                             <i class="fa-solid fa-school"></i>
                         </div>
-                        <div class="beforee">
+                        <div class="beforee hidden">
                             <p>Customizable workflows</p>
                         </div>
-                        <div class="iconns">
+                        <div class="iconns hidden">
                             <i class="fa-solid fa-bars"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="how-to">
+        <div class="how-to hidden">
             <div class="list">
                 <h3>Supported services</h3>
                 <ul>
@@ -1097,14 +1110,14 @@
                     <li>Custom facilities and operational workflows</li>
                 </ul>
             </div>
-            <div class="list">
+            <div class="list hidden">
                 <h3>Social Proof</h3>
                 <p>Testimonials from facilities or operations leaders and metrics such as reduced response times and improved service consistency.</p>
             </div>
-            <div class="list">
+            <div class="list hidden">
                 <h3>Pricing</h3>
                 <p>Pricing based on number of locations, services managed, users and support requirements.</p>
-                <div class="list-link">
+                <div class="list-link hidden">
                     <a href="#" class="openDocs">Request Pricing</a>
                 </div>
             </div>          
@@ -1123,7 +1136,7 @@
                 <a href="#" class="proDocs">Request Pricing</a>
             </div>
         </div>
-        <div class="faq">
+        <div class="faq hidden">
             <h3>Frequently Asked Questions</h3>
             <div class="can">
                 <div class="dropdown-toggle">
@@ -1225,6 +1238,17 @@
         proDocs.addEventListener("click", () => {
         alert("Thanks, a sales rep will contact you.");
         });
+
+        const sections = document.querySelectorAll(".hidden");
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.8;
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
         //----------------------------------------------------------------
         });
      </script>

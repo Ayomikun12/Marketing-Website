@@ -21,6 +21,21 @@
             overflow-x: hidden;
         }
 
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background-image:
+                linear-gradient(90deg, rgba(0, 8, 255, 0.3) 1px, transparent 1px),
+                linear-gradient(rgba(0,8,255,0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: shine 2s linear infinite;
+            z-index: -1;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(0,255,255,0.3), 0 0 20px rgba(0,255,255,0.2);
+        }
+
         .container {
             width: 90%;
             margin: 0 auto;
@@ -38,6 +53,17 @@
         color: #f1f1f1;
         }
 
+        .hidden {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         .hero {
             margin-top: 5rem;
         }
@@ -47,10 +73,6 @@
             margin-top: 1rem;
             border-radius: 8px;
             padding-bottom: 2rem;
-        }
-
-        body.dark .security {
-            background-color: #121212;
         }
 
         .security h1 {
@@ -152,10 +174,6 @@
             height: 45vh;
         }
 
-        body.dark .social {
-            background-color: #121212;
-        }
-
         .enterprise p {
             margin-top: 2rem;
         }
@@ -166,10 +184,6 @@
             border-radius: 8px;
             display: block;
             padding-bottom: 1rem;
-        }
-
-        body.dark .enter {
-            background-color: #121212;
         }
 
         .enter-text {
@@ -218,11 +232,6 @@
         .before h4 {
             border-left: 2px solid blue;
             padding: 5px;
-        }
-
-        body.dark .before {
-            background-color: #000;
-            color: #fff;
         }
 
         .key-ben {
@@ -334,11 +343,6 @@
         .how-to {
             /* margin-left: 2rem; */
             margin-top: 2rem;
-        }
-
-        body.dark .list {
-            background-color: #121212;
-            color: #fff;
         }
 
         .list ol li {
@@ -824,22 +828,36 @@
                 opacity: 1;
             }
         }
+
+        @keyframes shine {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 40px 40px;
+        }
+        }
+
+        @keyframes shine {
+        0% { background-position: 0 0; }
+        100% { background-position: 40px 40px; }
+        }
     </style>
 </head>
 <body class="light">
+    <div id="header"></div>
     <div class="container">
-        <div id="header"></div>
         <div class="hero">
             <div class="security">
                 <div class="first">
-                    <p>For School Districts & Universities</p>
+                    <p class="hidden">For School Districts & Universities</p>
                 </div>
-                <h1>Enterprise <span>education software</span> built for secure, compliant <span>operations.</span></h1>
-                <p>Purpose-built platforms for school districts and universities operating in regulated, high-scale environments.</p>
-                <div class="secure-link">
+                <h1 class="hidden">Enterprise <span>education software</span> built for secure, compliant <span>operations.</span></h1>
+                <p class="hidden">Purpose-built platforms for school districts and universities operating in regulated, high-scale environments.</p>
+                <div class="secure-link hidden" >
                     <a href="#" class="demo">Request a Demo</a>
                 </div>
-                <div class="edu">
+                <div class="edu hidden">
                     <h3>Education agencies face growing operational and compliance pressure</h3>
                     <ul>
                         <li>Legacy systems and disconnected tools</li>
@@ -850,18 +868,18 @@
                 </div>
             </div>
             <div class="enterprise">
-                <div class="social">
+                <div class="social hidden">
                     <div class="firsts">
                         <p>Social Proof</p>
                     </div>
                     <p>"Ayjas Integrated Systems helped our district replace fragmented tools with a single secure platform - we improved reporting and reduced manual work." - IT Director, Example Unified School District</p>
                 </div>    
                 <div class="enter">
-                    <div class="enter-text">
+                    <div class="enter-text hidden">
                         <h3>Modernize education operations with confidence</h3>
                         <p>Ready to move away from manual workflows?</p>
                     </div>
-                    <div class="secure-links">
+                    <div class="secure-links hidden">
                         <a href="#" class="demos">Request a Demo</a>
                     </div>
                 </div>
@@ -888,9 +906,9 @@
             </form>
         </div>
         <div class="org">
-            <h3>From fragmented systems to confident, compliant operations</h3>
+            <h3 class="hidden">From fragmented systems to confident, compliant operations</h3>
             <div class="from">
-                <div class="before">
+                <div class="before hidden">
                     <h4>Before</h4>
                     <ul>
                         <li>Spreadsheets, emails, and manual approvals</li>
@@ -898,7 +916,7 @@
                         <li>Audit and compliance uncertainty</li>
                     </ul>
                 </div>
-                <div class="before">
+                <div class="before hidden">
                     <h4>After</h4>
                     <ul>
                         <li>Centralized, secure workflows</li>
@@ -910,7 +928,7 @@
             <div class="key">
                 <h3>Key Benefits</h3>
                 <div class="key-ben">
-                    <div class="froms">
+                    <div class="froms hidden">
                         <div class="beforee">
                             <p>FERPA-aligned data protection practices</p>
                         </div>
@@ -930,10 +948,10 @@
                             <i class="fa-brands fa-github"></i>
                         </div>
                     </div>
-                    <div class="ben-img">
+                    <div class="ben-img hidden">
                         <img src="images/abi.jpg" alt="">
                     </div>
-                    <div class="froms">
+                    <div class="froms hidden">
                         <div class="beforee">
                             <p>Scales across schools, campuses, and departments</p>
                         </div>
@@ -957,7 +975,7 @@
             </div>
         </div>
         <div class="how-to">
-            <div class="list">
+            <div class="list hidden">
                 <h3>How it works</h3>
                 <ol>
                     <li>Configure workflows based on agency requirements</li>
@@ -966,11 +984,11 @@
                     <li>Scale deployment across the organization</li>
                 </ol>
             </div>
-            <div class="list">
+            <div class="list hidden">
                 <h3>Trusted by education agencies</h3>
                 <p>Logos and short testimonials from districts and universities. Currently deployed in education agencies, with additional public-sector partnerships underway.</p>
             </div>
-            <div class="list">
+            <div class="list hidden">
                 <h3>Pricing</h3>
                 <p>Enterprise pricing designed for education agencies. Custom pricing based on number of users, scope of deployment, support and onboarding needs. Annual contracts available.</p>
                 <div class="list-link">
@@ -992,7 +1010,7 @@
                 <a href="#" class="proDocs">Request Pricing</a>
             </div>
         </div>
-        <div class="faq">
+        <div class="faq hidden">
             <h3>Frequently Asked Questions</h3>
             <div class="dropdown-toggle">
                 <div class="ferpa">
@@ -1088,6 +1106,17 @@
         proDocs.addEventListener("click", () => {
         alert("Thanks, a sales rep will contact you.");
         });
+
+        const sections = document.querySelectorAll(".hidden");
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.8;
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
         });
      </script>
      <script src="javascript/include.js"></script>

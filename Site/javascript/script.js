@@ -22,4 +22,15 @@ function close(){
 proDocs.addEventListener("click", () => {
   alert("We will follow up with procurement paperwork.");
 });
+
+const sections = document.querySelectorAll(".hidden");
+    window.addEventListener("scroll", () => {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.toggle(
+                "show",
+                section.getBoundingClientRect().top < trigger
+            );
+        });
+    });
 });
