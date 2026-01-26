@@ -64,3 +64,31 @@ function initNavigation() {
         closeMenu.addEventListener("click", () => mainMenu.classList.remove("show"));
     }
 }
+
+const sections = document.querySelectorAll(".hidden");
+
+function revealSections() {
+  const trigger = window.innerHeight * 0.8;
+  sections.forEach(section => {
+    section.classList.add("show");
+  });
+}
+
+// Run when page loads / refreshes
+window.addEventListener("load", revealSections);
+
+sections.forEach((section, index) => {
+  setTimeout(() => {
+    section.classList.add("show");
+  }, index * 150);
+});
+
+window.addEventListener("scroll", () => {
+    const trigger = window.innerHeight * 0.8;
+    sections.forEach(section => {
+        section.classList.toggle(
+            "show",
+            section.getBoundingClientRect().top < trigger
+        );
+    });
+});

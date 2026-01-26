@@ -12,11 +12,22 @@ body.dark nav {
 
 .theme-toggle i {
     font-size: 34px;
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 
 body.dark .theme-toggle i {
     color: #fff;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);  
+    transition: all 0.8s ease-out; 
+}
+
+.hidden.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 nav {
@@ -37,13 +48,13 @@ nav {
 
 .mainMenu li {
     list-style: none;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-left: 2rem;
 }
 
 .mainMenu li a {
       text-decoration: none;
-      margin-top: .5rem;
+      margin-top: 1.5rem;
       color: #000;
       font-size: 17px;
       font-weight: 600;
@@ -77,6 +88,25 @@ body.dark .logo {
 
 body.dark .logo-img {
     background:rgba(216, 213, 213, 0.15);
+}
+
+.cont {
+    margin: 0;
+}
+
+.cont a {
+    text-decoration: none;
+    margin-top: 1rem;
+    background-color: blue;
+    margin-left: 5rem;
+    padding: 11px;
+    font-size: 14px;
+    color: #fff;
+}
+
+body.dark .cont a {
+    background-color: #000;
+
 }
 
 .stuni {
@@ -367,6 +397,12 @@ body.dark .create {
 
   body.dark .openMenu i {
     color: #fff;
+  }
+
+  .cont a {
+    margin: 0;
+    margin-left: 3rem;
+    margin-top: 1rem;
   }
 
   .ayjas {
