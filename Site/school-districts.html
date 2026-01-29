@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Press & Announcements | Marketing</title>
+    <title>K–12 School District Solutions</title>
 
     <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -40,7 +40,6 @@
             margin: 0 auto;
         }
 
-        /* Animations */
         .hidden {
             opacity: 0;
             transform: translateY(40px);
@@ -52,7 +51,6 @@
             transform: translateY(0);
         }
 
-        /* Hero */
         .hero {
             margin-top: 7rem;
             margin-bottom: 4rem;
@@ -64,13 +62,12 @@
         }
 
         .hero p {
-            max-width: 720px;
+            max-width: 800px;
             margin-top: 1rem;
             font-size: 1.05rem;
             opacity: 0.9;
         }
 
-        /* Sections */
         section {
             margin-bottom: 4rem;
         }
@@ -78,7 +75,6 @@
         section h2 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
-            position: relative;
         }
 
         section h2::after {
@@ -90,32 +86,23 @@
             margin-top: 0.5rem;
         }
 
-        /* Cards */
         .card {
             background: rgba(255, 255, 255, 0.04);
             padding: 2rem;
             border-radius: 14px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
         }
 
-        .date {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2f6fed;
-            margin-bottom: 0.5rem;
+        .card ul {
+            padding-left: 1.5rem;
         }
 
-        /* Media Contact */
-        .media {
-            background: #eef2ff;
-            padding: 2rem;
-            border-radius: 14px;
+        .card ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight {
             border-left: 4px solid #2f6fed;
-        }
-
-        body.dark .media {
-            background: #222;
         }
 
         @media(max-width: 800px){
@@ -128,16 +115,16 @@
                 line-height: 1.6;
             }
 
-            .sections h2 {
+            section h2 {
                 font-size: 20px;
             }
 
-            .sections p {
+            section p {
                 font-size: 12px;
                 line-height: 1.6;
             }
 
-            .sections ul li {
+            section ul li {
                 font-size: 12px;
                 line-height: 1.6;
             }
@@ -152,66 +139,77 @@
 <div class="container">
 
     <!-- HERO -->
-    <div class="hero hidden hero-animate">
-        <h1>Press & Announcements</h1>
+    <div class="hero hidden">
+        <h1>K–12 School District Solutions</h1>
         <p>
-            Official news, updates, and organizational announcements related to
-            company activities, milestones, and public sector engagements.
+            Supporting primary and secondary school systems with secure, scalable,
+            and student-centered solutions that improve educational delivery and
+            district operations.
+        </p>
+        <p>
+            We partner with school districts, education authorities, and public
+            school systems to strengthen teaching environments, streamline
+            administration, and support student success.
         </p>
     </div>
 
-    <!-- ABOUT PRESS -->
-    <section class="sections hidden">
-        <h2>Official Communications</h2>
+    <!-- WHO WE SUPPORT -->
+    <section class="hidden">
+        <h2>Who We Support</h2>
+        <div class="card">
+            <ul>
+                <li>Public K–12 school districts</li>
+                <li>Private and charter school networks</li>
+                <li>District education boards and authorities</li>
+                <li>School administrators and principals</li>
+                <li>Teachers and instructional staff</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="hidden">
+        <h2>Our K–12 Solutions</h2>
+        <div class="card">
+            <ul>
+                <li>Student information systems and data management</li>
+                <li>Learning management systems for K–12 environments</li>
+                <li>Digital classroom tools and infrastructure support</li>
+                <li>Administrative process automation</li>
+                <li>Teacher training and instructional technology support</li>
+                <li>Reporting, assessment, and compliance solutions</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="hidden">
+        <h2>Our Approach</h2>
         <div class="card">
             <p>
-                This page provides verified information regarding company milestones,
-                contract awards, partnerships, and organizational updates relevant
-                to government stakeholders, partners, and the general public.
+                We understand the unique challenges facing K–12 school districts,
+                including budget constraints, policy requirements, and the need
+                for age-appropriate, secure technology.
+            </p>
+            <p>
+                Our solutions are designed to be practical, compliant, and
+                sustainable, supporting educators while keeping students at the
+                center of every decision.
             </p>
         </div>
     </section>
 
-    <!-- ANNOUNCEMENTS -->
-    <section class="sections hidden">
-        <h2>Recent Announcements</h2>
-
-        <div class="card hidden">
-            <div class="date">January 2026</div>
-            <h3>Company Awarded Public Sector Contract</h3>
+    <!-- COMPLIANCE -->
+    <section class="hidden">
+        <div class="card highlight">
             <p>
-                The organization has been awarded a new government contract focused
-                on service delivery enhancement and operational modernization. This
-                engagement reflects our continued commitment to supporting public
-                sector objectives and institutional efficiency.
-            </p>
-        </div>
-
-        <div class="card hidden">
-            <div class="date">December 2025</div>
-            <h3>Expansion of Service Capabilities</h3>
-            <p>
-                We have expanded our service offerings to support additional government
-                institutions, strengthening our capacity to deliver scalable,
-                compliant, and mission-aligned solutions across multiple sectors.
+                All K–12 engagements follow applicable education policies, child
+                data protection standards, procurement regulations, and public
+                accountability requirements.
             </p>
         </div>
     </section>
-
-    <!-- MEDIA CONTACT -->
-    <section class="sections hidden">
-        <h2>Media Inquiries</h2>
-        <div class="media">
-            <p>
-                Members of the press and authorized media representatives may contact
-                our communications team at:
-            </p>
-            <p>
-                <strong>press@yourcompany.com</strong>
-            </p>
-        </div>
-    </section>
-    <div id="footer"></div>
+<div id="footer"></div>
 </div>
 
 <script>

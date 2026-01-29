@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .case-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            /* text-align: center; */
+        }
+
+        .case-hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .case-hero p {
+            max-width: 800px;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        /* GRID */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        /* CARD */
+        .case-card {
+            background: #f8f9fc;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.dark .case-card {
+            background: #1e1e1e;
+        }
+
+        .case-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+        }
+
+        .case-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #2f6fed;
+            background: rgba(47, 111, 237, 0.1);
+            padding: 0.3rem 0.7rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .case-card h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-section {
+            margin-bottom: 1rem;
+        }
+
+        .case-section span {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.7;
+        }
+
+        .case-section p {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .case-footer {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        @media(max-width: 800px){
+            .case-hero h1 {
+                font-size: 22px;
+            }
+
+            .case-hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+<div id="header"></div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="case-hero hidden">
+        <h1>Case Studies</h1>
+        <p>
+            Real-world examples of how we support public sector institutions,
+            education systems, and government agencies through practical,
+            compliant, and results-driven solutions.
+        </p>
+    </div>
+
+    <!-- CASE GRID -->
+    <div class="case-grid">
+
+        <!-- CASE 1 -->
+        <div class="case-card hidden">
+            <span class="case-tag">Public Sector Operations</span>
+            <h3>Government Agency Operational Modernization</h3>
+
+            <div class="case-section">
+                <span>Challenge</span>
+                <p>
+                    A government agency faced delays caused by manual processes,
+                    fragmented reporting, and limited visibility into operations.
+                </p>
+            </div>
+
+            <div class="case-section">
+                <span>Solution</span>
+                <p>
+                    We implemented streamlined workflows, standardized reporting
+                    processes, and operational support systems aligned with
+                    procurement regulations.
+                </p>
+            </div>
+
+            <div class="case-section">
+                <span>Impact</span>
+                <p>
+                    Improved service delivery timelines, enhanced transparency,
+                    and increased operational efficiency across departments.
+                </p>
+            </div>
+
+            <div class="case-footer">
+                Sector: Government Operations
+            </div>
+        </div>
+
+        <!-- CASE 2 -->
+        <div class="case-card hidden">
+            <span class="case-tag">Education</span>
+            <h3>District-Wide K–12 Digital Learning Support</h3>
+
+            <div class="case-section">
+                <span>Challenge</span>
+                <p>
+                    A public school district required secure digital tools to
+                    support remote and blended learning environments.
+                </p>
+            </div>
+
+            <div class="case-section">
+                <span>Solution</span>
+                <p>
+                    We supported the deployment of district-wide learning
+                    platforms and provided training for educators and
+                    administrators.
+                </p>
+            </div>
+
+            <div class="case-section">
+                <span>Impact</span>
+                <p>
+                    Increased classroom engagement, improved reporting accuracy,
+                    and stronger continuity of learning.
+                </p>
+            </div>
+
+            <div class="case-footer">
+                Sector: K–12 Education
+            </div>
+        </div>
+
+        <!-- CASE 3 -->
+        <div class="case-card hidden">
+            <span class="case-tag">Compliance & Governance</span>
+            <h3>Procurement & Compliance Support Program</h3>
+
+            <div class="case-section">
+                <span>Challenge</span>
+                <p>
+                    A public institution needed support aligning vendor
+                    engagements with evolving procurement regulations.
+                </p>
+            </div>
+
+            <div class="case-section">
+                <span>Solution</span>
+                <p>
+                    Our team provided compliance advisory services, documentation
+                    frameworks, and reporting guidance.
+                </p>
+            </div>
+
+            <div class="case-section">
+                <span>Impact</span>
+                <p>
+                    Reduced audit risks, clearer documentation, and improved
+                    regulatory confidence.
+                </p>
+            </div>
+
+            <div class="case-footer">
+                Sector: Public Compliance
+            </div>
+        </div>
+
+    </div>
+    <div id="footer"></div>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        function revealSections() {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.add("show");
+        });
+        }
+
+        // Run when page loads / refreshes
+        window.addEventListener("load", revealSections);
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 150);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+    });
+</script>
+<script src="javascript/include.js"></script>
+
+</body>
+</html>
+

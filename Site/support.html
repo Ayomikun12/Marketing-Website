@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: Montserrat, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .support-hero {
+            margin-top: 7rem;
+            margin-bottom: 3rem;
+            max-width: 850px;
+        }
+
+        .support-hero h1 {
+            font-size: 2.7rem;
+            font-weight: 700;
+        }
+
+        .support-hero p {
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .support-card {
+            background: #f9f9fb;
+            padding: 2rem;
+            border-radius: 14px;
+            border: 1px solid #e6e6ee;
+            transition: transform 0.3s ease;
+        }
+
+        body.dark .support-card {
+            background: #1d1d1d;
+            border-color: #2a2a2a;
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .support-card i {
+            font-size: 1.8rem;
+            color: #2f6fed;
+            margin-bottom: 1rem;
+        }
+
+        .support-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .support-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .support-note {
+            padding: 1.5rem;
+            background: rgba(47, 111, 237, 0.06);
+            border-left: 4px solid #2f6fed;
+            margin-bottom: 4rem;
+            font-size: 0.95rem;
+        }
+
+        @media(max-width: 800px){
+            .support-hero h1 {
+                font-size: 22px;
+            }
+
+            .support-hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .support-card h3 {
+                font-size: 15px;
+            }
+
+            .support-card p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .support-note {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <div class="support-hero hidden">
+            <h1>Support Center</h1>
+            <p>
+                Access technical support, service assistance, and operational guidance
+                for active government and education engagements.
+            </p>
+            <p>
+                Our support services are structured to ensure continuity, responsiveness,
+                and compliance with contractual service standards.
+            </p>
+        </div>
+
+        <div class="support-grid">
+
+            <div class="support-card hidden">
+                <i class="fa-solid fa-ticket"></i>
+                <h3>Submit a Support Request</h3>
+                <p>
+                    Open a support ticket for technical issues, service requests,
+                    or operational assistance.
+                </p>
+            </div>
+
+            <div class="support-card hidden">
+                <i class="fa-solid fa-book"></i>
+                <h3>Knowledge Base</h3>
+                <p>
+                    Access documentation, guides, and best practices for supported
+                    systems and services.
+                </p>
+            </div>
+
+            <div class="support-card hidden">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>Authorized Contacts</h3>
+                <p>
+                    Support is provided to designated representatives in accordance
+                    with contract and security policies.
+                </p>
+            </div>
+
+            <div class="support-card hidden">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Service Hours</h3>
+                <p>
+                    View standard support hours, response timelines, and escalation
+                    procedures.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="support-note hidden">
+            All support requests are logged, tracked, and handled in accordance with
+            service-level agreements, data protection requirements, and public sector
+            accountability standards.
+        </div>
+        <div id="footer"></div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+
+            function revealSections() {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.add("show");
+            });
+            }
+
+            // Run when page loads / refreshes
+            window.addEventListener("load", revealSections);
+
+            sections.forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add("show");
+            }, index * 150);
+            });
+
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.8;
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
+        });
+    </script>
+    <script src="javascript/include.js"></script>
+</body>
+</html>

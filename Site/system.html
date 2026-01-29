@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Status</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: Montserrat, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .status-hero {
+            margin-top: 7rem;
+            margin-bottom: 3rem;
+        }
+
+        .status-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .status-hero p {
+            margin-top: 0.8rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .status-list {
+            margin-bottom: 4rem;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.3rem 1.5rem;
+            border-bottom: 1px solid #e6e6ee;
+        }
+
+        body.dark .status-item {
+            border-color: #2a2a2a;
+        }
+
+        .status-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .status-badge {
+            padding: 0.35rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .operational {
+            background: rgba(46, 204, 113, 0.15);
+            color: #2ecc71;
+        }
+
+        .degraded {
+            background: rgba(241, 196, 15, 0.15);
+            color: #f1c40f;
+        }
+
+        .outage {
+            background: rgba(231, 76, 60, 0.15);
+            color: #e74c3c;
+        }
+
+        .status-note {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(47, 111, 237, 0.06);
+            border-left: 4px solid #2f6fed;
+            margin-bottom: 4rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body class="light">
+
+<div id="header"></div>
+
+<div class="container">
+
+    <div class="status-hero hidden">
+        <h1>System Status</h1>
+        <p>
+            Current operational status of supported platforms and services.
+        </p>
+    </div>
+
+    <div class="status-list">
+
+        <div class="status-item hidden">
+            <h3>Core Service Platform</h3>
+            <span class="status-badge operational">Operational</span>
+        </div>
+
+        <div class="status-item hidden">
+            <h3>Education Management Systems</h3>
+            <span class="status-badge operational">Operational</span>
+        </div>
+
+        <div class="status-item hidden">
+            <h3>Reporting & Analytics</h3>
+            <span class="status-badge degraded">Degraded Performance</span>
+        </div>
+
+        <div class="status-item hidden">
+            <h3>Support Ticketing System</h3>
+            <span class="status-badge operational">Operational</span>
+        </div>
+
+    </div>
+
+    <div class="status-note hidden">
+        Status information is updated regularly. Scheduled maintenance,
+        service interruptions, and incident reports are communicated
+        in accordance with contractual notification requirements.
+    </div>
+    <div id="footer"></div>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        function revealSections() {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.add("show");
+        });
+        }
+
+        // Run when page loads / refreshes
+        window.addEventListener("load", revealSections);
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 150);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+    });
+</script>
+
+<script src="javascript/include.js"></script>
+</body>
+</html>

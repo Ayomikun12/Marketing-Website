@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .doc-hero {
+            margin-top: 7rem;
+            margin-bottom: 3.5rem;
+            max-width: 850px;
+        }
+
+        .doc-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .doc-hero p {
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* SECTION */
+        .doc-section {
+            margin-bottom: 4rem;
+        }
+
+        .doc-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .doc-section h2::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: #2f6fed;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* DOCUMENT LIST */
+        .doc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .doc-item {
+            padding: 1.8rem;
+            border-radius: 14px;
+            background: #f9f9fb;
+            border: 1px solid #e6e6ee;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        body.dark .doc-item {
+            background: #1c1c1c;
+            border-color: #2a2a2a;
+        }
+
+        .doc-item:hover {
+            transform: translateY(-4px);
+            background: #f3f5ff;
+        }
+
+        body.dark .doc-item:hover {
+            background: #232323;
+        }
+
+        .doc-item i {
+            font-size: 1.6rem;
+            color: #2f6fed;
+            margin-bottom: 0.8rem;
+        }
+
+        .doc-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        /* NOTE */
+        .doc-note {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-left: 4px solid #2f6fed;
+            background: rgba(47, 111, 237, 0.05);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media(max-width: 800px){
+            .doc-hero h1 {
+                font-size: 22px;
+            }
+
+            .doc-hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .doc-section h2 {
+                font-size: 18px;
+            }
+
+            .doc-item h3 {
+                font-size: 15px;
+            }
+
+            .doc-item p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .doc-note {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+<div id="header"></div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="doc-hero hidden">
+        <h1>Documentation</h1>
+        <p>
+            Access official documentation, policies, and reference materials related
+            to our services, procurement processes, compliance frameworks, and
+            operational standards.
+        </p>
+        <p>
+            These materials are designed to support government agencies, educational
+            institutions, and authorized partners with clear and accurate information.
+        </p>
+    </div>
+
+    <!-- PROCUREMENT -->
+    <div class="doc-section hidden">
+        <h2>Procurement & Contracting</h2>
+
+        <div class="doc-list">
+            <div class="doc-item">
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Procurement Guidelines</h3>
+                <p>
+                    Overview of our procurement engagement process, submission
+                    requirements, and evaluation standards.
+                </p>
+            </div>
+
+            <div class="doc-item">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Compliance Framework</h3>
+                <p>
+                    Documentation outlining regulatory alignment, audit readiness,
+                    and contractual compliance practices.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICE DOCUMENTATION -->
+    <div class="doc-section hidden">
+        <h2>Service Documentation</h2>
+
+        <div class="doc-list">
+            <div class="doc-item">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Service Delivery Model</h3>
+                <p>
+                    Detailed explanation of our delivery methodology, governance
+                    structure, and reporting standards.
+                </p>
+            </div>
+
+            <div class="doc-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Data Protection & Security</h3>
+                <p>
+                    Policies covering data handling, confidentiality, and security
+                    controls for public sector environments.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="doc-section hidden">
+        <h2>Education & Public Sector Resources</h2>
+
+        <div class="doc-list">
+            <div class="doc-item">
+                <i class="fa-solid fa-school"></i>
+                <h3>Education Solutions Overview</h3>
+                <p>
+                    Reference materials for K–12 and higher education engagements,
+                    including implementation and support guidelines.
+                </p>
+            </div>
+
+            <div class="doc-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Reporting & Performance Metrics</h3>
+                <p>
+                    Documentation describing performance tracking, outcome
+                    measurement, and reporting formats.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTE -->
+    <div class="doc-note hidden">
+        All documentation is maintained in accordance with applicable laws,
+        procurement regulations, and public accountability requirements.
+        Certain materials may be provided upon request or subject to authorization.
+    </div>
+    <div id="footer"></div>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        function revealSections() {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.add("show");
+        });
+        }
+
+        // Run when page loads / refreshes
+        window.addEventListener("load", revealSections);
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 150);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+    });
+</script>
+
+<script src="javascript/include.js"></script>
+
+</body>
+</html>

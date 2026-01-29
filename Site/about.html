@@ -1,48 +1,300 @@
-<section class="page-header">
-  <h1>About Us</h1>
-  <p>
-    A mission-focused government contracting partner delivering dependable,
-    compliant, and results-driven solutions.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Marketing</title>
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-<section class="page-content">
-  <h2>Our Organization</h2>
-  <p>
-    We are a business-to-government (B2G) contracting firm dedicated to supporting
-    public sector institutions through professional services, technology solutions,
-    and operational support. Our work is guided by a commitment to accountability,
-    transparency, and long-term public value.
-  </p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <p>
-    We collaborate with government ministries, agencies, and publicly funded
-    institutions to design and implement solutions that improve efficiency,
-    service delivery, and institutional capacity.
-  </p>
+        body {
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
 
-  <h2>Our Mission</h2>
-  <p>
-    Our mission is to strengthen government operations by providing reliable,
-    scalable, and compliant services that align with national priorities and
-    regulatory standards.
-  </p>
+        body.light {
+            background: #ffffff;
+            color: #222;
+        }
 
-  <h2>Our Capabilities</h2>
-  <ul>
-    <li>Public sector consulting and advisory services</li>
-    <li>Information technology and digital transformation</li>
-    <li>Administrative and operational support</li>
-    <li>Research, policy analysis, and reporting</li>
-    <li>Training and capacity-building programs</li>
-  </ul>
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
 
-  <h2>Commitment to Compliance</h2>
-  <p>
-    We operate with a strong understanding of procurement procedures, data
-    protection requirements, and public accountability standards. Every engagement
-    is approached with strict adherence to applicable laws, regulations, and
-    contractual obligations.
-  </p>
-</section>
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
 
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
+
+        .sections {
+            margin-bottom: 4rem;
+        }
+
+        .sections h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .sections h2::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #2f6fed;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* body.light .card {
+            background: #f9f9fb;
+        } */
+
+        .card ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .value-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            background:  #eef2ff;
+        }
+
+        body.dark .value-box {
+            background: black;
+        }
+
+        .value-box h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        @media(max-width: 800px){
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .sections h2 {
+                font-size: 20px;
+            }
+
+            .sections p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .sections ul li {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+    <div id="header"></div>
+    <div class="container">
+        <!-- HERO -->
+        <div class="hero hidden hero-animate">
+            <h1>About Us</h1>
+            <p>
+                A mission-focused government contracting partner delivering dependable,
+                compliant, and results-driven solutions to public sector institutions.
+            </p>
+        </div>
+
+        <!-- ORGANIZATION -->
+        <section class="sections hidden">
+            <h2>Our Organization</h2>
+            <div class="card">
+                <p>
+                    We are a business-to-government (B2G) contracting firm dedicated to supporting
+                    public sector institutions through professional services, technology solutions,
+                    and operational support.
+                </p>
+                <p>
+                    Our approach is rooted in accountability, transparency, and long-term public
+                    value. We partner with government ministries, agencies, and publicly funded
+                    institutions to design and implement solutions that improve efficiency,
+                    strengthen capacity, and enhance service delivery.
+                </p>
+            </div>
+        </section>
+
+        <!-- MISSION -->
+        <section class="sections hidden">
+            <h2>Our Mission</h2>
+            <div class="card">
+                <p>
+                    Our mission is to strengthen government operations by providing reliable,
+                    scalable, and compliant services that align with national priorities,
+                    regulatory standards, and public accountability requirements.
+                </p>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES -->
+        <section class="sections hidden">
+            <h2>Our Capabilities</h2>
+            <div class="card">
+                <ul>
+                    <li>Public sector consulting and advisory services</li>
+                    <li>Information technology and digital transformation</li>
+                    <li>Administrative and operational support</li>
+                    <li>Research, policy analysis, and reporting</li>
+                    <li>Training and capacity-building programs</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- WHO WE SERVE -->
+        <section class="sections hidden">
+            <h2>Who We Serve</h2>
+            <div class="card">
+                <p>
+                    We serve government ministries, departments, agencies, and publicly funded
+                    institutions seeking trusted partners capable of delivering compliant,
+                    efficient, and measurable outcomes.
+                </p>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="sections hidden">
+            <h2>Our Values</h2>
+            <div class="values">
+                <div class="value-box">
+                    <h3>Integrity</h3>
+                    <p>We operate with honesty, ethics, and transparency.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Compliance</h3>
+                    <p>Strict adherence to laws, policies, and procurement standards.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Accountability</h3>
+                    <p>We take responsibility for results and performance.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Public Value</h3>
+                    <p>We prioritize solutions that benefit institutions and citizens.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPLIANCE -->
+        <section class="sections hidden">
+            <h2>Commitment to Compliance</h2>
+            <div class="card">
+                <p>
+                    We operate with a strong understanding of procurement procedures, data
+                    protection requirements, and public accountability standards. Every
+                    engagement is approached with strict adherence to applicable laws,
+                    regulations, and contractual obligations.
+                </p>
+            </div>
+        </section>
+        <div id="footer"></div>
+
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+
+            function revealSections() {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.add("show");
+            });
+            }
+
+            // Run when page loads / refreshes
+            window.addEventListener("load", revealSections);
+
+            sections.forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add("show");
+            }, index * 150);
+            });
+
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.8;
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

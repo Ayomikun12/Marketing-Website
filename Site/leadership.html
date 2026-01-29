@@ -1,53 +1,296 @@
-<section class="page-header">
-  <h1>Leadership</h1>
-  <p>
-    Experienced leadership dedicated to public sector excellence and responsible governance.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership</title>
 
-<section class="page-content">
-  <h2>Leadership Philosophy</h2>
-  <p>
-    Our leadership team brings together experience across government services,
-    operations management, and organizational strategy. The team is united by
-    a shared belief in ethical leadership, accountability, and service to the public good.
-  </p>
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
-  <h2>Executive Team</h2>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  <div class="leader-card">
-    <h3>Chief Executive Officer</h3>
-    <p>
-      The Chief Executive Officer provides strategic oversight and ensures that
-      the organization’s mission aligns with the needs of public sector clients.
-      This role is responsible for long-term planning, institutional partnerships,
-      and organizational governance.
-    </p>
-  </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <div class="leader-card">
-    <h3>Director of Operations</h3>
-    <p>
-      The Director of Operations oversees contract execution, internal processes,
-      and service delivery. This role ensures projects are delivered on time, within
-      scope, and in compliance with all contractual requirements.
-    </p>
-  </div>
+        body {
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
 
-  <div class="leader-card">
-    <h3>Head of Government Relations</h3>
-    <p>
-      The Head of Government Relations manages engagement with public sector
-      stakeholders, coordinates proposal development, and ensures alignment
-      with procurement and regulatory frameworks.
-    </p>
-  </div>
+        body.light {
+            background: #ffffff;
+            color: #222;
+        }
 
-  <h2>Governance & Oversight</h2>
-  <p>
-    Leadership decisions are guided by established governance practices,
-    performance monitoring, and continuous improvement initiatives designed
-    to uphold public trust.
-  </p>
-</section>
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
 
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #2f6fed;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-top: 1.5rem;
+        }
+
+        /* Executive Grid */
+        .executives {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .exec h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exec span {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2f6fed;
+        }
+
+        /* Leadership Principles */
+        .card ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        @media(max-width: 800px){
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .sections h2 {
+                font-size: 20px;
+            }
+
+            .sections p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .sections ul li {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+<div id="header"></div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero hidden hero-animate">
+        <h1>Leadership</h1>
+        <p>
+            Experienced leadership dedicated to public sector excellence,
+            responsible governance, and mission-driven service delivery.
+        </p>
+    </div>
+
+    <!-- LEADERSHIP PHILOSOPHY -->
+    <section class="sections hidden">
+        <h2>Leadership Philosophy</h2>
+        <div class="card">
+            <p>
+                Our leadership team brings together experience across government services,
+                operations management, and organizational strategy. We believe effective
+                leadership in government contracting requires integrity, accountability,
+                and a clear commitment to the public good.
+            </p>
+            <p>
+                Decisions are guided by long-term impact, regulatory compliance, and
+                stewardship of public resources—ensuring every engagement delivers
+                measurable and sustainable outcomes.
+            </p>
+        </div>
+    </section>
+
+    <!-- EXECUTIVE TEAM -->
+    <section class="sections hidden">
+        <h2>Executive Team</h2>
+
+        <div class="executives">
+
+            <div class="card exec hidden">
+                <span>Chief Executive Officer</span>
+                <h3>Strategic Leadership & Governance</h3>
+                <p>
+                    The Chief Executive Officer provides strategic direction and ensures
+                    the organization’s mission aligns with the evolving needs of public
+                    sector clients. This role oversees long-term planning, institutional
+                    partnerships, and corporate governance.
+                </p>
+            </div>
+
+            <div class="card exec hidden">
+                <span>Director of Operations</span>
+                <h3>Operational Excellence</h3>
+                <p>
+                    The Director of Operations oversees contract execution, internal
+                    processes, and service delivery. This role ensures all projects are
+                    delivered on time, within scope, and in full compliance with
+                    contractual and regulatory requirements.
+                </p>
+            </div>
+
+            <div class="card exec hidden">
+                <span>Head of Government Relations</span>
+                <h3>Public Sector Engagement</h3>
+                <p>
+                    The Head of Government Relations manages engagement with ministries,
+                    agencies, and public institutions. This role coordinates proposal
+                    development, stakeholder communication, and alignment with
+                    procurement frameworks.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LEADERSHIP PRINCIPLES -->
+    <section class="sections hidden">
+        <h2>Leadership Principles</h2>
+        <div class="card">
+            <ul>
+                <li>Ethical decision-making and transparency</li>
+                <li>Accountability to clients, partners, and the public</li>
+                <li>Compliance with laws, policies, and procurement standards</li>
+                <li>Continuous improvement and performance monitoring</li>
+                <li>Commitment to public trust and institutional integrity</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- GOVERNANCE -->
+    <section class="sections hidden">
+        <h2>Governance & Oversight</h2>
+        <div class="card">
+            <p>
+                Leadership decisions are guided by established governance practices,
+                performance metrics, and risk management frameworks. Regular reviews,
+                audits, and continuous improvement initiatives ensure accountability
+                and uphold the highest standards of public trust.
+            </p>
+        </div>
+    </section>
+    <div id="footer"></div>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        function revealSections() {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.add("show");
+        });
+        }
+
+        // Run when page loads / refreshes
+        window.addEventListener("load", revealSections);
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 150);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+    });
+</script>
+
+<script src="javascript/include.js"></script>
+
+</body>
+</html>

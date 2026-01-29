@@ -32,6 +32,7 @@ body.dark .theme-toggle i {
 
 nav {
     display: flex;
+    justify-content: space-between;
     padding: .3rem;
     z-index: 1;
     position: fixed;
@@ -43,7 +44,7 @@ nav {
 
 .mainMenu {
     display: flex;
-    margin-left: 15rem;
+    /* margin-left: 15rem; */
 }
 
 .mainMenu li {
@@ -54,7 +55,7 @@ nav {
 
 .mainMenu li a {
       text-decoration: none;
-      margin-top: 1.5rem;
+      /* margin-top: 1.5rem; */
       color: #000;
       font-size: 17px;
       font-weight: 600;
@@ -90,23 +91,23 @@ body.dark .logo-img {
     background:rgba(216, 213, 213, 0.15);
 }
 
-.cont {
+.contact-us {
     margin: 0;
+    margin-top: 1.3rem;
 }
 
-.cont a {
+.contact-us a {
     text-decoration: none;
     margin-top: 1rem;
     background-color: blue;
-    margin-left: 5rem;
+    margin-left: 3rem;
     padding: 11px;
     font-size: 14px;
     color: #fff;
 }
 
-body.dark .cont a {
+body.dark .contact-us a {
     background-color: #000;
-
 }
 
 .stuni {
@@ -127,6 +128,7 @@ body.dark .student{
     font-size: 9px;
     letter-spacing: 1.8px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
 }
 
 body.dark .uni {

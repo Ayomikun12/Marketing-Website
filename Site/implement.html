@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation & Onboarding</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .impl-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            max-width: 900px;
+        }
+
+        .impl-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .impl-hero p {
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-bottom: 5rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #2f6fed;
+        }
+
+        .timeline-step {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-step i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            background: #2f6fed;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .timeline-step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-step p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 800px;
+        }
+
+        /* CALLOUT */
+        .impl-callout {
+            margin-top: 4rem;
+            padding: 2rem;
+            border-left: 4px solid #2f6fed;
+            background: rgba(47, 111, 237, 0.05);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media(max-width: 800px){
+            .impl-hero h1 {
+                font-size: 22px;
+            }
+
+            .impl-hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .timeline-step h3 {
+                font-size: 15px;
+            }
+
+            .timeline-step p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .impl-callout {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+<div id="header"></div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="impl-hero hidden">
+        <h1>Implementation & Onboarding</h1>
+        <p>
+            A structured, transparent onboarding process designed to ensure
+            smooth implementation, regulatory alignment, and operational
+            continuity from day one.
+        </p>
+        <p>
+            Our implementation framework minimizes disruption, supports
+            stakeholders, and ensures every engagement begins with clarity
+            and accountability.
+        </p>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+
+        <div class="timeline-step hidden">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>1. Contract Initiation & Alignment</h3>
+            <p>
+                We begin with a formal kickoff to confirm scope, objectives,
+                timelines, governance structures, and compliance requirements
+                aligned with contract terms.
+            </p>
+        </div>
+
+        <div class="timeline-step hidden">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h3>2. Requirements & Readiness Assessment</h3>
+            <p>
+                Our team conducts a detailed assessment of operational,
+                technical, and organizational readiness to ensure all
+                prerequisites are in place before implementation begins.
+            </p>
+        </div>
+
+        <div class="timeline-step hidden">
+            <i class="fa-solid fa-gears"></i>
+            <h3>3. Configuration & Deployment</h3>
+            <p>
+                Solutions are configured according to agreed specifications,
+                policies, and security standards, with controlled deployment
+                and validation checkpoints.
+            </p>
+        </div>
+
+        <div class="timeline-step hidden">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <h3>4. Training & Knowledge Transfer</h3>
+            <p>
+                We provide structured training sessions, documentation, and
+                support materials to ensure stakeholders are prepared to
+                operate and manage the solution effectively.
+            </p>
+        </div>
+
+        <div class="timeline-step hidden">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>5. Go-Live & Operational Support</h3>
+            <p>
+                After go-live, we monitor performance, address issues, and
+                provide ongoing support to ensure stability and continuity.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CALLOUT -->
+    <div class="impl-callout hidden">
+        Our implementation and onboarding processes follow established
+        governance, security, and compliance standards applicable to public
+        sector and educational environments.
+    </div>
+    <div id="footer"></div>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        function revealSections() {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.add("show");
+        });
+        }
+
+        // Run when page loads / refreshes
+        window.addEventListener("load", revealSections);
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 150);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+    });
+</script>
+
+<script src="javascript/include.js"></script>
+
+</body>
+</html>

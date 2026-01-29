@@ -1,37 +1,275 @@
-<section class="page-header">
-  <h1>Contact Government Sales</h1>
-  <p>
-    Engage directly with our public sector solutions and contracting team.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Sales | Marketing</title>
 
-<section class="page-content">
-  <p>
-    Our government sales team works closely with public institutions to understand
-    mission objectives, procurement requirements, and implementation timelines.
-    We support agencies throughout the acquisition lifecycle—from initial inquiry
-    to contract execution.
-  </p>
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
-  <h2>Who Should Contact Us</h2>
-  <ul>
-    <li>Government ministries and departments</li>
-    <li>Public agencies and authorities</li>
-    <li>Educational and research institutions</li>
-    <li>Procurement and contracting officers</li>
-  </ul>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  <h2>Submit an Inquiry</h2>
-  <form class="gov-contact-form">
-    <input type="text" placeholder="Agency / Organization Name" required />
-    <input type="text" placeholder="Contact Person" required />
-    <input type="email" placeholder="Official Email Address" required />
-    <textarea placeholder="Brief description of your requirement or procurement inquiry"></textarea>
-    <button type="submit">Submit Inquiry</button>
-  </form>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <p class="note">
-    All communications are handled in accordance with applicable procurement
-    regulations and confidentiality requirements.
-  </p>
-</section>
+        body {
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        body.light {
+            background: #ffffff;
+            color: #222;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #2f6fed;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .card ul {
+            padding-left: 1.5rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Form */
+        .gov-form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+        }
+
+        .gov-form input,
+        .gov-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid gainsboro;
+            font-family: inherit;
+        }
+
+        body.dark .gov-form input, body.dark .gov-form textarea, body.dark .gov-form button {
+            background-color: black;
+        }
+
+        .gov-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .gov-form button {
+            width: fit-content;
+            padding: 0.7rem 1.6rem;
+            background: #2f6fed;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .gov-form button:hover {
+            background: #1f54c8;
+        }
+
+        /* Compliance */
+        .compliance {
+            border-left: 4px solid #2f6fed;
+        }
+
+        @media(max-width: 800px){
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .sections h2 {
+                font-size: 20px;
+            }
+
+            .sections p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .sections ul li {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+<div id="header"></div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero hidden">
+        <h1>Contact Government Sales</h1>
+        <p>
+            Engage directly with our public sector solutions and contracting team.
+        </p>
+        <p>
+            We work closely with government institutions to understand mission objectives,
+            procurement requirements, and implementation timelines—supporting agencies
+            from initial inquiry through contract execution.
+        </p>
+    </div>
+
+    <!-- WHO SHOULD CONTACT -->
+    <section class="sections hidden">
+        <h2>Who Should Contact Us</h2>
+        <div class="card">
+            <ul>
+                <li>Government ministries and departments</li>
+                <li>Public agencies and authorities</li>
+                <li>Educational and research institutions</li>
+                <li>Procurement and contracting officers</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- INQUIRY FORM -->
+    <section class="sections hidden">
+        <h2>Submit an Inquiry</h2>
+        <div class="card">
+            <form class="gov-form">
+                <input type="text" placeholder="Agency / Organization Name" required>
+                <input type="text" placeholder="Contact Person" required>
+                <input type="email" placeholder="Official Email Address" required>
+                <textarea placeholder="Brief description of your requirement or procurement inquiry"></textarea>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE -->
+    <section class="sections hidden">
+        <div class="card compliance">
+            <p>
+                All communications are handled in accordance with applicable procurement
+                regulations, confidentiality standards, and ethical engagement guidelines.
+            </p>
+        </div>
+    </section>
+    <div id="footer"></div>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        function revealSections() {
+        const trigger = window.innerHeight * 0.8;
+        sections.forEach(section => {
+            section.classList.add("show");
+        });
+        }
+
+        // Run when page loads / refreshes
+        window.addEventListener("load", revealSections);
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add("show");
+        }, index * 150);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+    });
+</script>
+
+<script src="javascript/include.js"></script>
+
+</body>
+</html>
