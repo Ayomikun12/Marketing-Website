@@ -12,6 +12,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Montserrat, sans-serif;
             background: #ffffff;
@@ -106,6 +112,30 @@
             border-left: 4px solid #2f6fed;
             margin-bottom: 4rem;
             font-size: 0.95rem;
+        }
+
+        @media(max-width: 800px){
+            .status-hero h1 {
+                font-size: 22px;
+            }
+
+            .status-hero p {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .status-item h3 {
+                font-size: 11px;
+            }
+
+            .status-badge {
+                font-size: 9px;
+                line-height: 1.6;
+            }
+
+            .status-note {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
