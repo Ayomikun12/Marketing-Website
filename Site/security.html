@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Overview</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .sec-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            max-width: 900px;
+        }
+
+        .sec-hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .sec-hero p {
+            margin-top: 1rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* SECURITY FRAMEWORK */
+        .security-framework {
+            position: relative;
+            margin-bottom: 5rem;
+            padding-left: 1.5rem;
+        }
+
+        .security-framework::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(
+                to bottom,
+                #2f6fed,
+                rgba(47, 111, 237, 0.2)
+            );
+            border-radius: 4px;
+        }
+
+        .security-step {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 70px;
+        }
+
+        .security-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .security-step i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 46px;
+            height: 46px;
+            background: #2f6fed;
+            color: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .security-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .security-step p {
+            font-size: 0.80rem;
+            line-height: 1.65;
+            opacity: 0.9;
+            max-width: 820px;
+        }
+
+        /* TRUST CALLOUT */
+        .security-callout {
+            margin-top: 4rem;
+            padding: 2.2rem;
+            border-radius: 14px;
+            background: linear-gradient(
+                to right,
+                rgba(47, 111, 237, 0.08),
+                rgba(47, 111, 237, 0.02)
+            );
+            border-left: 5px solid #2f6fed;
+            font-size: 0.8rem;
+            line-height: 1.65;
+        }
+
+        .security-callout strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        @media(max-width: 800px){
+            .sec-hero h1 {
+                font-size: 22px;
+            }
+
+            .sec-hero p {
+                font-size: 12px;
+            }
+
+            .security-step h3 {
+                font-size: 15px;
+            }
+
+            .security-step p {
+                font-size: 12px;
+            }
+
+            .security-callout {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="sec-hero hidden">
+            <h1>Security Overview</h1>
+            <p>
+                Security is foundational to every service we deliver. Our approach
+                is built to protect systems, data, and stakeholders across public
+                sector and educational environments.
+            </p>
+            <p>
+                We apply layered controls, risk-based governance, and continuous
+                monitoring to maintain confidentiality, integrity, and availability.
+            </p>
+        </div>
+
+        <!-- SECURITY FRAMEWORK -->
+        <div class="security-framework">
+
+            <div class="security-step hidden">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>1. Governance & Risk Management</h3>
+                <p>
+                    Security governance is embedded into our operational model through
+                    defined policies, accountability structures, and risk management
+                    practices aligned with public sector requirements.
+                </p>
+            </div>
+
+            <div class="security-step hidden">
+                <i class="fa-solid fa-lock"></i>
+                <h3>2. Data Protection & Privacy</h3>
+                <p>
+                    We implement safeguards to protect sensitive data throughout its
+                    lifecycle, including access controls, encryption, and data
+                    handling procedures consistent with regulatory expectations.
+                </p>
+            </div>
+
+            <div class="security-step hidden">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>3. Identity & Access Control</h3>
+                <p>
+                    Access to systems and information is restricted to authorized
+                    personnel based on role, necessity, and contractual authorization,
+                    reducing exposure and insider risk.
+                </p>
+            </div>
+
+            <div class="security-step hidden">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>4. Infrastructure & Network Security</h3>
+                <p>
+                    Our infrastructure is designed with layered defenses, continuous
+                    monitoring, and proactive controls to prevent unauthorized access
+                    and detect potential threats.
+                </p>
+            </div>
+
+            <div class="security-step hidden">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h3>5. Incident Response & Continuity</h3>
+                <p>
+                    We maintain formal incident response and continuity procedures to
+                    ensure timely detection, response, communication, and recovery
+                    in the event of a security incident.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TRUST CALLOUT -->
+        <div class="security-callout hidden">
+            <strong>Commitment to Assurance</strong>
+            Our security practices are reviewed and maintained to align with
+            applicable contractual obligations, regulatory standards, and
+            industry-recognized security frameworks used across government
+            and education sectors.
+        </div>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add("show");
+                }, index * 150);
+            });
+
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.85;
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

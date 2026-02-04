@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance & Certifications</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .comp-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            max-width: 900px;
+        }
+
+        .comp-hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .comp-hero p {
+            margin-top: 1rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* COMPLIANCE GRID */
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .compliance-card {
+            background: rgba(47, 111, 237, 0.04);
+            border: 1px solid rgba(47, 111, 237, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .compliance-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .compliance-card i {
+            font-size: 1.8rem;
+            color: #2f6fed;
+            margin-bottom: 1rem;
+        }
+
+        .compliance-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .compliance-card p {
+            font-size: 0.80rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* ASSURANCE SECTION */
+        .assurance {
+            margin-top: 4rem;
+            padding: 2.5rem;
+            border-radius: 18px;
+            background: linear-gradient(
+                to right,
+                rgba(47, 111, 237, 0.10),
+                rgba(47, 111, 237, 0.02)
+            );
+            border-left: 6px solid #2f6fed;
+            font-size: .8rem;
+            line-height: 1.65;
+        }
+
+        .assurance strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        @media(max-width: 800px){
+            .comp-hero h1 {
+                font-size: 22px;
+            }
+
+            .comp-hero p {
+                font-size: 12px;
+            }
+
+            .compliance-card h3 {
+                font-size: 15px;
+            }
+
+            .compliance-card p {
+                font-size: 12px;
+            }
+
+            .assurance {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="comp-hero hidden">
+            <h1>Compliance & Certifications</h1>
+            <p>
+                Compliance is integral to how we operate. Our policies, controls,
+                and procedures are designed to align with public sector, educational,
+                and regulatory expectations.
+            </p>
+            <p>
+                We maintain structured compliance practices that support transparency,
+                auditability, and contractual accountability.
+            </p>
+        </div>
+
+        <!-- COMPLIANCE AREAS -->
+        <div class="compliance-grid">
+
+            <div class="compliance-card hidden">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Regulatory Compliance</h3>
+                <p>
+                    Our operations align with applicable government regulations,
+                    procurement rules, and contractual obligations relevant to
+                    public sector engagements.
+                </p>
+            </div>
+
+            <div class="compliance-card hidden">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Industry Standards</h3>
+                <p>
+                    We follow recognized industry frameworks and best practices
+                    to ensure consistency, reliability, and operational integrity
+                    across all services.
+                </p>
+            </div>
+
+            <div class="compliance-card hidden">
+                <i class="fa-solid fa-user-check"></i>
+                <h3>Data Protection & Privacy</h3>
+                <p>
+                    Our compliance posture includes safeguards for personal and
+                    sensitive information, supporting lawful processing and
+                    responsible data management.
+                </p>
+            </div>
+
+            <div class="compliance-card hidden">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <h3>Audit & Oversight</h3>
+                <p>
+                    Internal reviews, documentation, and controls support audit
+                    readiness and ongoing oversight throughout the contract lifecycle.
+                </p>
+            </div>
+
+            <div class="compliance-card hidden">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Ethics & Conduct</h3>
+                <p>
+                    We maintain codes of conduct and ethical standards that guide
+                    employee behavior, conflict management, and public accountability.
+                </p>
+            </div>
+
+            <div class="compliance-card hidden">
+                <i class="fa-solid fa-shield-check"></i>
+                <h3>Security Alignment</h3>
+                <p>
+                    Compliance is closely integrated with our security controls to
+                    ensure alignment between governance, risk management, and
+                    technical safeguards.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ASSURANCE -->
+        <div class="assurance hidden">
+            <strong>Commitment to Continuous Compliance</strong>
+            Compliance is not a one-time activity. Our frameworks are reviewed and
+            updated to reflect regulatory changes, contractual requirements, and
+            evolving public sector standards, ensuring sustained alignment over time.
+        </div>
+        <div id="footer"></div>
+    </div>
+
+
+
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add("show");
+                }, index * 150);
+            });
+
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.85;
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

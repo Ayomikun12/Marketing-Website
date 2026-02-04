@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at Ayjas Integrated Systems</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body{
+            font-family:"Montserrat", sans-serif;
+            background:linear-gradient(180deg,#f8fbff 0%,#ffffff 60%);
+            color:#1a1a1a;
+        }
+
+        body.dark{
+            background:#0f1115;
+            color:#f1f1f1;
+        }
+
+        .container{
+            width:90%;
+            margin:0 auto;
+        }
+
+        /* HERO */
+        .career-hero{
+            margin-top:7rem;
+            padding:4rem 0;
+            max-width:900px;
+        }
+
+        .career-hero h1{
+            font-size:2rem;
+            font-weight:800;
+            letter-spacing:-1px;
+        }
+
+        .career-hero span{
+            color:#2f6fed;
+        }
+
+        .career-hero p{
+            margin-top:1.4rem;
+            font-size:.8rem;
+            line-height:1.8;
+            opacity:0.85;
+        }
+
+        /* CULTURE STRIP */
+        .culture-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+            margin-top:3rem;
+        }
+
+        .culture-card{
+            background:white;
+            padding:28px;
+            border-radius:18px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            transition:.35s ease;
+        }
+
+        body.dark .culture-card{
+            background:#171a21;
+        }
+
+        .culture-card:hover{
+            transform:translateY(-8px);
+        }
+
+        .culture-card i{
+            font-size:28px;
+            color:#2f6fed;
+        }
+
+        .culture-card h3{
+            margin-top:14px;
+            font-size:1rem;
+        }
+
+        .culture-card p{
+            margin-top:10px;
+            font-size:.8rem;
+            line-height:1.7;
+            opacity:.85;
+        }
+
+        /* JOB AREAS */
+        .jobs-section{
+            margin-top:5rem;
+        }
+
+        .section-title{
+            font-size:1.5rem;
+            font-weight:700;
+            margin-bottom:2rem;
+        }
+
+        .jobs-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:28px;
+        }
+
+        .job-card{
+            padding:26px;
+            border-radius:18px;
+            background:linear-gradient(180deg,#ffffff,#f4f8ff);
+            border:1px solid #e8eefc;
+            transition:.35s ease;
+        }
+
+        body.dark .job-card{
+            background:#1b1f29;
+            border-color:#2a3040;
+        }
+
+        .job-card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 14px 35px rgba(47,111,237,.15);
+        }
+
+        .job-card h4{
+            font-size:1rem;
+        }
+
+        .job-card p{
+            margin-top:10px;
+            font-size:.8rem;
+            line-height:1.6;
+            opacity:.85;
+        }
+
+        /* CTA */
+        .career-cta{
+            margin-top:5rem;
+            margin-bottom:6rem;
+            padding:3rem;
+            border-radius:20px;
+            background:linear-gradient(135deg,#2f6fed,#1e4fc9);
+            color:white;
+        }
+
+        .career-cta h2{
+            font-size:1.5rem;
+        }
+
+        .career-cta p{
+            margin-top:14px;
+            opacity:.9;
+            max-width:700px;
+            font-size: .8rem;
+        }
+
+        .career-cta button{
+            margin-top:22px;
+            padding:14px 20px;
+            border:none;
+            border-radius:12px;
+            background:white;
+            color:#2f6fed;
+            font-weight:600;
+            cursor:pointer;
+        }
+
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:.8s ease;
+        }
+
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        /* MOBILE */
+        @media(max-width:768px){
+            .career-hero h1{ font-size:22px; }
+            .career-hero p{ font-size:12px; }
+            .culture-card p, .job-card p, .career-cta p {
+                font-size: 12px;
+            }
+
+            .career-cta h2 {
+                font-size: 16px;
+            }
+
+            .career-hero {
+                margin: 0;
+                margin-top: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="career-hero hidden">
+            <h1>Careers at <span>Ayjas Integrated Systems</span></h1>
+            <p>
+            Join a mission-driven team building technology, infrastructure, and operational
+            solutions for government and public sector institutions. At Ayjas, we combine
+            innovation with accountability to create measurable public impact.
+            </p>
+            <p>
+            We are looking for professionals who value integrity, excellence, and service.
+            If you want your work to directly support communities, education systems, and
+            government transformation — you belong here.
+            </p>
+        </section>
+
+        <!-- CULTURE -->
+        <section class="culture-grid">
+            <div class="culture-card hidden">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Mission Driven</h3>
+                <p>We build solutions that improve public service delivery and operational efficiency.</p>
+            </div>
+
+            <div class="culture-card hidden">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Continuous Learning</h3>
+                <p>We invest in professional growth, certifications, and knowledge development.</p>
+            </div>
+
+            <div class="culture-card hidden">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Integrity & Compliance</h3>
+                <p>Every project follows strict governance, procurement, and security standards.</p>
+            </div>
+
+            <div class="culture-card hidden">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Collaborative Teams</h3>
+                <p>Cross-functional collaboration ensures delivery excellence and innovation.</p>
+            </div>
+        </section>
+
+        <!-- JOB AREAS -->
+        <section class="jobs-section">
+            <h2 class="section-title hidden">Career Opportunities</h2>
+
+            <div class="jobs-grid">
+
+                <div class="job-card hidden">
+                    <h4>Government Consulting</h4>
+                    <p>Support public agencies with strategy, digital transformation, and policy execution.</p>
+                </div>
+
+                <div class="job-card hidden">
+                    <h4>Technology & Engineering</h4>
+                    <p>Design and deploy secure systems supporting government and education environments.</p>
+                </div>
+
+                <div class="job-card hidden">
+                    <h4>Program & Project Management</h4>
+                    <p>Lead mission-critical implementations aligned with procurement and contract standards.</p>
+                </div>
+
+                <div class="job-card hidden">
+                    <h4>Compliance & Security</h4>
+                    <p>Ensure solutions meet regulatory frameworks, security standards, and audit readiness.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="career-cta hidden">
+            <h2>Build Your Career With Purpose</h2>
+            <p>
+            We are always looking for talented professionals passionate about public sector
+            innovation. Submit your resume and join our growing team.
+            </p>
+            <button>View Open Positions</button>
+        </section>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+        const sections = document.querySelectorAll(".hidden");
+
+        sections.forEach((section, index) => {
+        setTimeout(() => {
+        section.classList.add("show");
+        }, index * 120);
+        });
+
+        window.addEventListener("scroll", () => {
+        const trigger = window.innerHeight * 0.85;
+        sections.forEach(section => {
+        section.classList.toggle(
+        "show",
+        section.getBoundingClientRect().top < trigger
+        );
+        });
+        });
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

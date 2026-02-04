@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Equal Opportunity Employer Statement</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body{
+        font-family:"Montserrat",sans-serif;
+        overflow-x:hidden;
+        }
+
+        .container{
+        width:90%;
+        margin:0 auto;
+        }
+
+        body.light{
+        background:#ffffff;
+        color:#222;
+        transition:1s ease-in-out;
+        }
+
+        body.dark{
+        background:#121212;
+        color:#f1f1f1;
+        }
+
+        /* animation – unchanged */
+        .hidden{
+        opacity:0;
+        transform:translateY(40px);
+        transition:all .8s ease-out;
+        }
+
+        .hidden.show{
+        opacity:1;
+        transform:translateY(0);
+        }
+
+        /* HERO */
+        .eeo-hero{
+        margin-top:7rem;
+        max-width:900px;
+        }
+
+        .eeo-hero h1{
+        font-size:2rem;
+        font-weight:700;
+        }
+
+        .eeo-hero p{
+        margin-top:1rem;
+        line-height:1.7;
+        opacity:.85;
+        font-size: .8rem;
+        }
+
+        /* CONTENT */
+        .eeo-section{
+        margin-top:3rem;
+        max-width:950px;
+        }
+
+        .eeo-section h2{
+        font-size:1.2rem;
+        margin-bottom:.6rem;
+        }
+
+        .eeo-section p{
+        line-height:1.7;
+        opacity:.9;
+        font-size: .8rem;
+        }
+
+        /* GRID */
+        .eeo-grid{
+        margin-top:3.5rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:1.6rem;
+        }
+
+        .eeo-card{
+        padding:1.8rem;
+        border-radius:14px;
+        border:1px solid rgba(0,0,0,.08);
+        background:#fff;
+        }
+
+        body.dark .eeo-card{
+        background:#1a1a1a;
+        border-color:#2a2a2a;
+        }
+
+        .eeo-card i{
+        font-size:1.6rem;
+        color:#2f6fed;
+        margin-bottom:.8rem;
+        }
+
+        .eeo-card h3{
+        font-size:1rem;
+        margin-bottom:.5rem;
+        }
+
+        .eeo-card p{
+        font-size:.8rem;
+        line-height:1.6;
+        opacity:.85;
+        }
+
+        /* CALLOUT */
+        .eeo-callout{
+        margin-top:4rem;
+        padding:2rem;
+        border-left:4px solid #2f6fed;
+        background:rgba(47,111,237,.05);
+        font-size:.8rem;
+        line-height:1.7;
+        }
+
+        @media(max-width:800px){
+        .eeo-hero h1{font-size:22px;}
+        .eeo-hero p,
+        .eeo-section p,
+        .eeo-card p,
+        .eeo-callout{font-size:12px;}
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="eeo-hero hidden">
+            <h1>Equal Opportunity Employer Statement</h1>
+            <p>
+            Ayjas Integrated Systems is committed to providing an inclusive,
+            respectful, and equitable workplace where all individuals are
+            valued for their skills, experience, and contributions.
+            </p>
+            <p>
+            We believe diversity strengthens our organization and enhances
+            our ability to serve government, education, and public sector partners.
+            </p>
+        </div>
+
+        <!-- TEXT SECTIONS -->
+        <div class="eeo-section hidden">
+            <h2>Our Commitment to Equal Employment</h2>
+            <p>
+            Ayjas Integrated Systems provides equal employment opportunities to all
+            employees and applicants without regard to race, color, national origin,
+            gender, gender identity, age, disability, veteran status, or any other
+            protected characteristic under applicable law.
+            </p>
+        </div>
+
+        <div class="eeo-section hidden">
+            <h2>Inclusive & Respectful Workplace</h2>
+            <p>
+            We are committed to maintaining a professional environment free from
+            discrimination, harassment, and retaliation. All team members are
+            expected to uphold standards of respect, integrity, and accountability.
+            </p>
+        </div>
+
+        <div class="eeo-section hidden">
+            <h2>Fair Hiring & Advancement</h2>
+            <p>
+            Employment decisions related to recruitment, hiring, compensation,
+            promotion, and professional development are based on qualifications,
+            merit, performance, and organizational needs.
+            </p>
+        </div>
+
+        <!-- GRID -->
+        <div class="eeo-grid">
+
+            <div class="eeo-card hidden">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Fair Employment Practices</h3>
+                <p>
+                Structured hiring and evaluation processes ensure consistency,
+                transparency, and fairness across all roles.
+                </p>
+            </div>
+
+            <div class="eeo-card hidden">
+                <i class="fa-solid fa-users"></i>
+                <h3>Diverse Perspectives</h3>
+                <p>
+                We value diverse experiences and perspectives that strengthen decision-making
+                and service delivery.
+                </p>
+            </div>
+
+            <div class="eeo-card hidden">
+                <i class="fa-solid fa-shield"></i>
+                <h3>Safe & Respectful Environment</h3>
+                <p>
+                Harassment or discrimination of any kind is not tolerated,
+                and concerns may be raised without fear of retaliation.
+                </p>
+            </div>
+
+            <div class="eeo-card hidden">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <h3>Legal Compliance</h3>
+                <p>
+                We comply with all applicable equal employment opportunity laws
+                and employment regulations.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- CALLOUT -->
+        <div class="eeo-callout hidden">
+        Ayjas Integrated Systems regularly reviews employment policies and
+        practices to ensure alignment with legal requirements and our
+        commitment to equal opportunity.
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- ORIGINAL ANIMATION SCRIPT — UNCHANGED -->
+    <script>
+    window.addEventListener('load', () => {
+    const sections = document.querySelectorAll(".hidden");
+
+    function revealSections() {
+    const trigger = window.innerHeight * 0.8;
+    sections.forEach(section => {
+    section.classList.add("show");
+    });
+    }
+
+    window.addEventListener("load", revealSections);
+
+    sections.forEach((section, index) => {
+    setTimeout(() => {
+    section.classList.add("show");
+    }, index * 150);
+    });
+
+    window.addEventListener("scroll", () => {
+    const trigger = window.innerHeight * 0.8;
+    sections.forEach(section => {
+    section.classList.toggle(
+    "show",
+    section.getBoundingClientRect().top < trigger
+    );
+    });
+    });
+    });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>
+

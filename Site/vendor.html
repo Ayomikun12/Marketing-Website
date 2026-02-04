@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Documentation</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: "Montserrat", sans-serif;
+            overflow-x:hidden;
+        }
+
+        body.light{
+            background:#ffffff;
+            color:#222;
+            transition:1s ease;
+        }
+
+        body.dark{
+            background:#121212;
+            color:#f1f1f1;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+        }
+
+        /* HERO */
+        .hero{
+            margin-top:6rem;
+            max-width:900px;
+        }
+
+        .hero h1{
+            font-size:2rem;
+            font-weight:800;
+        }
+
+        .hero p{
+            margin-top:1rem;
+            line-height:1.7;
+            font-size:.8rem;
+        }
+
+        /* DOCUMENT GRID */
+        .doc-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:2rem;
+            margin-top:3rem;
+        }
+
+        .doc-card{
+            padding:2rem;
+            border-radius:14px;
+            background:rgba(0,0,0,0.03);
+            transition:0.4s ease;
+            border:1px solid rgba(0,0,0,0.05);
+        }
+
+        body.dark .doc-card{
+            background:rgba(255,255,255,0.04);
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .doc-card:hover{
+            transform:translateY(-6px);
+        }
+
+        .doc-card i{
+            font-size:1.6rem;
+            margin-bottom:1rem;
+            color: blue;
+        }
+
+        .doc-card h3{
+            margin-bottom:0.5rem;
+        }
+
+        .doc-card p{
+            line-height:1.6;
+            font-size:0.8rem;
+        }
+
+        /* DOWNLOAD SECTION */
+        .download-section{
+            margin-top:4rem;
+        }
+
+        .download-section h2{
+            margin-bottom:1rem;
+        }
+
+        .download-list{
+            margin-top:1.5rem;
+        }
+
+        .download-item{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:1rem;
+            border-radius:10px;
+            margin-bottom:1rem;
+            background:rgba(0,0,0,0.03);
+        }
+
+        body.dark .download-item{
+            background:rgba(255,255,255,0.05);
+        }
+
+        .download-item span{
+            font-weight:600;
+        }
+
+        .download-item button{
+            border:none;
+            padding:0.5rem 1rem;
+            border-radius:6px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+        }
+
+        /* ANIMATIONS */
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:all 0.8s ease;
+        }
+
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        @media(max-width: 800px){
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p, .doc-card p {
+                font-size: 12px;
+            }
+
+            .download-item span {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="hero hidden">
+            <h1 class="hidden">Vendor Documentation</h1>
+            <p class="hidden">
+                Access official documentation required for vendor registration, onboarding, 
+                compliance verification, and contract participation across government and 
+                public sector programs.
+            </p>
+            <p class="hidden">
+                Our vendor documentation framework ensures transparency, regulatory alignment, 
+                and streamlined procurement engagement across all supported jurisdictions.
+            </p>
+        </section>
+
+        <!-- DOCUMENT TYPES -->
+        <section class="doc-grid">
+
+            <div class="doc-card hidden">
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Contract Templates</h3>
+                <p>
+                    Standardized contract structures used across government procurement 
+                    programs to ensure legal consistency and audit readiness.
+                </p>
+            </div>
+
+            <div class="doc-card hidden">
+                <i class="fa-solid fa-shield"></i>
+                <h3>Compliance Requirements</h3>
+                <p>
+                    Documentation covering regulatory, security, and certification 
+                    requirements for approved public sector vendors.
+                </p>
+            </div>
+
+            <div class="doc-card hidden">
+                <i class="fa-solid fa-user-check"></i>
+                <h3>Vendor Registration Guides</h3>
+                <p>
+                    Step-by-step onboarding documentation covering vendor qualification, 
+                    verification, and approval workflows.
+                </p>
+            </div>
+
+            <div class="doc-card hidden">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Integration Documentation</h3>
+                <p>
+                    Technical integration standards for vendors delivering software, 
+                    services, or infrastructure to public sector agencies.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- DOWNLOAD SECTION -->
+        <section class="download-section hidden">
+
+            <h2>Available Downloads</h2>
+
+            <div class="download-list">
+
+                <div class="download-item hidden">
+                    <span>Vendor Registration Packet</span>
+                    <button>Download</button>
+                </div>
+
+                <div class="download-item hidden">
+                    <span>Government Security Requirements Guide</span>
+                    <button>Download</button>
+                </div>
+
+                <div class="download-item hidden">
+                    <span>Standard Contract Terms & Conditions</span>
+                    <button>Download</button>
+                </div>
+
+                <div class="download-item hidden">
+                    <span>Data Protection & Privacy Vendor Checklist</span>
+                    <button>Download</button>
+                </div>
+
+            </div>
+
+        </section>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+    window.addEventListener('load', () => {
+
+        const sections = document.querySelectorAll(".hidden");
+
+        sections.forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add("show");
+            }, index * 120);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.85;
+
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+
+    });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

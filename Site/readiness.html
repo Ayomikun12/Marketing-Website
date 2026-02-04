@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC 2 Readiness</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark { background: #121212; color: #f1f1f1; }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .soc-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            max-width: 900px;
+        }
+
+        .soc-hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .soc-hero p {
+            margin-top: 1rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* TRUST PRINCIPLES */
+        .soc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .soc-card {
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(47,111,237,0.15);
+            background: rgba(47,111,237,0.04);
+        }
+
+        .soc-card i {
+            font-size: 1.8rem;
+            color: #2f6fed;
+            margin-bottom: 1rem;
+        }
+
+        .soc-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .soc-card p {
+            font-size: 0.80rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* READINESS STATEMENT */
+        .soc-callout {
+            margin-top: 4rem;
+            padding: 2.5rem;
+            border-radius: 18px;
+            background: linear-gradient(
+                to right,
+                rgba(47,111,237,0.10),
+                rgba(47,111,237,0.02)
+            );
+            border-left: 6px solid #2f6fed;
+            font-size: 0.8rem;
+            line-height: 1.65;
+        }
+
+        @media(max-width: 800px){
+            .soc-hero h1 { font-size: 22px; }
+            .soc-hero p,
+            .soc-card p,
+            .soc-callout { font-size: 12px; }
+            .soc-card h3 { font-size: 15px; }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <div class="soc-hero hidden">
+            <h1>SOC 2 Readiness</h1>
+            <p>
+                Our security and governance practices are aligned with the
+                Trust Services Criteria that underpin SOC 2 assessments.
+            </p>
+            <p>
+                We maintain documented controls, monitoring processes, and
+                operational discipline to support audit readiness.
+            </p>
+        </div>
+
+        <div class="soc-grid">
+
+            <div class="soc-card hidden">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Security</h3>
+                <p>
+                    Controls are in place to protect systems and data against
+                    unauthorized access and security incidents.
+                </p>
+            </div>
+
+            <div class="soc-card hidden">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Availability</h3>
+                <p>
+                    Systems are monitored to support reliability, uptime,
+                    and operational continuity.
+                </p>
+            </div>
+
+            <div class="soc-card hidden">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Processing Integrity</h3>
+                <p>
+                    Operational processes support accuracy, completeness,
+                    and timely execution of services.
+                </p>
+            </div>
+
+            <div class="soc-card hidden">
+                <i class="fa-solid fa-user-lock"></i>
+                <h3>Confidentiality & Privacy</h3>
+                <p>
+                    Data handling practices align with confidentiality
+                    obligations and privacy expectations.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="soc-callout hidden">
+            SOC 2 readiness reflects alignment with best practices and internal
+            controls. Formal SOC 2 certification requires an independent audit
+            conducted by a licensed CPA firm.
+        </div>
+        <div id="footer"></div>
+    </div>
+
+
+
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+            sections.forEach((section, index) => {
+                setTimeout(() => section.classList.add("show"), index * 150);
+            });
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Solutions</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            font-family:"Montserrat", sans-serif;
+            background:#f7f9fc;
+            color:#222;
+            overflow-x:hidden;
+        }
+
+        body.dark {
+            background:#121212;
+            color:#eee;
+        }
+
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:all 0.8s ease;
+        }
+
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        .container {
+            width:92%;
+            margin:auto;
+        }
+
+        /* HERO */
+        .sol-hero {
+            margin-top:6rem;
+            margin-bottom:4rem;
+        }
+
+        .sol-hero h1 {
+            font-size:2rem;
+            font-weight:700;
+        }
+
+        .sol-hero p {
+            margin-top:1rem;
+            font-size:.8rem;
+            opacity:0.85;
+            line-height:1.7;
+        }
+
+        /* SOLUTIONS GRID */
+        .sol-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:24px;
+            margin-bottom:6rem;
+        }
+
+        .sol-card {
+            background:#fff;
+            border-radius:16px;
+            padding:20px;
+            box-shadow:0 6px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor:pointer;
+        }
+
+        body.dark .sol-card {
+            background:#1c1c1c;
+            box-shadow:0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .sol-card:hover {
+            transform: translateY(-8px);
+            box-shadow:0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .sol-card i {
+            font-size:2rem;
+            color:#2563eb;
+        }
+
+        .sol-card h3 {
+            margin-top:12px;
+            font-size:1rem;
+            font-weight:600;
+        }
+
+        .sol-card p {
+            margin-top:8px;
+            font-size:0.8rem;
+            line-height:1.6;
+            opacity:0.85;
+        }
+
+        /* SECTION HEADERS */
+        .section-title {
+            font-size:1.8rem;
+            font-weight:700;
+            margin-bottom:2rem;
+        }
+
+        @media(max-width:768px){
+            .sol-hero h1 { font-size:22px; }
+            .sol-hero p { font-size:12px; }
+            .sol-card h3 { font-size:16px; }
+            .sol-card p { font-size:12px; }
+            .section-title {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="sol-hero hidden">
+            <h1>All Solutions</h1>
+            <p>Explore our full suite of services tailored for government, education, and public sector institutions.</p>
+        </div>
+
+        <!-- SOLUTIONS GRID -->
+        <div class="section-title">Our Core Solutions</div>
+        <div class="sol-grid">
+
+            <div class="sol-card hidden">
+                <i class="fa-solid fa-university"></i>
+                <h3>Education Solutions</h3>
+                <p>End-to-end technology and operational solutions for K–12 and Higher Education institutions.</p>
+            </div>
+
+            <div class="sol-card hidden">
+                <i class="fa-solid fa-landmark"></i>
+                <h3>Government Services</h3>
+                <p>Supporting local, state, and federal agencies with procurement, compliance, and operational support.</p>
+            </div>
+
+            <div class="sol-card hidden">
+                <i class="fa-solid fa-shield-alt"></i>
+                <h3>Security & Compliance</h3>
+                <p>Enterprise-level data protection, FERPA alignment, SOC 2 readiness, and privacy safeguards.</p>
+            </div>
+
+            <div class="sol-card hidden">
+                <i class="fa-solid fa-cogs"></i>
+                <h3>Implementation & Onboarding</h3>
+                <p>Structured processes for seamless adoption, training, and operational continuity.</p>
+            </div>
+
+            <div class="sol-card hidden">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Documentation & Support</h3>
+                <p>Comprehensive manuals, case studies, and a dedicated support center for system users.</p>
+            </div>
+
+            <div class="sol-card hidden">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Analytics & Reporting</h3>
+                <p>Actionable insights to optimize operations, measure performance, and guide decision-making.</p>
+            </div>
+
+        </div>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+    // Animate cards on scroll
+    window.addEventListener('load', () => {
+
+            const sections = document.querySelectorAll(".hidden");
+
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add("show");
+                }, index * 120);
+            });
+
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.85;
+
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
+
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+</body>
+</html>

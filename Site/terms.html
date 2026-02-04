@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+        *{margin:0;padding:0;box-sizing:border-box;}
+
+        body{
+            font-family:"Montserrat", sans-serif;
+        }
+
+        body.light{
+            background:#ffffff;
+            color:#222;
+        }
+
+        body.dark{
+            background:#121212;
+            color:#eee;
+        }
+
+        .container{
+            width:92%;
+            margin:auto;
+        }
+
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:all 0.8s ease;
+        }
+
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        /* HERO */
+        .tos-hero{
+            margin-top:6rem;
+            margin-bottom:3rem;
+            max-width:900px;
+        }
+
+        .tos-hero h1{
+            font-size:2rem;
+            font-weight:800;
+        }
+
+        .tos-hero p{
+            margin-top:1rem;
+            line-height:1.7;
+            opacity:0.85;
+            font-size: .8rem;
+        }
+
+        /* VERSION STRIP */
+        .tos-meta{
+            margin-top:1.5rem;
+            display:flex;
+            gap:20px;
+            font-size:14px;
+            opacity:0.8;
+        }
+
+        /* SEARCH */
+        .tos-search{
+            margin-top:2rem;
+            position:relative;
+            max-width:500px;
+        }
+
+        .tos-search input{
+            width:100%;
+            padding:12px 14px 12px 42px;
+            border-radius:10px;
+            border:1px solid rgba(0,0,0,0.15);
+        }
+
+        body.dark .tos-search input{
+            background:#1f1f1f;
+            border:1px solid rgba(255,255,255,0.15);
+            color:white;
+        }
+
+        .tos-search i{
+            position:absolute;
+            left:14px;
+            top:50%;
+            transform:translateY(-50%);
+            opacity:0.6;
+        }
+
+        /* LAYOUT */
+        .tos-layout{
+            display:grid;
+            grid-template-columns:1fr 320px;
+            gap:40px;
+            margin-top:3rem;
+        }
+
+        /* TERM CARDS */
+        .term-card{
+            border:1px solid rgba(0,0,0,0.08);
+            padding:24px;
+            border-radius:14px;
+            margin-bottom:1.5rem;
+        }
+
+        body.dark .term-card{
+            border:1px solid rgba(255,255,255,0.12);
+        }
+
+        .term-card h3{
+            margin-bottom:10px;
+        }
+
+        .term-card p{
+            font-size:.8rem;
+            line-height:1.7;
+            opacity:0.9;
+        }
+
+        /* SIDE PANEL */
+        .tos-side{
+            position:sticky;
+            top:120px;
+            height:fit-content;
+        }
+
+        .side-box{
+            border:1px solid rgba(0,0,0,0.08);
+            border-radius:14px;
+            padding:20px;
+            margin-bottom:20px;
+        }
+
+        body.dark .side-box{
+            border:1px solid rgba(255,255,255,0.12);
+        }
+
+        .side-box h4{
+            margin-bottom:10px;
+        }
+
+        .side-box button{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            border:none;
+            border-radius:8px;
+            font-weight:600;
+            cursor:pointer;
+        }
+
+        .primary-btn{
+            background:#2563eb;
+            color:white;
+        }
+
+        .secondary-btn{
+            background:transparent;
+            border:1px solid #2563eb;
+            color:#2563eb;
+        }
+
+        /* MOBILE */
+        @media(max-width:900px){
+            .tos-layout{
+                grid-template-columns:1fr;
+            }
+
+            .tos-side{
+                position:relative;
+                top:0;
+            }
+
+            .tos-hero h1{
+                font-size:24px;
+            }
+
+            .term-card p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="tos-hero hidden">
+            <h1>Terms of Service</h1>
+            <p>
+                These Terms of Service govern access to and use of our platforms,
+                services, and government and education technology solutions.
+            </p>
+
+            <div class="tos-meta hidden">
+                <span><strong>Version:</strong> v3.1</span>
+                <span><strong>Last Updated:</strong> January 2026</span>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="tos-search hidden">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search terms (e.g., liability, uptime, data usage)">
+            </div>
+        </div>
+
+        <!-- MAIN LAYOUT -->
+        <div class="tos-layout">
+
+            <!-- TERMS CONTENT -->
+            <div>
+
+                <div class="term-card hidden">
+                    <h3>Service Usage</h3>
+                    <p>
+                    Customers may access and use services only for authorized government,
+                    education, or public sector purposes in accordance with applicable laws
+                    and contract terms.
+                    </p>
+                </div>
+
+                <div class="term-card hidden">
+                    <h3>Account Responsibility</h3>
+                    <p>
+                    Customers are responsible for maintaining credential security,
+                    managing authorized users, and ensuring proper usage policies
+                    are enforced internally.
+                    </p>
+                </div>
+
+                <div class="term-card hidden">
+                    <h3>Data Protection & Security</h3>
+                    <p>
+                    We maintain administrative, technical, and physical safeguards
+                    aligned with recognized security frameworks and regulatory standards.
+                    </p>
+                </div>
+
+                <div class="term-card hidden">
+                    <h3>Service Availability</h3>
+                    <p>
+                    We maintain enterprise-grade uptime targets and provide status
+                    transparency through our system status platform.
+                    </p>
+                </div>
+
+                <div class="term-card hidden">
+                    <h3>Limitation of Liability</h3>
+                    <p>
+                    Liability is limited to the maximum extent permitted under
+                    applicable procurement and commercial law frameworks.
+                    </p>
+                </div>
+
+                <div class="term-card hidden">
+                    <h3>Termination</h3>
+                    <p>
+                    Either party may terminate services under defined contractual,
+                    regulatory, or compliance-triggered conditions.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- SIDE PANEL -->
+            <div class="tos-side">
+
+                <div class="side-box hidden">
+                    <h4>Quick Summary</h4>
+                    <p style="font-size:.8rem;opacity:0.85;">
+                    Defines platform usage rules, security obligations,
+                    and service responsibilities for all customers.
+                    </p>
+                </div>
+
+                <div class="side-box hidden">
+                    <h4>Actions</h4>
+                    <button class="primary-btn">Accept Terms</button>
+                    <button class="secondary-btn">Download PDF</button>
+                </div>
+
+                <div class="side-box hidden">
+                    <h4>Need Legal Help?</h4>
+                    <p style="font-size:.8rem;opacity:0.85;">
+                    Contact our compliance and legal operations team.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer"></div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+
+            const sections = document.querySelectorAll(".hidden");
+
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add("show");
+                }, index * 120);
+            });
+
+            window.addEventListener("scroll", () => {
+                const trigger = window.innerHeight * 0.85;
+
+                sections.forEach(section => {
+                    section.classList.toggle(
+                        "show",
+                        section.getBoundingClientRect().top < trigger
+                    );
+                });
+            });
+
+        });
+    </script>
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

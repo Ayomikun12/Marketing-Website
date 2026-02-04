@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Government & Public Services</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body{
+        font-family:"Montserrat",sans-serif;
+        overflow-x:hidden;
+        }
+
+        .container{
+        width:90%;
+        margin:0 auto;
+        }
+
+        body.light{
+        background:#ffffff;
+        color:#222;
+        transition:1s ease-in-out;
+        }
+
+        body.dark{
+        background:#121212;
+        color:#f1f1f1;
+        }
+
+        /* ANIMATION (UNCHANGED) */
+        .hidden{
+        opacity:0;
+        transform:translateY(40px);
+        transition:all .8s ease-out;
+        }
+
+        .hidden.show{
+        opacity:1;
+        transform:translateY(0);
+        }
+
+        /* HERO */
+
+
+        /* .gov-services-page {
+        font-family: inherit;
+        } */
+
+        /* HERO */
+        .gps-hero {
+        margin-top: 7rem;
+        }
+
+        .gps-hero-content {
+        max-width: 700px;
+        z-index: 2;
+        /* position: relative; */
+        }
+
+        .gps-badge {
+        /* display: inline-block; */
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(0, 140, 255, 0.15);
+        border: 1px solid rgba(0, 140, 255, 0.4);
+        font-size: 13px;
+        margin-bottom: 20px;
+        }
+
+        .gps-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        margin-top: 2rem;
+        }
+
+        .gps-hero p {
+        font-size: .8rem;
+        line-height: 1.7;
+        opacity: 0.9;
+        }
+
+        .gps-hero-buttons {
+        margin-top: 35px;
+        display: flex;
+        gap: 16px;
+        }
+
+        .link {
+            margin-top: 2rem;
+        }
+
+        .gps-btn-primary {
+        padding: 14px 28px;
+        border-radius: 10px;
+        background:  #0033ff;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        }
+
+        .gps-btn-outline {
+        padding: 14px 28px;
+        border-radius: 10px;
+        border: 1px solid black;
+        color: black;
+        text-decoration: none;
+        }
+
+        body.dark .gps-btn-outline {
+            border: 1px solid white;
+            color: #ffffff;
+        }
+
+        /* PILLARS */
+        .gps-pillars {
+            margin-top: 3rem;
+        }
+
+        .gps-pillars-grid {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 30px;
+        }
+
+        .gps-pillar-card {
+            background:white;
+            padding:28px;
+            border-radius:18px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            transition:.35s ease;
+        }
+
+        body.dark .gps-pillar-card {
+            background-color: black;
+        }
+
+        .gps-pillar-card i {
+            font-size:28px;
+            color:#2f6fed;
+        }
+
+        .gps-pillar-card h3 {
+            font-size: 1rem;
+            margin-top: 7px;
+        }
+
+        .gps-pillar-card p {
+            font-size: .8rem;
+            margin-top: 8px;
+        }
+
+        /* SOLUTIONS */
+        .gps-solutions {
+        margin-top: 3rem;
+        }
+
+        .gps-solutions-grid {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+        }
+
+        .gps-solution {
+        background:white;
+            padding:28px;
+            border-radius:18px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            transition:.35s ease;
+        }
+
+        body.dark .gps-solution {
+            background-color: black;
+        }
+
+        .gps-solution h3 {
+            font-size: 1rem;
+        }
+
+        .gps-solution p {
+            font-size: .8rem;
+            margin-top: 8px;
+        }
+
+        /* IMPACT */
+        .gps-impact {
+        margin-top: 4rem;
+        }
+
+        .gps-impact-grid {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 40px;
+        }
+
+        .gps-impact h3 {
+        font-size: 1.5rem;
+        color: #0033ff;
+        }
+
+        .gps-impact h2 {
+            font-size: 1.3rem;
+        }
+
+        .gps-impact p {
+            font-size: .8rem;
+        }
+
+        /* CTA */
+        .gps-cta {
+        margin-top: 4rem;
+        }
+
+        .gps-cta h2 {
+            font-size: 1.2rem;
+        }
+
+        .gps-cta p {
+            font-size: .8rem;
+        }
+
+
+        @media(max-width:800px){
+        .gps-hero h1{font-size:22px;}
+        .gps-hero p,
+        .gps-card p,
+        .gps-strategy p,
+        .gps-callout{font-size:12px;}
+        .gps-hero-buttons {
+            display: grid;
+        }
+        .gps-btn-primary, .gps-btn-outline {
+            padding: 0;
+            width: 55%;
+            padding: 9px;
+            text-align: center;
+        }
+
+        .gps-pillars h2 {
+            font-size: 1rem;
+        }
+
+        .gps-pillar-card p {
+            font-size: .8rem;
+        }
+
+        .gps-impact h2 {
+            font-size: 1rem;
+        }
+
+        .gps-impact-grid h3 {
+            font-size: 1.5rem;
+        }
+
+        .gps-impact-grid p {
+            font-size: .8rem;
+        }
+
+        .gps-cta h2 {
+            font-size: 1rem;
+        }
+
+        .gps-cta p {
+            font-size: .8rem;
+            margin-top: 5px;
+        }
+
+        .link a {
+            font-size: .7rem;
+        }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <!-- Government & Public Services Page Content -->
+        <main class="gov-services-page">
+
+            <!-- HERO -->
+            <section class="gps-hero">
+                <div class="gps-hero-content hidden">
+                    <span class="gps-badge">Public Sector Solutions</span>
+                    <h1>Government & Public Services</h1>
+                    <p>
+                        Secure, scalable, and citizen-focused digital platforms designed to help
+                        government agencies modernize operations, improve service delivery,
+                        and build public trust.
+                    </p>
+
+                    <div class="gps-hero-buttons">
+                        <a href="#" class="gps-btn-primary">Explore Solutions</a>
+                        <a href="#" class="gps-btn-outline">Request Demo</a>
+                    </div>
+                </div>
+
+                <div class="gps-hero-glow"></div>
+            </section>
+
+            <!-- VALUE PILLARS -->
+            <section class="gps-pillars hidden">
+                <h2>Built for Modern Public Sector Needs</h2>
+
+                <div class="gps-pillars-grid hidden">
+                    <div class="gps-pillar-card">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>Citizen-Centered Services</h3>
+                        <p>
+                        Deliver seamless digital experiences that improve citizen satisfaction
+                        while reducing administrative overhead.
+                        </p>
+                    </div>
+
+                    <div class="gps-pillar-card hidden">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Security & Compliance</h3>
+                        <p>
+                        Designed with government-grade security standards and regulatory
+                        compliance at every layer.
+                        </p>
+                    </div>
+
+                    <div class="gps-pillar-card hidden">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <h3>Data-Driven Decision Making</h3>
+                        <p>
+                        Transform operational data into actionable intelligence for leadership
+                        and policy planning.
+                        </p>
+                    </div>
+
+                    <div class="gps-pillar-card hidden">
+                        <i class="fa-solid fa-gears"></i>
+                        <h3>Scalable Infrastructure</h3>
+                        <p>
+                        Built to support local, state, and national agencies with reliable,
+                        high-performance systems.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOLUTION AREAS -->
+            <section class="gps-solutions hidden">
+                <h2>Solution Areas</h2>
+
+                <div class="gps-solutions-grid hidden">
+
+                    <div class="gps-solution">
+                        <h3>Digital Service Delivery</h3>
+                        <p>
+                        Online portals, automated workflows, and integrated platforms
+                        that simplify citizen interactions.
+                        </p>
+                    </div>
+
+                    <div class="gps-solution">
+                        <h3>Operational Modernization</h3>
+                        <p>
+                        Replace legacy systems with secure, cloud-ready solutions that
+                        improve efficiency and reduce cost.
+                        </p>
+                    </div>
+
+                    <div class="gps-solution">
+                        <h3>Public Data Platforms</h3>
+                        <p>
+                        Enable transparency and data sharing across departments while
+                        maintaining strict security controls.
+                        </p>
+                    </div>
+
+                    <div class="gps-solution">
+                        <h3>Workforce Digital Tools</h3>
+                        <p>
+                        Empower government employees with modern tools for collaboration,
+                        reporting, and service delivery.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- IMPACT METRICS -->
+            <section class="gps-impact hidden">
+                <h2>Proven Public Sector Impact</h2>
+
+                <div class="gps-impact-grid hidden">
+                    <div>
+                        <h3>40%</h3>
+                        <p>Faster service processing times</p>
+                    </div>
+
+                    <div>
+                        <h3>60%</h3>
+                        <p>Reduction in manual workflows</p>
+                    </div>
+
+                    <div>
+                        <h3>99.9%</h3>
+                        <p>Platform availability reliability</p>
+                    </div>
+
+                    <div>
+                        <h3>100%</h3>
+                        <p>Compliance-first architecture</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="gps-cta hidden">
+                <h2>Transform Public Service Delivery</h2>
+                <p>
+                Partner with Ayjas Integrated Systems to build secure, future-ready
+                platforms for government and citizens.
+                </p>
+                <div class="link">
+                    <a href="#" class="gps-btn-primary">Contact Public Sector Team</a>
+                </div>
+            </section>
+
+        </main>
+
+
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- ANIMATION SCRIPT (UNCHANGED) -->
+    <script>
+    window.addEventListener('load', () => {
+    const sections = document.querySelectorAll(".hidden");
+
+    function revealSections() {
+    const trigger = window.innerHeight * 0.8;
+    sections.forEach(section => {
+    section.classList.add("show");
+    });
+    }
+
+    window.addEventListener("load", revealSections);
+
+    sections.forEach((section, index) => {
+    setTimeout(() => {
+    section.classList.add("show");
+    }, index * 150);
+    });
+
+    window.addEventListener("scroll", () => {
+    const trigger = window.innerHeight * 0.8;
+    sections.forEach(section => {
+    section.classList.toggle(
+    "show",
+    section.getBoundingClientRect().top < trigger
+    );
+    });
+    });
+    });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

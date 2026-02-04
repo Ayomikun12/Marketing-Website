@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Privacy</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .privacy-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            max-width: 850px;
+        }
+
+        .privacy-hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .privacy-hero p {
+            margin-top: 1rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* TWO COLUMN LAYOUT */
+        .privacy-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        /* LEFT CONTENT */
+        .privacy-content h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content p {
+            font-size: 0.80rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* RIGHT PANEL */
+        .privacy-panel {
+            padding: 2.5rem;
+            border-radius: 18px;
+            background: linear-gradient(
+                180deg,
+                rgba(47,111,237,0.08),
+                rgba(47,111,237,0.02)
+            );
+            border: 1px solid rgba(47,111,237,0.15);
+        }
+
+        .privacy-panel h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-point {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.3rem;
+        }
+
+        .privacy-point i {
+            font-size: 1.3rem;
+            color: #2f6fed;
+            margin-top: 3px;
+        }
+
+        .privacy-point p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* FOOTER NOTE */
+        .privacy-note {
+            margin-bottom: 5rem;
+            padding: 2.5rem;
+            border-radius: 14px;
+            background: rgba(0,0,0,0.03);
+            font-size: 0.8rem;
+            line-height: 1.65;
+            border-left: 6px solid #2f6fed;
+        }
+
+        body.dark .privacy-note {
+            background: rgba(255,255,255,0.05);
+        }
+
+        @media(max-width: 900px){
+            .privacy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .privacy-hero h1 {
+                font-size: 22px;
+            }
+
+            .privacy-hero p,
+            .privacy-content p,
+            .privacy-point p,
+            .privacy-note {
+                font-size: 12px;
+            }
+
+            .privacy-content h2,
+            .privacy-panel h3 {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="privacy-hero hidden">
+            <h1>Data Privacy</h1>
+            <p>
+                We are committed to responsible data handling practices that
+                respect privacy, support regulatory obligations, and protect
+                sensitive information entrusted to us.
+            </p>
+            <p>
+                Our approach emphasizes transparency, accountability, and
+                alignment with public sector and educational expectations.
+            </p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="privacy-layout">
+
+            <!-- LEFT -->
+            <div class="privacy-content hidden">
+                <h2>Our Privacy Approach</h2>
+                <p>
+                    Data privacy is integrated into our operational, technical,
+                    and governance practices. We collect, process, and store
+                    information only as necessary to support contractual and
+                    service-related objectives.
+                </p>
+                <p>
+                    Privacy considerations are addressed throughout the
+                    lifecycle of our services, from system design and access
+                    control to retention and disposal.
+                </p>
+
+                <h2>Data Handling Scope</h2>
+                <p>
+                    We work with institutions to define data ownership,
+                    processing responsibilities, and oversight requirements
+                    through documented agreements and governance structures.
+                </p>
+                <p>
+                    Personal and sensitive data is handled in accordance with
+                    applicable laws, contractual obligations, and internal
+                    policies.
+                </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="privacy-panel hidden">
+                <h3>Privacy Principles</h3>
+
+                <div class="privacy-point">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <p>
+                        Data access is restricted to authorized personnel based
+                        on role and responsibility.
+                    </p>
+                </div>
+
+                <div class="privacy-point">
+                    <i class="fa-solid fa-database"></i>
+                    <p>
+                        Information is collected and processed only for defined
+                        and legitimate purposes.
+                    </p>
+                </div>
+
+                <div class="privacy-point">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>
+                        Safeguards are implemented to protect against
+                        unauthorized access, disclosure, or misuse.
+                    </p>
+                </div>
+
+                <div class="privacy-point">
+                    <i class="fa-solid fa-file-contract"></i>
+                    <p>
+                        Data handling responsibilities are governed by
+                        contractual and policy-based controls.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- NOTE -->
+        <div class="privacy-note hidden">
+            Data privacy practices are designed to support regulatory and
+            contractual obligations. Final compliance determinations remain
+            the responsibility of the data-owning institution or agency.
+        </div>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+            sections.forEach((section, index) => {
+                setTimeout(() => section.classList.add("show"), index * 150);
+            });
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Benefits & Culture</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body{
+        font-family:"Montserrat",sans-serif;
+        background:#ffffff;
+        color:#222;
+        overflow-x:hidden;
+        }
+
+        body.dark{
+        background:#121212;
+        color:#f1f1f1;
+        }
+
+        .container{
+        width:90%;
+        margin:0 auto;
+        }
+
+        .hidden{
+        opacity:0;
+        transform:translateY(40px);
+        transition:all .8s ease;
+        }
+
+        .hidden.show{
+        opacity:1;
+        transform:translateY(0);
+        }
+
+        /* HERO */
+        .bc-hero{
+        margin-top:7rem;
+        margin-bottom:3rem;
+        max-width:900px;
+        }
+
+        .bc-hero h1{
+        font-size:2rem;
+        font-weight:700;
+        }
+
+        .bc-hero p{
+        margin-top:1rem;
+        line-height:1.7;
+        opacity:.85;
+        font-size: .8rem;
+        }
+
+        /* VALUES GRID */
+        .values-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:1.6rem;
+        margin-top:2rem;
+        }
+
+        .value-card{
+        padding:1.8rem;
+        border-radius:16px;
+        border:1px solid rgba(0,0,0,.08);
+        background:#fff;
+        transition:.3s ease;
+        }
+
+        body.dark .value-card{
+        background:#1a1a1a;
+        border-color:#2b2b2b;
+        }
+
+        .value-card:hover{
+        transform:translateY(-6px);
+        border-color:#2f6fed;
+        box-shadow:0 12px 28px rgba(0,0,0,.08);
+        }
+
+        .value-card i{
+        font-size:1.6rem;
+        margin-bottom:1rem;
+        color:#2f6fed;
+        }
+
+        .value-card h3{
+        font-size:1rem;
+        margin-bottom:.6rem;
+        }
+
+        .value-card p{
+        font-size:.8rem;
+        line-height:1.6;
+        opacity:.85;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits-section{
+        margin-top:4rem;
+        }
+
+        .benefits-section h2{
+        margin-bottom:1rem;
+        font-size: 1.3rem;
+        }
+
+        .benefits-list{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        gap:1.2rem;
+        }
+
+        .benefit-item{
+        padding:1.3rem;
+        border-radius:12px;
+        background:rgba(47,111,237,.06);
+        border:1px solid rgba(47,111,237,.18);
+        font-size:.8rem;
+        }
+
+        /* CALLOUT */
+        .bc-callout{
+        margin-top:4rem;
+        padding:2rem;
+        border-left:4px solid #2f6fed;
+        background:rgba(47,111,237,.05);
+        font-size:.8rem;
+        line-height:1.6;
+        }
+
+        @media(max-width:800px){
+        .bc-hero h1{font-size:22px;}
+        .bc-hero p{font-size:12px;}
+        .value-card h3{font-size:14px;}
+        .value-card p{font-size:12px;}
+        .bc-callout{font-size:12px;}
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="bc-hero hidden">
+            <h1>Benefits & Culture</h1>
+            <p>
+            At Ayjas Integrated Systems, our culture is built on innovation,
+            public impact, collaboration, and long-term career growth. We are
+            committed to creating an environment where professionals can do
+            meaningful work while maintaining balance and well-being.
+            </p>
+
+            <p>
+            Our teams support government, education, and public service
+            organizations worldwide — and we believe the best outcomes
+            come from empowered, supported employees.
+            </p>
+        </div>
+
+        <!-- VALUES -->
+        <div class="values-grid">
+
+            <div class="value-card hidden">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Innovation Mindset</h3>
+                <p>
+                We encourage experimentation, creative thinking, and continuous
+                improvement across every team and discipline.
+                </p>
+            </div>
+
+            <div class="value-card hidden">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Collaborative Culture</h3>
+                <p>
+                Cross-functional teamwork drives our success. We value open
+                communication, shared ownership, and mutual respect.
+                </p>
+            </div>
+
+            <div class="value-card hidden">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Mission-Driven Work</h3>
+                <p>
+                Our work directly supports public sector missions, improving
+                services that impact communities and citizens globally.
+                </p>
+            </div>
+
+            <div class="value-card hidden">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Career Growth</h3>
+                <p>
+                We invest in employee learning, certifications, and leadership
+                development programs to support long-term success.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- BENEFITS -->
+        <div class="benefits-section hidden">
+            <h2>Employee Benefits</h2>
+
+            <div class="benefits-list">
+
+                <div class="benefit-item">Competitive Compensation Packages</div>
+                <div class="benefit-item">Flexible Remote & Hybrid Work Options</div>
+                <div class="benefit-item">Professional Certification Sponsorship</div>
+                <div class="benefit-item">Paid Training & Development Programs</div>
+                <div class="benefit-item">Comprehensive Health & Wellness Support</div>
+                <div class="benefit-item">Generous Paid Time Off Policies</div>
+                <div class="benefit-item">Technology & Equipment Allowances</div>
+                <div class="benefit-item">Global Collaboration Opportunities</div>
+
+            </div>
+        </div>
+
+        <!-- CALLOUT -->
+        <div class="bc-callout hidden">
+        We are committed to building an inclusive, diverse workplace that
+        supports professional growth, innovation, and long-term career
+        success for every team member.
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script>
+    window.addEventListener('load', () => {
+    const sections = document.querySelectorAll(".hidden");
+
+    sections.forEach((section,index)=>{
+    setTimeout(()=>{
+    section.classList.add("show");
+    }, index*120);
+    });
+
+    window.addEventListener("scroll",()=>{
+    const trigger = window.innerHeight * 0.85;
+    sections.forEach(section=>{
+    section.classList.toggle(
+    "show",
+    section.getBoundingClientRect().top < trigger
+    );
+    });
+    });
+    });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

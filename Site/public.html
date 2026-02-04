@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Services</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body{
+            font-family:"Montserrat", sans-serif;
+            background:#ffffff;
+            color:#1f2937;
+        }
+
+        body.light {
+            background: #ffffff;
+            color: #222;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container{
+            width:90%;
+            max-width:1150px;
+            margin:auto;
+        }
+
+        /* Reveal Animation */
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:.8s ease;
+        }
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        /* HERO */
+        .ps-hero{
+            margin-top:7rem;
+            max-width:880px;
+        }
+        .ps-hero h1{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .ps-hero p{
+            margin-top:.95rem;
+            line-height:1.7;
+            font-size:.8rem;
+            opacity:.9;
+        }
+
+        /* SERVICE BANDS */
+        .ps-band{
+            margin-top:4rem;
+            padding:2.4rem;
+            border-radius:24px;
+            background:#f8fafc;
+            border:1px solid #e5e7eb;
+            display:grid;
+            grid-template-columns:70px 1fr;
+            gap:.6rem;
+            align-items:flex-start;
+        }
+
+        body.dark .ps-band {
+            background: black;
+            border: none;
+        }
+        .ps-band i{
+            font-size:1.8rem;
+            color:#2f6fed;
+            margin-top:4px;
+        }
+        .ps-band h3{
+            font-size:1.2rem;
+            margin-bottom:.6rem;
+        }
+        .ps-band p{
+            font-size:.80rem;
+            line-height:1.7;
+        }
+
+        /* IMPACT GRID */
+        .ps-impact{
+            margin-top:5rem;
+        }
+        .ps-impact h2{
+            font-size:1.2rem;
+            margin-bottom:2rem;
+        }
+        .ps-impact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:2rem;
+        }
+        .ps-impact-card{
+            padding:2rem;
+            border-radius:20px;
+            border:1px solid #e5e7eb;
+        }
+        .ps-impact-card h4{
+            font-size:1rem;
+            margin-bottom:.5rem;
+        }
+        .ps-impact-card p{
+            font-size:.8rem;
+            line-height:1.6;
+            opacity:.9;
+        }
+
+        /* CALLOUT STRIP */
+        .ps-callout{
+            background: #eef2ff;
+            padding: 2rem;
+            border-radius: 14px;
+            border-left: 4px solid #2f6fed;
+            font-size: .8rem;
+            margin-top: 4rem;
+        }
+        .ps-callout h2{
+            font-size:1.5rem;
+            margin-bottom:1rem;
+        }
+        .ps-callout p{
+            max-width:820px;
+            font-size:.8rem;
+            line-height:1.7;
+        }
+
+        /* MOBILE */
+        @media(max-width:800px){
+            .ps-hero h1{font-size:22px;}
+            .ps-hero p,
+            .ps-band p,
+            .ps-impact-card p,
+            .ps-callout p{
+                font-size:12px;
+            }
+
+            .ps-band {
+                gap: 0rem;
+                display: block;
+            }
+
+            .ps-band p {
+                margin: 0;
+            }
+
+            .ps-band h3 {
+                margin-top: 10px;
+            }
+            .ps-impact h2,
+            .ps-callout h2,
+            .ps-band h3{
+                font-size:15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="ps-hero hidden">
+            <h1>Public Services</h1>
+            <p>
+                Public service organizations are responsible for delivering essential
+                programs that directly impact citizens’ daily lives. Our platforms help
+                agencies improve service delivery, strengthen transparency, and support
+                data-driven decision making across service environments.
+            </p>
+        </section>
+
+        <!-- SERVICE BANDS -->
+        <section class="ps-band hidden">
+            <i class="fa-solid fa-users"></i>
+            <div>
+                <h3>Citizen Service Delivery</h3>
+                <p>
+                    Streamline service workflows, reduce processing times, and improve
+                    accessibility for citizens interacting with government services.
+                </p>
+            </div>
+        </section>
+
+        <section class="ps-band hidden">
+            <i class="fa-solid fa-database"></i>
+            <div>
+                <h3>Program Data Management</h3>
+                <p>
+                    Centralize service program data to improve reporting accuracy,
+                    regulatory compliance, and cross-department collaboration.
+                </p>
+            </div>
+        </section>
+
+        <section class="ps-band hidden">
+            <i class="fa-solid fa-lock"></i>
+            <div>
+                <h3>Secure Service Platforms</h3>
+                <p>
+                    Protect sensitive citizen data through role-based access controls,
+                    encryption, and continuous monitoring aligned with public-sector
+                    security standards.
+                </p>
+            </div>
+        </section>
+
+        <!-- IMPACT GRID -->
+        <section class="ps-impact hidden">
+            <h2>Public Service Outcomes We Support</h2>
+
+            <div class="ps-impact-grid">
+
+                <div class="ps-impact-card">
+                    <h4>Service Accessibility</h4>
+                    <p>
+                        Digital platforms designed to support diverse communities,
+                        including rural and underserved populations.
+                    </p>
+                </div>
+
+                <div class="ps-impact-card">
+                    <h4>Operational Transparency</h4>
+                    <p>
+                        Reporting tools that support oversight bodies and public
+                        accountability initiatives.
+                    </p>
+                </div>
+
+                <div class="ps-impact-card">
+                    <h4>Program Performance</h4>
+                    <p>
+                        Analytics tools helping agencies evaluate service outcomes
+                        and optimize resource allocation.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CALLOUT -->
+        <section class="ps-callout hidden">
+            <h2>Supporting Citizen-Focused Government Missions</h2>
+            <p>
+                Our solutions are designed to strengthen public trust, improve
+                service consistency, and help agencies deliver programs efficiently
+                while maintaining strong governance and compliance standards.
+            </p>
+        </section>
+        <div id="footer"></div>
+    </div>
+
+    <script src="javascript/include.js"></script>
+
+    <script>
+    document.querySelectorAll(".hidden").forEach((el,i)=>{
+        setTimeout(()=>el.classList.add("show"), i*120);
+    });
+    </script>
+
+</body>
+</html>

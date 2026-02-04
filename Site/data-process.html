@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Processing Addendum (DPA)</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:"Montserrat", sans-serif;
+            overflow-x:hidden;
+        }
+
+        body.light{
+            background:#ffffff;
+            color:#222;
+            transition:1s ease;
+        }
+
+        body.dark{
+            background:#121212;
+            color:#f1f1f1;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+        }
+
+        /* HERO */
+        .hero{
+            margin-top:6rem;
+            max-width:900px;
+        }
+
+        .hero h1{
+            font-size:2rem;
+            font-weight:800;
+        }
+
+        .hero p{
+            margin-top:1rem;
+            line-height:1.7;
+            font-size: .8rem;
+        }
+
+        /* LEGAL SUMMARY CARD */
+        .summary-card{
+            margin-top:2.5rem;
+            padding:2rem;
+            border-radius:16px;
+            background:linear-gradient(135deg, rgba(37,99,235,0.08), rgba(0,0,0,0.03));
+            border:1px solid rgba(37,99,235,0.2);
+        }
+
+        body.dark .summary-card{
+            background:linear-gradient(135deg, rgba(37,99,235,0.15), rgba(255,255,255,0.05));
+        }
+
+        .summary-card h3{
+            margin-bottom:1rem;
+            font-size: 1rem;
+        }
+
+        .summary-card p{
+            line-height:1.6;
+            font-size: .8rem;
+        }
+
+        /* LEGAL SECTIONS */
+        .legal-section{
+            margin-top:3rem;
+        }
+
+        .legal-section h2{
+            margin-bottom:1rem;
+            font-size: 1.2rem;
+        }
+
+        .legal-section p{
+            line-height:1.7;
+            margin-bottom:1rem;
+            font-size: .8rem;
+        }
+
+        .legal-section ul{
+            margin-left:2rem;
+        }
+
+        .legal-section li{
+            margin-bottom:0.7rem;
+            font-size: .8rem;
+        }
+
+        /* SIGN SECTION */
+        .sign-section{
+            margin-top:4rem;
+            padding:2rem;
+            border-radius:14px;
+            background:rgba(0,0,0,0.03);
+        }
+
+        body.dark .sign-section{
+            background:rgba(255,255,255,0.05);
+        }
+
+        .sign-section h3{
+            margin-bottom:1rem;
+            font-size: 1rem;
+        }
+
+        .sign-section p {
+            font-size: .8rem;
+        }
+
+        .sign-section button{
+            margin-top:1rem;
+            padding:0.7rem 1.4rem;
+            border:none;
+            border-radius:8px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-weight:600;
+        }
+
+        /* ANIMATION */
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:all 0.8s ease;
+        }
+
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        @media(max-width: 800px){
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p, .legal-section p, .legal-section li {
+                font-size: 12px;
+            }
+
+            .sign-section p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="hero hidden">
+            <h1 class="hidden">Data Processing Addendum (DPA)</h1>
+
+            <p class="hidden">
+                This Data Processing Addendum (“DPA”) governs the processing of personal data 
+                by authorized vendors, partners, and service providers supporting public 
+                sector and regulated industry operations.
+            </p>
+
+            <p class="hidden">
+                The DPA establishes clear roles, responsibilities, and security requirements 
+                to ensure compliance with applicable data protection regulations and 
+                government data handling standards.
+            </p>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="summary-card hidden">
+            <h3>Purpose of This Addendum</h3>
+            <p>
+                This DPA defines how personal and sensitive data is processed, protected, 
+                stored, and transferred when delivering services to government agencies, 
+                educational institutions, and regulated public sector entities.
+            </p>
+        </section>
+
+        <!-- LEGAL CONTENT -->
+        <section class="legal-section hidden">
+
+            <h2>Scope of Processing</h2>
+            <p>
+                Vendors may only process personal data for purposes directly related to 
+                contracted service delivery and must follow documented government 
+                procurement and security policies.
+            </p>
+
+        </section>
+
+        <section class="legal-section hidden">
+
+            <h2>Vendor Responsibilities</h2>
+            <ul>
+                <li>Process data only under documented customer instructions</li>
+                <li>Maintain appropriate technical and organizational safeguards</li>
+                <li>Ensure personnel confidentiality and security training</li>
+                <li>Support regulatory audits and compliance verification</li>
+                <li>Notify customers of security incidents without undue delay</li>
+            </ul>
+
+        </section>
+
+        <section class="legal-section hidden">
+
+            <h2>Security Controls</h2>
+            <p>
+                Vendors must maintain industry-recognized security frameworks including 
+                encryption, access control, monitoring, and secure infrastructure management.
+            </p>
+
+        </section>
+
+        <section class="legal-section hidden">
+
+            <h2>Sub-Processor Management</h2>
+            <p>
+                Vendors must disclose approved sub-processors and ensure equivalent 
+                contractual data protection obligations are enforced.
+            </p>
+
+        </section>
+
+        <section class="legal-section hidden">
+
+            <h2>Data Retention & Deletion</h2>
+            <p>
+                Personal data must only be retained for the duration required to deliver 
+                contracted services or meet regulatory retention requirements.
+            </p>
+
+        </section>
+
+        <!-- SIGN SECTION -->
+        <section class="sign-section hidden">
+
+            <h3>DPA Agreement & Acceptance</h3>
+
+            <p>
+                Vendors must formally acknowledge and accept this DPA prior to onboarding 
+                or processing any government or regulated data.
+            </p>
+
+            <button>Download Full DPA Document</button>
+
+        </section>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+    window.addEventListener('load', () => {
+
+        const sections = document.querySelectorAll(".hidden");
+
+        sections.forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add("show");
+            }, index * 120);
+        });
+
+        window.addEventListener("scroll", () => {
+            const trigger = window.innerHeight * 0.85;
+
+            sections.forEach(section => {
+                section.classList.toggle(
+                    "show",
+                    section.getBoundingClientRect().top < trigger
+                );
+            });
+        });
+
+    });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

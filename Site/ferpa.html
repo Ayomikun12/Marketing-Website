@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERPA Alignment</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark { background: #121212; color: #f1f1f1; }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.8s ease;
+        }
+
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HERO */
+        .ferpa-hero {
+            margin-top: 7rem;
+            margin-bottom: 4rem;
+            max-width: 900px;
+        }
+
+        .ferpa-hero h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .ferpa-hero p {
+            margin-top: 1rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* PRINCIPLES */
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .principle {
+            padding: 2rem;
+            border-radius: 18px;
+            background: rgba(47,111,237,0.04);
+            border: 1px solid rgba(47,111,237,0.15);
+        }
+
+        .principle i {
+            font-size: 1.8rem;
+            color: #2f6fed;
+            margin-bottom: 1rem;
+        }
+
+        .principle h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .principle p {
+            font-size: 0.80rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* CALLOUT */
+        .ferpa-callout {
+            margin-top: 4rem;
+            padding: 2.5rem;
+            border-left: 6px solid #2f6fed;
+            background: rgba(47,111,237,0.06);
+            font-size: 0.8rem;
+            line-height: 1.65;
+            border-radius: 14px;
+        }
+
+        @media(max-width: 800px){
+            .ferpa-hero h1 { font-size: 22px; }
+            .ferpa-hero p,
+            .principle p,
+            .ferpa-callout { font-size: 12px; }
+            .principle h3 { font-size: 15px; }
+        }
+    </style>
+</head>
+
+<body class="light">
+    <div id="header"></div>
+
+    <div class="container">
+
+        <div class="ferpa-hero hidden">
+            <h1>FERPA Alignment</h1>
+            <p>
+                We align our practices with the Family Educational Rights and Privacy Act (FERPA)
+                to support educational institutions in protecting student education records.
+            </p>
+            <p>
+                Our controls are designed to support lawful access, limited disclosure,
+                and responsible handling of student information.
+            </p>
+        </div>
+
+        <div class="principles">
+
+            <div class="principle hidden">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>Student Privacy Protection</h3>
+                <p>
+                    Access to education records is restricted to authorized personnel
+                    and governed by documented policies and contractual requirements.
+                </p>
+            </div>
+
+            <div class="principle hidden">
+                <i class="fa-solid fa-lock"></i>
+                <h3>Controlled Data Access</h3>
+                <p>
+                    Role-based access controls help ensure that student data is accessed
+                    only for legitimate educational or administrative purposes.
+                </p>
+            </div>
+
+            <div class="principle hidden">
+                <i class="fa-solid fa-file-circle-check"></i>
+                <h3>Use & Disclosure Safeguards</h3>
+                <p>
+                    Student information is used and disclosed only in accordance
+                    with institutional direction and applicable regulations.
+                </p>
+            </div>
+
+            <div class="principle hidden">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h3>Policy & Documentation</h3>
+                <p>
+                    Written procedures support FERPA-aligned handling, retention,
+                    and oversight of education records.
+                </p>
+            </div>
+
+            <div class="principle hidden">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Education Sector Support</h3>
+                <p>
+                    Our alignment framework is designed to support K–12 districts,
+                    higher education institutions, and education service providers.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="ferpa-callout hidden">
+            FERPA alignment is maintained through governance, training, and
+            institutional coordination to support ongoing compliance obligations.
+        </div>
+        <div id="footer"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll(".hidden");
+            sections.forEach((s, i) => setTimeout(() => s.classList.add("show"), i * 150));
+        });
+    </script>
+
+    <script src="javascript/include.js"></script>
+</body>
+</html>

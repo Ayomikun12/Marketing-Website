@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Open Positions</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body{
+        font-family:"Montserrat",sans-serif;
+        background:#ffffff;
+        color:#222;
+        overflow-x:hidden;
+        }
+
+        body.dark{
+        background:#121212;
+        color:#f1f1f1;
+        }
+
+        .container{
+        width:90%;
+        margin:0 auto;
+        }
+
+        .hidden{
+        opacity:0;
+        transform:translateY(40px);
+        transition:all .8s ease;
+        }
+
+        .hidden.show{
+        opacity:1;
+        transform:translateY(0);
+        }
+
+        /* HERO */
+        .jobs-hero{
+        margin-top:7rem;
+        margin-bottom:3rem;
+        max-width:900px;
+        }
+
+        .jobs-hero h1{
+        font-size:2rem;
+        font-weight:700;
+        }
+
+        .jobs-hero p{
+        margin-top:1rem;
+        line-height:1.7;
+        opacity:.85;
+        font-size: .8rem;
+        }
+
+        /* JOB GRID */
+        .jobs-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:1.8rem;
+        margin-top:3rem;
+        }
+
+        .job-card{
+        padding:1.8rem;
+        border-radius:16px;
+        border:1px solid rgba(0,0,0,.08);
+        background:#fff;
+        transition:.3s ease;
+        }
+
+        body.dark .job-card{
+        background:#1a1a1a;
+        border-color:#2b2b2b;
+        }
+
+        .job-card:hover{
+        transform:translateY(-6px);
+        border-color:#2f6fed;
+        box-shadow:0 12px 28px rgba(0,0,0,.08);
+        }
+
+        .job-title{
+        font-size:1rem;
+        font-weight:600;
+        margin-bottom:.5rem;
+        }
+
+        .job-meta{
+        font-size:.8rem;
+        opacity:.7;
+        margin-bottom:1rem;
+        }
+
+        .job-desc{
+        font-size:.8rem;
+        line-height:1.6;
+        opacity:.9;
+        margin-bottom:1.2rem;
+        }
+
+        .job-footer{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        }
+
+        .job-tag{
+        font-size:.8rem;
+        padding:.3rem .7rem;
+        border-radius:8px;
+        background:rgba(47,111,237,.12);
+        color:#2f6fed;
+        }
+
+        .apply-btn{
+        font-size:.85rem;
+        padding:.5rem 1rem;
+        border-radius:8px;
+        background:#2f6fed;
+        color:#fff;
+        text-decoration:none;
+        }
+
+        /* CALLOUT */
+        .jobs-callout{
+        margin-top:4rem;
+        padding:2rem;
+        border-left:4px solid #2f6fed;
+        background:rgba(47,111,237,.05);
+        font-size:.8rem;
+        line-height:1.6;
+        }
+
+        .cta{
+        margin:100px 0 60px;
+        padding: 20px;
+        /* border-radius:30px; */
+        background: rgb(27, 88, 210);
+        }
+
+        .cta h2{
+        font-size:1.2rem;
+        margin-bottom:15px;
+        color: white;
+        }
+
+        .cta p {
+            color: #fff;
+            font-size: .8rem;
+        }
+
+        .cta a{
+        display:inline-block;
+        margin-top:20px;
+        padding:15px 20px;
+        border-radius:12px;
+        background:white;
+        color:#0a84ff;
+        font-weight:700;
+        text-decoration:none;
+        }
+
+        @media(max-width:800px){
+        .jobs-hero h1{font-size:22px;}
+        .jobs-hero p{font-size:12px;}
+        .job-title{font-size:14px;}
+        .job-desc{font-size:12px;}
+        .jobs-callout{font-size:12px;}
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="jobs-hero hidden">
+            <h1>Open Positions</h1>
+            <p>
+            Explore current opportunities to work on secure, scalable platforms
+            supporting government agencies, education systems, and public service
+            organizations.
+            </p>
+
+            <p>
+            We look for individuals committed to innovation, public impact, and
+            operational excellence across engineering, security, consulting,
+            and program delivery roles.
+            </p>
+        </div>
+
+        <!-- JOB LIST -->
+        <div class="jobs-grid">
+
+        <div class="job-card hidden">
+            <div class="job-title">Senior Cloud Security Engineer</div>
+            <div class="job-meta">Remote • Security • Full Time</div>
+            <div class="job-desc">
+            Design and implement security controls across multi-cloud public
+            sector infrastructure environments.
+            </div>
+            <div class="job-footer">
+                <span class="job-tag">Security</span>
+                <a href="#" class="apply-btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="job-card hidden">
+            <div class="job-title">Public Sector Solutions Consultant</div>
+            <div class="job-meta">Hybrid • Consulting</div>
+            <div class="job-desc">
+            Work with government agencies to design digital transformation
+            and modernization strategies.
+            </div>
+            <div class="job-footer">
+                <span class="job-tag">Consulting</span>
+                <a href="#" class="apply-btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="job-card hidden">
+            <div class="job-title">Platform Backend Engineer</div>
+            <div class="job-meta">Remote • Engineering</div>
+            <div class="job-desc">
+            Develop APIs and backend services powering high-availability
+            government systems and data platforms.
+            </div>
+            <div class="job-footer">
+                <span class="job-tag">Engineering</span>
+                <a href="#" class="apply-btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="job-card hidden">
+            <div class="job-title">DevOps Automation Specialist</div>
+            <div class="job-meta">Remote • Platform Operations</div>
+            <div class="job-desc">
+            Build deployment pipelines and infrastructure automation supporting
+            enterprise-scale deployments.
+            </div>
+            <div class="job-footer">
+                <span class="job-tag">DevOps</span>
+                <a href="#" class="apply-btn">Apply</a>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="cta hidden">
+            <h2>Don’t See Your Role?</h2>
+            <p>Join our talent network and be first to know when new roles open.</p>
+            <a href="#">Join Talent Network</a>
+        </div>
+
+        <!-- CALLOUT -->
+        <div class="jobs-callout hidden">
+        Ayjas Integrated Systems is an equal opportunity employer committed to
+        building inclusive teams and supporting professional growth across all
+        roles and career stages.
+        </div>
+
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script>
+    window.addEventListener('load', () => {
+    const sections = document.querySelectorAll(".hidden");
+
+    sections.forEach((section,index)=>{
+    setTimeout(()=>{
+    section.classList.add("show");
+    }, index*120);
+    });
+
+    window.addEventListener("scroll",()=>{
+    const trigger = window.innerHeight * 0.85;
+    sections.forEach(section=>{
+    section.classList.toggle(
+    "show",
+    section.getBoundingClientRect().top < trigger
+    );
+    });
+    });
+    });
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

@@ -219,110 +219,61 @@
             padding: 5px;
         }
 
-        .key-ben {
-            display: flex;
+        /* ===== Key Benefits (Refined) ===== */
+        .key {
+            margin-top: 4rem;
         }
 
-        .ben-img {
-            text-align: center;
+        .key h3 {
+            margin-left: 1.5rem;
+            font-size: 22px;
+            border-left: 3px solid blue;
+            padding-left: 10px;
         }
 
-        .ben-img img {
-            width: 75%;
-            border-radius: 50%;
-            border: 10px solid blue;
-        }
-
-        .beforee {
-            padding: 20px;
+        .key-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-top: 2.5rem;
-            border-radius: 8px;
-            border: 2px solid rgb(145, 145, 216);
         }
 
-        body.dark .beforee {
+        .benefit-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card i {
+            font-size: 28px;
+            color: blue;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Dark mode */
+        body.dark .benefit-card {
             background-color: #000;
-            color: #fff;
+            box-shadow: 0 0 14px #3e3e3e;
         }
 
-        .ico i {
-            top: -80px;
-            left: 340px;
-            position: relative;
-            font-size: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 50%;
-            border-bottom-right-radius: 0;
-            box-shadow: 0 0 10px rgb(180, 178, 178);
-        }
-
-        body.dark .ico i, body.dark .icoo i, body.dark .icoon i {
-            background-color: #000;
-            color: #fff;
-        }
-
-        body.dark .iconn i, body.dark .iconns i, body.dark .iconss i {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .icoo i {
-            top: -80px;
-            left: 340px;
-            position: relative;
-            font-size: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgb(180, 178, 178);
-        }
-
-        .icoon i {
-            top: -80px;
-            left: 340px;
-            position: relative;
-            font-size: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 50%;
-            border-top-right-radius: 0;
-            box-shadow: 0 0 10px rgb(180, 178, 178);
-        }
-
-        .iconss i {
-            top: -80px;
-            right: 60px;
-            position: relative;
-            font-size: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 50%;
-            border-bottom-left-radius: 0;
-            box-shadow: 0 0 10px rgb(180, 178, 178);
-        }
-
-        .iconn i {
-            top: -80px;
-            right: 60px;
-            position: relative;
-            font-size: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgb(180, 178, 178);
-        }
-
-        .iconns i {
-            top: -80px;
-            right: 60px;
-            position: relative;
-            font-size: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 50%;
-            border-top-left-radius: 0;
-            box-shadow: 0 0 10px rgb(180, 178, 178);
+        body.dark .benefit-card i {
+            color: #4f8cff;
         }
 
         .how-to {
@@ -641,66 +592,6 @@
             display: block;
         }
 
-        .ico i {
-            top: 0;
-            left: 0;
-            padding: 0;
-            padding: 15px;
-            font-size: 20px;
-            left: 250px;
-            top: -60px;
-        }
-
-        .iconn i {
-            top: 0;
-            right: 0;
-            padding: 0;
-            padding: 15px;
-            font-size: 20px;
-            top: -58px;
-            left: 10px;
-        }
-
-        .icoo i {
-            top: 0;
-            left: 0;
-            padding: 0;
-            padding: 15px;
-            font-size: 20px;
-            left: 250px;
-            top: -60px;
-        }
-
-        .icoon i {
-            top: 0;
-            left: 0;
-            padding: 0;
-            padding: 15px;
-            font-size: 20px;
-            left: 250px;
-            top: -60px;
-        }
-
-        .iconns i {
-            top: 0;
-            right: 0;
-            padding: 0;
-            padding: 15px;
-            font-size: 20px;
-            top: -58px;
-            left: 10px;
-        }
-
-        .iconss i {
-            top: 0;
-            right: 0;
-            padding: 0;
-            padding: 15px;
-            font-size: 20px;
-            top: -58px;
-            left: 10px;
-        }
-
         .org h3 {
             font-size: 15px;
         }
@@ -717,8 +608,16 @@
             margin-top: 1rem;
         }
 
-        .before ul li, .beforee p {
+        .before ul li {
             font-size: 11px;
+        }
+
+        .benefit-card {
+            margin-top: 2rem;
+        }
+
+        .benefit-card p {
+            font-size: 12px;
         }
 
         .list {
@@ -911,53 +810,41 @@
                 </div>
             </div>
             <div class="key">
-                <h3>Key Benefits</h3>
-                <div class="key-ben">
-                    <div class="froms hidden">
-                        <div class="beforee">
-                            <p>FERPA-aligned data protection practices</p>
-                        </div>
-                        <div class="ico">
-                            <i class="fa-solid fa-credit-card"></i>
-                        </div>
-                        <div class="beforee">
-                            <p>Enterprise-grade security controls</p>
-                        </div>
-                        <div class="icoo">
-                            <i class="fa-solid fa-bars"></i>
-                        </div>
-                        <div class="beforee">
-                            <p>Configurable workflows to match district and university needs</p>
-                        </div>
-                        <div class="icoon">
-                            <i class="fa-brands fa-github"></i>
-                        </div>
+                <h3 class="hidden">Key Benefits</h3>
+
+                <div class="key-ben key-grid">
+                    <div class="benefit-card hidden">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <p>FERPA-aligned data protection practices</p>
                     </div>
-                    <div class="ben-img hidden">
-                        <img src="images/abi.jpg" alt="">
+
+                    <div class="benefit-card hidden">
+                        <i class="fa-solid fa-lock"></i>
+                        <p>Enterprise-grade security controls</p>
                     </div>
-                    <div class="froms hidden">
-                        <div class="beforee">
-                            <p>Scales across schools, campuses, and departments</p>
-                        </div>
-                        <div class="iconss">
-                            <i class="fa-solid fa-house"></i>
-                        </div>
-                        <div class="beforee">
-                            <p>Built for long-term public-sector use</p>
-                        </div>
-                        <div class="iconn">
-                            <i class="fa-solid fa-school"></i>
-                        </div>
-                        <div class="beforee">
-                            <p>Clear reporting and accountability</p>
-                        </div>
-                        <div class="iconns">
-                            <i class="fa-solid fa-bars"></i>
-                        </div>
+
+                    <div class="benefit-card hidden">
+                        <i class="fa-solid fa-sliders"></i>
+                        <p>Configurable workflows for districts and universities</p>
+                    </div>
+
+                    <div class="benefit-card hidden">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <p>Scales across schools, campuses, and departments</p>
+                    </div>
+
+                    <div class="benefit-card hidden">
+                        <i class="fa-solid fa-landmark"></i>
+                        <p>Built for long-term public-sector use</p>
+                    </div>
+
+                    <div class="benefit-card hidden">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <p>Clear reporting and accountability</p>
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="how-to">
             <div class="list hidden">

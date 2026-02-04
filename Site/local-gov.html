@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Government</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        body.dark { background: #121212; color: #f1f1f1; }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all .8s ease;
+        }
+        .hidden.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .gov-hero {
+            margin-top: 7rem;
+            max-width: 900px;
+        }
+        .gov-hero h1 {
+            font-size: 2rem;
+        }
+        .gov-hero p {
+            margin-top: 1rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: .9;
+        }
+
+       
+        .gov-flow {
+            margin-top: 4rem;
+        }
+        .gov-item {
+            padding: 2.8rem;
+            margin-bottom: 2.5rem;
+            border-radius: 22px;
+            background: #f8f9fb;
+            border: 1px solid #e4e7ec;
+            border-left: 6px solid #2f6fed;
+        }
+
+        body.dark .gov-item {
+            background-color: black;
+            border: none;
+            border-left: 6px solid #2f6fed;
+        }
+        .gov-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: .6rem;
+        }
+        .gov-item p {
+            font-size: .8rem;
+            line-height: 1.7;
+            opacity: .9;
+        }
+
+       
+        .gov-trust {
+            margin: 5rem 0;
+            padding: 3rem;
+            background: linear-gradient(180deg, rgba(47,111,237,.1), rgba(47,111,237,.02));
+            border-radius: 24px;
+        }
+        .gov-trust h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .gov-trust p {
+            max-width: 900px;
+            font-size: .8rem;
+            line-height: 1.7;
+        }
+
+        @media(max-width: 900px){
+            .gov-hero h1 { font-size: 22px; }
+            .gov-hero p, .gov-item p, .gov-trust p { font-size: 12px; }
+            .gov-item h3, .gov-trust h2 { font-size: 15px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+
+        <section class="gov-hero hidden">
+            <h1>Local Government</h1>
+            <p>
+                Municipalities and public agencies require technology partners that
+                understand accountability, transparency, and long-term public trust.
+            </p>
+        </section>
+
+        <section class="gov-flow">
+            <div class="gov-item hidden">
+                <h3>Operational Modernization</h3>
+                <p>
+                    Systems that streamline workflows, improve service delivery,
+                    and support cross-department collaboration.
+                </p>
+            </div>
+
+            <div class="gov-item hidden">
+                <h3>Security & Risk Management</h3>
+                <p>
+                    Safeguards designed to protect sensitive information while
+                    maintaining availability and operational resilience.
+                </p>
+            </div>
+
+            <div class="gov-item hidden">
+                <h3>Governance & Oversight</h3>
+                <p>
+                    Technology that supports reporting, auditing, and compliance
+                    requirements across public-sector operations.
+                </p>
+            </div>
+        </section>
+
+        <section class="gov-trust hidden">
+            <h2>Technology That Supports Public Trust</h2>
+            <p>
+                Local governments operate under continuous public oversight.
+                Our solutions emphasize reliability, transparency, and alignment
+                with public-sector standards and expectations.
+            </p>
+        </section>
+        <div id="footer"></div>
+    </div>
+    <script>
+        document.querySelectorAll('.hidden').forEach((el, i) => {
+            setTimeout(() => el.classList.add('show'), i * 120);
+        });
+    </script>
+    <script src="javascript/include.js"></script>
+</body>
+</html>

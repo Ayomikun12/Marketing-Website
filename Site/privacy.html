@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+        *{margin:0;padding:0;box-sizing:border-box;}
+
+        body{
+            font-family:"Montserrat", sans-serif;
+        }
+
+        body.light{
+            background:#ffffff;
+            color:#222;
+        }
+
+        body.dark{
+            background:#121212;
+            color:#eee;
+        }
+
+        .container{
+            width:92%;
+            margin:auto;
+        }
+
+        /* HERO */
+        .privacy-hero{
+            margin-top:6rem;
+            max-width:900px;
+        }
+
+        .privacy-hero h1{
+            font-size:2rem;
+            font-weight:800;
+        }
+
+        .privacy-hero p{
+            margin-top:1rem;
+            line-height:1.7;
+            opacity:0.85;
+            font-size: .8rem;
+        }
+
+        /* TRUST BADGES */
+        .trust-row{
+            display:flex;
+            flex-wrap:wrap;
+            gap:14px;
+            margin-top:2rem;
+        }
+
+        .trust-badge{
+            border:1px solid rgba(0,0,0,0.1);
+            padding:8px 14px;
+            border-radius:999px;
+            font-size:13px;
+        }
+
+        body.dark .trust-badge{
+            border:1px solid rgba(255,255,255,0.15);
+        }
+
+        /* LAYOUT */
+        .privacy-layout{
+            display:grid;
+            grid-template-columns:240px 1fr;
+            gap:50px;
+            margin-top:3rem;
+        }
+
+        /* SIDEBAR */
+        .privacy-nav{
+            position:sticky;
+            top:110px;
+            height:fit-content;
+        }
+
+        .privacy-nav a{
+            display:block;
+            padding:10px 0;
+            text-decoration:none;
+            font-size:14px;
+            opacity:0.8;
+        }
+
+        .privacy-nav a:hover{
+            opacity:1;
+        }
+
+        /* CONTENT */
+        .policy-section{
+            margin-bottom:3rem;
+        }
+
+        .policy-section h2{
+            margin-bottom:12px;
+            font-size: 1rem;
+        }
+
+        .policy-section p{
+            font-size:.8rem;
+            line-height:1.8;
+            opacity:0.9;
+        }
+
+        /* CALLOUT RIGHTS */
+        .rights-box{
+            margin-top:20px;
+            border-left:4px solid #2563eb;
+            padding:16px;
+            background:rgba(37,99,235,0.06);
+            border-radius:8px;
+            font-size:14px;
+            line-height:1.7;
+        }
+
+        /* DATA LIFECYCLE */
+        .data-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:16px;
+            margin-top:20px;
+        }
+
+        .data-card{
+            border:1px solid rgba(0,0,0,0.08);
+            padding:18px;
+            border-radius:12px;
+            font-size:14px;
+        }
+
+        body.dark .data-card{
+            border:1px solid rgba(255,255,255,0.12);
+        }
+
+        /* MOBILE */
+        @media(max-width:900px){
+            .privacy-layout{
+                grid-template-columns:1fr;
+            }
+
+            .privacy-nav{
+                position:relative;
+                top:0;
+                display:flex;
+                flex-wrap:wrap;
+                gap:15px;
+            }
+
+            .privacy-hero h1{
+                font-size:24px;
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="privacy-hero">
+            <h1>Privacy Policy</h1>
+            <p>
+            This Privacy Policy explains how we collect, process, protect, and manage
+            personal and institutional data across our government and education platforms.
+            </p>
+
+            <!-- TRUST BADGES -->
+            <div class="trust-row">
+                <div class="trust-badge">FERPA Aware</div>
+                <div class="trust-badge">SOC 2 Aligned</div>
+                <div class="trust-badge">GDPR Principles</div>
+                <div class="trust-badge">Public Sector Ready</div>
+            </div>
+        </div>
+
+        <!-- LAYOUT -->
+        <div class="privacy-layout">
+
+            <!-- SIDEBAR -->
+            <div class="privacy-nav">
+                <a href="#collection">Data Collection</a>
+                <a href="#usage">Data Usage</a>
+                <a href="#sharing">Data Sharing</a>
+                <a href="#retention">Retention</a>
+                <a href="#rights">User Rights</a>
+                <a href="#security">Security</a>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div>
+
+                <section id="collection" class="policy-section">
+                    <h2>Information We Collect</h2>
+                    <p>
+                    We collect information necessary to provide secure, reliable, and compliant
+                    services to public institutions and education organizations.
+                    </p>
+
+                    <div class="data-grid">
+                        <div class="data-card"><strong>Account Data</strong><br>User identity and access credentials.</div>
+                        <div class="data-card"><strong>Operational Data</strong><br>System usage and performance metrics.</div>
+                        <div class="data-card"><strong>Support Data</strong><br>Service requests and technical logs.</div>
+                    </div>
+                </section>
+
+                <section id="usage" class="policy-section">
+                    <h2>How We Use Data</h2>
+                    <p>
+                    Data is used strictly for service delivery, platform improvement,
+                    security monitoring, and regulatory compliance obligations.
+                    </p>
+                </section>
+
+                <section id="sharing" class="policy-section">
+                    <h2>Data Sharing & Subprocessors</h2>
+                    <p>
+                    We do not sell customer data. Data sharing is limited to approved
+                    subprocessors required for infrastructure, hosting, and security services.
+                    </p>
+                </section>
+
+                <section id="retention" class="policy-section">
+                    <h2>Data Retention</h2>
+                    <p>
+                    Data retention is aligned with contract requirements, regulatory
+                    frameworks, and institutional policies.
+                    </p>
+                </section>
+
+                <section id="rights" class="policy-section">
+                    <h2>Individual Rights</h2>
+                    <p>
+                    Depending on jurisdiction, individuals may have rights related to
+                    access, correction, deletion, or restriction of personal data.
+                    </p>
+
+                    <div class="rights-box">
+                    You may submit data access or deletion requests through
+                    our compliance and privacy request channels.
+                    </div>
+                </section>
+
+                <section id="security" class="policy-section">
+                    <h2>Security Safeguards</h2>
+                    <p>
+                    We maintain administrative, technical, and physical safeguards
+                    designed to protect data from unauthorized access, disclosure,
+                    or misuse.
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+        <div id="footer"></div>
+    </div>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>

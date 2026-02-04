@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Agencies</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body{
+            font-family: "Montserrat", sans-serif;
+            background:#ffffff;
+            color:#1f2937;
+        }
+
+        body.light {
+            background: #ffffff;
+            color: #222;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        .container{
+            width:90%;
+            max-width:1150px;
+            margin:auto;
+        }
+
+        /* Reveal Animation */
+        .hidden{
+            opacity:0;
+            transform:translateY(40px);
+            transition:all .8s ease;
+        }
+        .hidden.show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        /* HERO */
+        .state-hero{
+            margin-top:7rem;
+            max-width:850px;
+        }
+        .state-hero h1{
+            font-size:2rem;
+            font-weight:700;
+        }
+        .state-hero p{
+            margin-top:1rem;
+            font-size:.8rem;
+            line-height:1.7;
+            opacity:.9;
+        }
+
+        /* METRIC STRIP */
+        .state-metrics{
+            margin-top:3rem;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:2rem;
+        }
+        .metric-box{
+            padding:1.8rem;
+            border-radius:18px;
+            background:linear-gradient(180deg,rgba(47,111,237,.1),rgba(47,111,237,.02));
+            border:1px solid rgba(47,111,237,.18);
+        }
+        .metric-box h3{
+            font-size:1rem;
+            color:#2f6fed;
+        }
+        .metric-box p{
+            font-size:.8rem;
+            margin-top:.4rem;
+            opacity:.85;
+        }
+
+        /* SPLIT FEATURE */
+        .state-split{
+            margin-top:5rem;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:3rem;
+            align-items:center;
+        }
+        .state-split-text h2{
+            font-size:1.2rem;
+            margin-bottom:1rem;
+        }
+        .state-split-text p{
+            font-size:.8rem;
+            line-height:1.7;
+            opacity:.9;
+        }
+
+        /* FEATURE PANELS */
+        .state-panels{
+            margin-top:5rem;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:2.2rem;
+        }
+        .state-panel{
+            padding:2.2rem;
+            border-radius:22px;
+            background:#f8fafc;
+            border:1px solid #e5e7eb;
+        }
+
+        body.dark .state-panel {
+            background: black;
+            border: none;
+        }
+        .state-panel i{
+            font-size:1.6rem;
+            color:#2f6fed;
+            margin-bottom:.8rem;
+        }
+        .state-panel h3{
+            font-size:1rem;
+            margin-bottom:.6rem;
+        }
+        .state-panel p{
+            font-size:.8rem;
+            line-height:1.65;
+        }
+
+        /* TRUST BLOCK */
+        .state-trust{
+            background: #eef2ff;
+            padding: 2rem;
+            border-radius: 14px;
+            border-left: 4px solid #2f6fed;
+            font-size: .8rem;
+            margin-top: 4rem;
+        }
+
+        body.dark .state-trust {
+            background: black;
+        }
+        .state-trust h2{
+            font-size:1.2rem;
+            margin-bottom:1rem;
+        }
+        .state-trust p{
+            max-width:850px;
+            font-size:.8rem;
+            line-height:1.7;
+        }
+
+        /* MOBILE */
+        @media(max-width:900px){
+            .state-split{
+                grid-template-columns:1fr;
+            }
+            .state-hero h1{font-size:22px;}
+            .state-hero p,
+            .state-panel p,
+            .state-trust p,
+            .metric-box p{
+                font-size:12px;
+            }
+            .state-panel h3,
+            .state-trust h2,
+            .state-split-text h2{
+                font-size:15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="state-hero hidden">
+            <h1>State Agencies</h1>
+            <p>
+                State-level institutions operate at the intersection of policy,
+                public service delivery, and large-scale operational oversight.
+                Our solutions support agencies responsible for statewide programs,
+                regulatory enforcement, and multi-jurisdiction coordination.
+            </p>
+        </section>
+
+        <!-- METRICS STYLE STRIP -->
+        <section class="state-metrics">
+            <div class="metric-box hidden">
+                <h3>Enterprise Scale</h3>
+                <p>Built to support multi-department state operations.</p>
+            </div>
+            <div class="metric-box hidden">
+                <h3>Regulatory Ready</h3>
+                <p>Aligned with public-sector governance frameworks.</p>
+            </div>
+            <div class="metric-box hidden">
+                <h3>Secure by Design</h3>
+                <p>Defense-in-depth architecture and access controls.</p>
+            </div>
+        </section>
+
+        <!-- SPLIT SECTION -->
+        <section class="state-split">
+            <div class="state-split-text hidden">
+                <h2>Built for Complex Statewide Operations</h2>
+                <p>
+                    State agencies must manage programs spanning multiple
+                    regions, departments, and regulatory obligations.
+                    Our platforms support interoperability, data governance,
+                    and operational visibility at scale.
+                </p>
+                <p>
+                    We design solutions that reduce administrative friction
+                    while improving accountability and reporting accuracy.
+                </p>
+            </div>
+
+            <div class="state-panel hidden">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Cross-Agency Integration</h3>
+                <p>
+                    Secure data exchange between departments, partner agencies,
+                    and authorized external entities.
+                </p>
+            </div>
+        </section>
+
+        <!-- CAPABILITY PANELS -->
+        <section class="state-panels">
+
+            <div class="state-panel hidden">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Risk & Compliance Management</h3>
+                <p>
+                    Continuous monitoring, audit logging, and policy enforcement
+                    aligned with state regulatory expectations.
+                </p>
+            </div>
+
+            <div class="state-panel hidden">
+                <i class="fa-solid fa-chart-column"></i>
+                <h3>Program Oversight & Reporting</h3>
+                <p>
+                    Centralized reporting tools supporting transparency,
+                    legislative oversight, and performance measurement.
+                </p>
+            </div>
+
+            <div class="state-panel hidden">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <h3>Modern Infrastructure</h3>
+                <p>
+                    Secure cloud and hybrid environments supporting resilience,
+                    scalability, and long-term modernization initiatives.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- TRUST BLOCK -->
+        <section class="state-trust hidden">
+            <h2>Supporting State-Level Public Service Missions</h2>
+            <p>
+                Our work with public-sector organizations emphasizes reliability,
+                security, and accountability. Every engagement is designed to
+                support long-term program sustainability and public trust.
+            </p>
+        </section>
+        <div id="footer"></div>
+    </div>
+
+    <script src="javascript/include.js"></script>
+    <script>
+    document.querySelectorAll(".hidden").forEach((el,i)=>{
+        setTimeout(()=>el.classList.add("show"), i*120);
+    });
+    </script>
+
+</body>
+</html>
