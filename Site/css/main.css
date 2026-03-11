@@ -143,17 +143,11 @@ body.dark .uni {
     border-radius: 6px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    padding-top: .5rem;
 }
 
 body.dark .ayjas {
     background-color: #000;
-}
-
-.refuge h1 {
-    font-size: 28px;
-    line-height: 2.2;
-    margin-left: 3rem;
-    color: #fff;
 }
 
 .refuge p {
@@ -431,13 +425,6 @@ body.dark .create {
     .refuge {
         margin: 0;
         font-size: 15px;
-    }
-
-    .refuge h1 {
-        margin: 0;
-        margin-left: .4rem;
-        margin-top: 1.5rem;
-        font-size: 14px;
     }
 
     .refuge p {
