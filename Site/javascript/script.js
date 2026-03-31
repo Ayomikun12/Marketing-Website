@@ -24,28 +24,6 @@ proDocs.addEventListener("click", () => {
 });
 
 
-// const heroSections = document.querySelectorAll(".hero-animate");
-// const scrollSections = document.querySelectorAll(".scroll-animate");
-
-// // 🔹 HERO → animate on refresh
-// window.addEventListener("load", () => {
-//   heroSections.forEach(section => {
-//     section.classList.add("show");
-//   });
-// });
-
-// // 🔹 OTHERS → animate on scroll
-// window.addEventListener("scroll", () => {
-//   const trigger = window.innerHeight * 0.8;
-
-//   scrollSections.forEach(section => {
-//     if (section.getBoundingClientRect().top < trigger) {
-//       section.classList.add("show");
-//     }
-//   });
-// });
-
-
 const sections = document.querySelectorAll(".hidden");
 
 function revealSections() {

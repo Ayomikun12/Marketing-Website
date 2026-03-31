@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.text())
         .then(html => {
             document.getElementById("header").innerHTML = html;
-            initNavigation(); // 🔥 VERY IMPORTANT
+            initNavigation(); 
         });
 
     // LOAD FOOTER
