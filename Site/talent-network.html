@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Talent Network</title>
+
+    <link rel="icon" href="Images/Glacier Pool Primary Transparent.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body{
+        font-family:"Montserrat",sans-serif;
+        background:#ffffff;
+        color:#222;
+        overflow-x:hidden;
+        }
+
+        body.dark{
+        background:#121212;
+        color:#f1f1f1;
+        }
+
+        .container{
+        width:90%;
+        margin:0 auto;
+        margin-top: 8rem;
+        }
+
+        .hidden{
+        opacity:0;
+        transform:translateY(40px);
+        transition:all .8s ease;
+        }
+
+        .hidden.show{
+        opacity:1;
+        transform:translateY(0);
+        }
+
+        a{
+        text-decoration:none;
+        /* color:inherit; */
+        }
+
+        /* .contact-page{
+        min-height:100vh;
+        padding:80px 7%;
+        /* background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.25), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.2), transparent 30%),
+        #0b1120; 
+        } */
+
+        .contact-header{
+        text-align:center;
+        /* margin-bottom:60px; */
+        }
+
+        .contact-header h1{
+        font-size:3.5rem;
+        font-weight:800;
+        margin-bottom:20px;
+        line-height:1.1;
+        /* color: #000; */
+        }
+
+        .contact-header p{
+        max-width:700px;
+        margin:auto;
+        /* color:#cbd5e1; */
+        font-size:1.1rem;
+        line-height:1.8;
+        }
+
+        .contact-container{
+        max-width:900px;
+        margin:auto;
+        border-radius:28px;
+        padding:45px;
+        }
+
+        .contact-info,
+        .contact-form{
+        /* margin-top:2rem; */
+        padding:2rem;
+        /* border-left:4px solid #2f6fed; */
+        background:rgba(47,111,237,.05);
+        font-size:.8rem;
+        line-height:1.6;
+        border-radius: 30px;
+        /* text-align: center; */
+        }
+
+        .section-title{
+        font-size:1.8rem;
+        font-weight:700;
+        margin-bottom:10px;
+        }
+
+        .section-subtitle{
+        /* color:#94a3b8; */
+        margin-bottom:35px;
+        line-height:1.7;
+        }
+
+        .input-box{
+        margin-bottom:22px;
+        }
+
+        #responseMessage {
+            margin-top:20px;
+            font-size: 18px;
+            text-align: center;
+            color:#109e41;
+        }
+
+        .username-error {
+            display: none;
+            color: red;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .input-box.invalid input {
+            border-color: red;
+        }
+
+        .input-box.invalid .username-error {
+            display: block;
+        }
+
+        .input-box.invalid select {
+            border-color: red;
+        }
+
+        .input-box.invalid textarea {
+            border-color: red;
+        }
+
+        .innerText {
+            color: red;
+        }
+
+        .form-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:18px;
+        }
+
+        label{
+        display:block;
+        margin-bottom:10px;
+        font-size:0.95rem;
+        /* color:#e2e8f0; */
+        font-weight:700;
+        }
+
+        input,
+        textarea,
+        select{
+        width:100%;
+        padding:16px;
+        border-radius:14px;
+        border:1px solid rgba(255,255,255,0.08);
+        background:rgba(255,255,255,0.06);
+        /* color:white; */
+        font-size:1rem;
+        outline:none;
+        transition:0.3s ease;
+        border: 1px solid black;
+        }
+
+        .upload-box{
+        border:2px dashed black;
+        padding:35px;
+        border-radius:18px;
+        text-align:center;
+        transition:0.3s ease;
+        cursor:pointer;
+        }
+
+        .upload-box:hover{
+        border-color:#3b82f6;
+        background:rgba(59,130,246,0.08);
+        }
+
+        .upload-box input{
+        margin-top:15px;
+        background:none;
+        border:none;
+        padding:0;
+        }
+
+        body.dark input,
+        body.dark textarea,
+        body.dark select {
+            color: white;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus{
+        border-color:#3b82f6;
+        box-shadow:0 0 0 4px rgba(59,130,246,0.15);
+        }
+
+        select {
+            color: black;
+        }
+
+        body.dark select {
+            color: #ffffff;
+        }
+
+        body.dark select option {
+            color: #000;
+        }
+
+        textarea{
+        min-height:150px;
+        resize:vertical;
+        }
+
+        input::placeholder, textarea::placeholder{
+        color:#94a3b8;
+        }
+
+        .submit-btn{
+        width:100%;
+        border:none;
+        padding:18px;
+        border-radius:16px;
+        background:linear-gradient(135deg,#2563eb,#3b82f6);
+        color:white;
+        font-size:1rem;
+        font-weight:700;
+        cursor:pointer;
+        transition:0.3s ease;
+        }
+
+        .submit-btn:hover{
+        transform:translateY(-3px);
+        box-shadow:0 15px 35px rgba(37,99,235,0.3);
+        }
+
+        .map-box{
+        margin-top:35px;
+        border-radius:18px;
+        overflow:hidden;
+        height:220px;
+        background:#111827;
+        }
+
+        .map-box iframe{
+        width:100%;
+        height:100%;
+        border:0;
+        }
+
+        @media(max-width:800px){
+
+            .contact-container{
+                grid-template-columns:1fr;
+            }
+
+            .contact-header h1{
+                font-size: 20px;
+            }
+
+            .contact-header p {
+                font-size: 12px;
+            }
+
+            .contact-info, .contact-form {
+                margin-top: 0;
+            }
+
+            .contact-info h2, .info-content h4, .contact-form h2 {
+                font-size: 18px;
+            }
+
+            .contact-info p, .info-content p, .contact-form p {
+                font-size: 11px;
+            }
+
+            .input-box label {
+                font-size: 13px;
+            }
+
+            .input-box input::placeholder {
+                font-size: 11px;
+            }
+
+            .input-box select option, .input-box select {
+                font-size: 11px;
+            }
+        }
+
+        @media(max-width:600px){
+
+        .contact-page{
+            padding:60px 5%;
+        }
+
+        .contact-info,
+        .contact-form{
+            padding:28px;
+        }
+
+        .form-row{
+            grid-template-columns:1fr;
+        }
+        }
+
+        
+    </style>
+</head>
+
+<body class="light">
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <div class="contact-header hidden">
+            <div class="talent-badge">
+            🚀 Future Opportunities
+            </div>
+
+            <h1>Join Our Talent Network</h1>
+
+            <p>
+            Don’t see the perfect role right now? Stay connected with AYJAS Systems and
+            be the first to hear about future opportunities, internships, partnerships,
+            and exciting projects.
+            </p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-form hidden">
+
+                <form id="talentForm">
+
+                    <div class="form-row">
+
+                        <div class="input-box">
+                            <label>First Name</label>
+                            <input type="text" id="firstname" placeholder="John">
+                            <div class="username-error">
+                                <p class="error-text">Please enter your first name</p>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>Last Name</label>
+                            <input type="text" id="lastname" placeholder="Doe">
+                            <div class="username-error">
+                                <p class="error-text">Please enter your last name</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-box">
+                            <label>Email Address</label>
+                            <input type="email" id="email" placeholder="johndoe@example.com">
+                            <div class="username-error">
+                                <p class="error-text">Please enter your email address</p>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                        <label>Area of Interest</label>
+
+                        <select id="interest">
+                            <option value="">Select Area</option>
+                            <option>Software Engineering</option>
+                            <option>UI/UX Design</option>
+                            <option>Marketing</option>
+                            <option>Project Management</option>
+                            <option>Data & AI</option>
+                            <option>Business Development</option>
+                        </select>
+                        <div class="username-error">
+                            <p class="error-text">Please select an option</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Tell Us About Yourself</label>
+
+                        <textarea
+                            placeholder="Share your skills, experience, interests, or what kind of opportunities you are looking for..." id="message"></textarea>
+                        <div class="username-error">
+                            <p class="error-text">This field cannot be empty</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Join Talent Network
+                    </button>
+
+                    <p id="responseMessage"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        
+
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const API_URL = "http://127.0.0.1:5000";
+
+
+            // CONTACT FORM
+            const form = document.getElementById("talentForm");
+
+            // Select BOTH input and textarea
+            const fields = document.querySelectorAll(".input-box input, .input-box textarea, .input-box select");
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData();
+
+                let isValid = true;
+
+                // VALIDATE FIELDS
+                fields.forEach((field) => {
+
+                    const inputBox = field.parentElement;
+
+                    // Get error message
+                    const errorText = inputBox.querySelector(".error-text");
+
+                    // Remove old error first
+                    inputBox.classList.remove("invalid");
+
+                    // CHECK EMPTY FIELD
+                    if (field.value.trim() === "") {
+
+                        inputBox.classList.add("invalid");
+
+                        // errorText.innerText = `Please enter your ${field.id}`;
+
+                        isValid = false;
+                    }
+
+                    // EMAIL VALIDATION
+                    if (field.id === "email" && field.value.trim() !== "") {
+
+                        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+                        if (!field.value.match(emailPattern)) {
+
+                            inputBox.classList.add("invalid");
+
+                            errorText.innerText = "Please enter a valid email";
+
+                            isValid = false;
+                        }
+                    }
+                });
+
+                // STOP FORM IF INVALID
+                if (!isValid) {
+                    return;
+                }
+
+                // GET VALUES
+                const firstname = document.getElementById("firstname").value;
+                const lastname = document.getElementById("lastname").value;
+                const email = document.getElementById("email").value;
+                const interest = document.getElementById("interest").value;
+                const message = document.getElementById("message").value;
+
+
+                const cvFile = document.getElementById("cv").files[0];
+
+
+                //APPEND TEXT 
+
+                formData.append("firstname", firstname);
+                formData.append("lastname", lastname);
+                formData.append("email", email);
+                formData.append("interest", interest);
+                formData.append("message", message);
+
+                try {
+
+                    const response = await fetch(`${API_URL}/talent-form`, {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    const data = await response.json();
+
+                    document.getElementById("responseMessage").innerText = data.message;
+
+                    form.reset();
+                    setTimeout(() => {
+                        responseMessage.style.display = "none";
+                    }, 5000);
+
+                } catch (error) {
+
+                    document.getElementById("responseMessage").innerText =
+                        "Something went wrong";
+                }
+            });
+
+
+            // REMOVE ERROR WHILE TYPING
+            fields.forEach((field) => {
+
+                field.addEventListener("input", () => {
+
+                    const inputBox = field.parentElement;
+
+                    if (field.value.trim() !== "") {
+                        inputBox.classList.remove("invalid");
+                    }
+                });
+            });
+
+
+            // TRACK LINK CLICKS
+            const trackLinks = document.querySelectorAll(".track-link");
+
+            trackLinks.forEach(link => {
+
+                link.addEventListener("click", async () => {
+
+                    const linkName = link.dataset.link;
+
+                    await fetch(`${API_URL}/track-click`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            link: linkName
+                        })
+                    });
+                });
+            });
+
+
+
+
+
+
+
+
+
+        const sections = document.querySelectorAll(".hidden");
+
+        sections.forEach((section,index)=>{
+        setTimeout(()=>{
+        section.classList.add("show");
+        }, index*120);
+        });
+
+        window.addEventListener("scroll",()=>{
+        const trigger = window.innerHeight * 0.85;
+        sections.forEach(section=>{
+        section.classList.toggle(
+        "show",
+        section.getBoundingClientRect().top < trigger
+        );
+        });
+        });
+        });
+
+    
+    </script>
+
+    <script src="javascript/include.js"></script>
+
+</body>
+</html>
